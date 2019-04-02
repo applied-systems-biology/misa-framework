@@ -1,6 +1,6 @@
 +++
 title = "Prerequisites"
-weight = 0
+weight = 10
 type="page"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"

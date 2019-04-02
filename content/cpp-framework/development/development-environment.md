@@ -1,6 +1,6 @@
 +++
 title = "Setting up a project"
-weight = 1
+weight = 20
 type="page"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
