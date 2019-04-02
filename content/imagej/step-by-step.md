@@ -1,6 +1,6 @@
 +++
 title = "Tutorial: Step by step analysis"
-weight = 10
+weight = 20
 type="page"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"

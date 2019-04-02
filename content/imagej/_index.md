@@ -1,5 +1,6 @@
 +++
 title = "ImageJ plugin"
+weight = 10
 
 # Type of content, set "slide" to display it fullscreen with reveal.js
 type="page"
