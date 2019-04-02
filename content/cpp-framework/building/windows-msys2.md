@@ -9,8 +9,8 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 We tested building on Windows via the [MSYS2](https://www.msys2.org/) environment.
 
-{{% alert theme="info" %}}Please note that the Visual Studio compiler is not
-supported due to missing OpenMP 3.x capabilities.{{% /alert %}}
+{{% notice warning %}}Please note that the Visual Studio compiler is not
+supported due to missing OpenMP 3.x capabilities.{{% /notice %}}
 
 
 # Prerequisites

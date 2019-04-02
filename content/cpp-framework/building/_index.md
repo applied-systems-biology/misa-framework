@@ -1,5 +1,6 @@
 +++
 title = "Building"
+weight = 0
 type="page"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
@@ -34,6 +35,8 @@ B --> D[MISA++ OME]
 D --> E["MISA++ Tissue Segmentation"]
 E --> F["MISA++ Kidney Glomeruli Segmentation"]
 B --> G["MISA++ OME Visualizer"]
+H["OpenCV Toolbox"] --> E
+H --> F
 {{< /mermaid >}}
 
 Please make sure to build the dependencies the correct order.

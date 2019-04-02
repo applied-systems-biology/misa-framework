@@ -1,16 +1,9 @@
 +++
 title = "C++ Framework"
-
-# Type of content, set "slide" to display it fullscreen with reveal.js
 type="page"
-
-# Creator's Display name
 creatordisplayname = "Ruman Gerst"
-# Creator's Email
 creatoremail = "ruman.gerst@leibniz-hki.de"
-# LastModifier's Display name
 lastmodifierdisplayname = "Ruman Gerst"
-# LastModifier's Email
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
