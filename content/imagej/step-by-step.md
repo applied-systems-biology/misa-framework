@@ -159,7 +159,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 	</tr>
 	<tr valign="top">
 		<td ><p >
-			<img src="/img/imagej/userguide_html_7c7db2265df6ffa2.png" name="image139.png" border="0"/>
+			<img src="/img/imagej/column_editor.png" name="image139.png" border="0"/>
 </p>
 		</td>
 		<td ><p >
