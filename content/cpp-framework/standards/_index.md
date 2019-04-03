@@ -1,5 +1,6 @@
 +++
 title = "Standards"
+weight = 40
 type="page"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"

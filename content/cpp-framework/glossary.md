@@ -1,6 +1,6 @@
 +++
 title = "Glossary"
-weight = 1
+weight = 50
 type="page"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
