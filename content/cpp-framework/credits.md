@@ -1,6 +1,6 @@
 +++
 title = "Credits"
-weight = 60
+weight = 70
 type="page"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"

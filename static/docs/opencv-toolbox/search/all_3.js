@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['data',['data',['../structcv_1_1recoloring__hashmap.html#a46126ba6df7d581ab92fb916ece29d31',1,'cv::recoloring_hashmap']]],
+  ['default_5foutput',['default_output',['../structcv_1_1recoloring__hashmap.html#a7fd81224161734de04dbcda2463065d7',1,'cv::recoloring_hashmap']]],
+  ['dilate',['dilate',['../namespacecv_1_1toolbox_1_1morph.html#a465e4979330ff548639dd694cfeda9ee',1,'cv::toolbox::morph::dilate(images::grayscale8u &amp;img, const images::mask &amp;kernel, int iterations=1)'],['../namespacecv_1_1toolbox_1_1morph.html#a64a0001ebb8855329fb9ae49be79c257',1,'cv::toolbox::morph::dilate(images::grayscale16u &amp;img, const images::mask &amp;kernel, int iterations=1)'],['../namespacecv_1_1toolbox_1_1morph.html#a5fb3d9344bcad6aeb4bc7e7eaee239e8',1,'cv::toolbox::morph::dilate(images::grayscale16s &amp;img, const images::mask &amp;kernel, int iterations=1)'],['../namespacecv_1_1toolbox_1_1morph.html#ae60a4e4f99b43eab49c39f8231a9ae29',1,'cv::toolbox::morph::dilate(images::grayscale32f &amp;img, const images::mask &amp;kernel, int iterations=1)'],['../namespacecv_1_1toolbox_1_1morph.html#a9f143f5ba42b164023d11eb662c6a92e',1,'cv::toolbox::morph::dilate(images::grayscale64f &amp;img, const images::mask &amp;kernel, int iterations=1)']]]
+];

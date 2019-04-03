@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['bmat1b',['BMat1b',['../namespacecv.html#a996bb41f09ed8a78240ee144f4255f0c',1,'cv']]],
+  ['bmat1d',['BMat1d',['../namespacecv.html#a592cb42d2e8ae0690e68a5e53bc46422',1,'cv']]],
+  ['bmat1f',['BMat1f',['../namespacecv.html#af15cdcb5548533959805d85f6ed94388',1,'cv']]],
+  ['bmat1i',['BMat1i',['../namespacecv.html#a27c5d3be2981ab856d28678762d03fb4',1,'cv']]],
+  ['bmat1s',['BMat1s',['../namespacecv.html#a194258c9895ba6e74bfc55ab69c17c35',1,'cv']]],
+  ['bmat1w',['BMat1w',['../namespacecv.html#a60c2a2721dc0233ffe06e081ba32994d',1,'cv']]],
+  ['bmat2b',['BMat2b',['../namespacecv.html#a0f75156db39ac216b228b323141c5da4',1,'cv']]],
+  ['bmat2d',['BMat2d',['../namespacecv.html#ac22985d34541cac9adf59be91ca62bfd',1,'cv']]],
+  ['bmat2f',['BMat2f',['../namespacecv.html#a194ba3c895f75d9fb14b2a79a5ece022',1,'cv']]],
+  ['bmat2i',['BMat2i',['../namespacecv.html#a74c965670d3674e9bea77e76fb901297',1,'cv']]],
+  ['bmat2s',['BMat2s',['../namespacecv.html#aac5ad547898998c326cac266eb02866c',1,'cv']]],
+  ['bmat2w',['BMat2w',['../namespacecv.html#af01952f0566697845b31b043ae57fb24',1,'cv']]],
+  ['bmat3b',['BMat3b',['../namespacecv.html#a2557a8b159db252acb7ff2a69e5f477d',1,'cv']]],
+  ['bmat3d',['BMat3d',['../namespacecv.html#a17ed150b077961d8ad730026ad51ca15',1,'cv']]],
+  ['bmat3f',['BMat3f',['../namespacecv.html#a5bc4297bd81400a81d3ae6cb1ba29724',1,'cv']]],
+  ['bmat3i',['BMat3i',['../namespacecv.html#ac9b7c7a436a4211db37538c19ca17533',1,'cv']]],
+  ['bmat3s',['BMat3s',['../namespacecv.html#aa6ce95e9068b3e241ef9f50955984c1a',1,'cv']]],
+  ['bmat3w',['BMat3w',['../namespacecv.html#a6e44f16743babedff004ea9097d98290',1,'cv']]],
+  ['bmat4b',['BMat4b',['../namespacecv.html#ab88b7e79b65d6a726d24f7602b9942fa',1,'cv']]],
+  ['bmat4d',['BMat4d',['../namespacecv.html#a8ccf82a18f68a2fc313e02f4f8103ec7',1,'cv']]],
+  ['bmat4f',['BMat4f',['../namespacecv.html#a5c0f81176c7c4440e78afe44a66c2349',1,'cv']]],
+  ['bmat4i',['BMat4i',['../namespacecv.html#a141b3a9d7ee3550f281e5107d274d783',1,'cv']]],
+  ['bmat4s',['BMat4s',['../namespacecv.html#adbbbe3fddcdc23e1d92bb48fdbdfdc2f',1,'cv']]],
+  ['bmat4w',['BMat4w',['../namespacecv.html#ab2f0b0e72111b5026bfe24630d7d0e53',1,'cv']]],
+  ['buffered',['buffered',['../namespacecv_1_1images.html#a82277233b86c0ddc65d81f14e2c08aa4',1,'cv::images']]]
+];
