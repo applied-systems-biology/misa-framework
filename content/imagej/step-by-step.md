@@ -8,6 +8,22 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
+# Prerequisites
+
+* Make sure that **MISA++ Kidney Glomeruli Segmentation** and **MISA++ Result Analyzer** are installed
+* Make sure that the MISA++ ImageJ plugin is installed
+* [Download the example data](static/distrib/misaxx_example_data.zip)
+
+# Video tutorial
+
+The video tutorial covers the same steps as the written tutorial.
+
+<p style="text-align: center;">
+<video src="/media/misaxx_imagej_tutorial.mp4" width="80%" controls preload keepaspectratio></video>
+</p>
+
+# Written tutorial
+
 <p>The following step-by-step tutorial shows the quantitative analysis of glomeruli by creating statistics and plots of their diameter.</p>
 
 <table cellpadding="7" cellspacing="0">

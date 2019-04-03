@@ -64,5 +64,5 @@ weight = 20
 
 [[menu.shortcuts]]
 name = "<i class='fa fa-paragraph'></i> <label>Citation</label>"
-url = "/credits"
+url = "/citation"
 weight = 30
