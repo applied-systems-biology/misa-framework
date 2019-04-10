@@ -61,7 +61,7 @@ under following links:
 | MISA++ Tissue Segmentation           | <a href="/docs/misaxx-tissue" target="_blank"> Download source code </a>           | <a href="/docs/misaxx-tissue" target="_blank"> Open </a>           |
 | MISA++ Kidney Glomeruli Segmentation | <a href="/docs/misaxx-kidney-glomeruli" target="_blank"> Download source code </a> | <a href="/docs/misaxx-kidney-glomeruli" target="_blank"> Open </a> |
 | MISA++ Result Analyzer               | <a href="/docs/misaxx-analyzer" target="_blank"> Download source code </a>         | <a href="/docs/misaxx-analyzer" target="_blank"> Open </a>         |
-| OpenCV Toolbox                       | <a href="/docs/opencv-toolbox" target="_blank"> Download source code </a>          | <a href="/docs/opencv-toolbox" target="_blank"> Open </a>          |
+
 
 {{%expand "Git repositories" %}}
 ```bash

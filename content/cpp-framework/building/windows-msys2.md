@@ -77,7 +77,6 @@ cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DCMAKE_INSTALL_PREFIX=
 ```
 
 {{% panel theme="danger" header="Warning" %}}
-* LEMON Graph library cannot be built dynamically (`-DBUILD_SHARED_LIBS=OFF` must be set)
 * Building OME libraries dynamically caused segmentation faults during application runtime (Error 0xc0000005). Build the libraries statically to avoid the issue.
 * Dynamically built MISA++ libraries caused random (~ every 10th execution) 0xc0000005 errors. We again decided to only link statically.
 * OME Model requires `OME_HOME` to be set to `/mingw64/` or any other folder that contains `./share/xml` and `./share/xsl`
