@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/building/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/output-data/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/imagej/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/imagej/installation/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/development/prerequisites/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/quantification-results/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/running/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/development/development-environment/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/imagej/step-by-step/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/development/declaring-data/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/development/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/download/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/imagej/module-manager/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/table-analyzer/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/imagej/analyzing-data/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/citation/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/plot-builder/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-tasks/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/standards/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/runtime-log/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-dispatchers/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/imagej/creating-pipelines/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/glossary/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/references/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/development/dispatching-submodules/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/development/attaching-data/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/credits/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/imagej/credits/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-caches/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/development/tips/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/_footer/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/_header/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/standards/attachments/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/building/windows-msys2/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/standards/module-info/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/standards/parameter-schema/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/standards/parameters/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/standards/public-api/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/standards/output-data/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/standards/runtime-log/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/cpp-framework/standards/serialization-id/</loc>
+  </url>
+  
+  <url>
+    <loc>applied-systems-biology.github.io/misa-framework/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

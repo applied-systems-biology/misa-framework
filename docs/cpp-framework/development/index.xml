@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Development on MISA&#43;&#43; Framework</title>
+    <link>applied-systems-biology.github.io/misa-framework/cpp-framework/development/</link>
+    <description>Recent content in Development on MISA&#43;&#43; Framework</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="applied-systems-biology.github.io/misa-framework/cpp-framework/development/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Prerequisites</title>
+      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/development/prerequisites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/development/prerequisites/</guid>
+      <description>MISA++ uses the CMake build system. Please make sure that CMake version 3.12 or higher is installed.
+The compiler must support C++ version 2017 or higher.
+For Windows, we recommend the MSYS2 environment.
+Please note that the Visual Studio compiler is not supported due to missing OpenMP 3.x capabilities.
+ Make sure that MISA++ Core and any other dependency modules are installed. See Building for more information about building MISA++ and already existing modules.</description>
+    </item>
+    
+    <item>
+      <title>Setting up a project</title>
+      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/development/development-environment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/development/development-environment/</guid>
+      <description>The MISA++ Core library contains a CMake script to simplify the creation of modules. The following documentation assumes that this script is used. You are free to setup your project without our helper script.
+ Creating the folder structure Each module is designed to be compiled into a shared library (.dll/.so), which requires a strict separation between the API and implementation. Create following folder structure:
+./CMakeLists.txt ./include/&amp;lt;module-name&amp;gt;/ ./src/&amp;lt;module-name&amp;gt;/  &amp;lt;module-name&amp;gt; is the name of the CMake target, for example misaxx-ome.</description>
+    </item>
+    
+    <item>
+      <title>Declaring data</title>
+      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/development/declaring-data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/development/declaring-data/</guid>
+      <description>MISA++ organizes input and output data in caches. Caches provide functionality to access large datasets in a memory-efficient way. To be able to achieve this, they are linked to a location within the filesystem (a folder). The cache-implementation loads data into the memory on-demand and frees space if there is no demand left.
+Caches are exclusively created within the module interface that is also responsible for triggering the linking process between a folder and the cache implementation.</description>
+    </item>
+    
+    <item>
+      <title>Creating tasks</title>
+      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-tasks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-tasks/</guid>
+      <description>The MISA++ framework manages workloads by parallelized execution of atomic tasks. Additionally, dispatchers can be created that acts as inner node within a tree of workers. Tasks on the other hand are always leaves.
+The module dispatcher (./include/&amp;lt;module-name&amp;gt;/module.h) acts as root of this tree and as entry point to define the tasks that process data and their dependencies.
+Tasks contain atomic workloads that should be able to run in parallel.</description>
+    </item>
+    
+    <item>
+      <title>Creating dispatchers</title>
+      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-dispatchers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-dispatchers/</guid>
+      <description>The MISA++ framework manages workloads by parallelized execution of atomic tasks. Additionally, dispatchers can be created that acts as inner node within a tree of workers. Tasks on the other hand are always leaves.
+The module dispatcher (./include/&amp;lt;module-name&amp;gt;/module.h) acts as root of this tree and as entry point to define the tasks that process data and their dependencies.
+Dispatchers require you to override following virtual functions:
+void create_blueprints(misa_dispatcher::blueprint_list &amp;amp;blueprints, misa_dispatcher::parameter_list &amp;amp;parameters); void build(const misa_dispatcher::blueprint_builder &amp;amp;builder);  To allow the automated documentation of the whole tree of tasks, the misaxx::misa_dispatcher interface requires a data-independent declaration of all sub-dispatchers and tasks that the dispatcher might create, as well as all parameters that might be queried from the parameter file.</description>
+    </item>
+    
+    <item>
+      <title>Dispatching submodules</title>
+      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/development/dispatching-submodules/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/development/dispatching-submodules/</guid>
+      <description>You reduce the amount of code in your current project by off-loading work to another MISA++ module. The sub-module will be integrated into the current worker tree and benefit from better parallelization and less post-processing compared to running MISA++ applications in a pipeline.
+Prerequisites Modify the CMakeLists.txt and the cmake/*-config.in to add the submodule as dependency.
+Example In CMakeLists.txt find_package(misaxx-core REQUIRED)find_package(misaxx-tissue-segmentation REQUIRED)# Later: target_link_libraries(my-module PUBLIC misaxx::misaxx-tissue-segmentation) In cmake/*-config.in find_package(misaxx-core REQUIRED)find_package(misaxx-tissue-segmentation REQUIRED)  Submodules within the filesystem A submodule is created on a subfolder of the current virtual filesystem and therefore are handled similar to data.</description>
+    </item>
+    
+    <item>
+      <title>Attaching data</title>
+      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/development/attaching-data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/development/attaching-data/</guid>
+      <description>The attachment system allows easy attachment of any serializable data to a cache. It can be used to communicate between different tasks and generate quantification output. If the attachment data type supports adding information about its location (e.g. which image plane), the cache will automatically assign the most available information.
+Attaching data to a cache To attach data, just call the void attach&amp;lt;T&amp;gt;(...) member function of a cache accessor. To access an attachment, you can use the T &amp;amp;get&amp;lt;T&amp;gt;() member function, which will throw an exception if the type does not exist.</description>
+    </item>
+    
+    <item>
+      <title>Creating caches</title>
+      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-caches/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-caches/</guid>
+      <description>This guide will show you how to create your own cache types. A cache data type consists of four different classes:
+ The cache implementation The cache accessor A pattern A description  The cache implementation is responsible for dynamically loading and unloading data from/to a folder that is located within the filesystem. Such a folder on the other hand can contain many different files with different names, while an image file cache would for example look for a specific image file within this folder.</description>
+    </item>
+    
+    <item>
+      <title>Tips and tricks</title>
+      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/development/tips/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/development/tips/</guid>
+      <description>Interacting with the runtime The MISA++ runtime is responsible for managing parameters, generation of the parameter schema, managing caches and executing workers.
+There are multiple interface functions avilable that allow extracting information from and manipulation of the runtime.
+misaxx::runtime_properties Contains functions about the current set of workers, the number of threads, the root filesystem and information about the root module.
+The most important function is misaxx::runtime_properties::is_simulating() that indicates if actual work should be done or a parameter schema is currently being generated.</description>
+    </item>
+    
+  </channel>
+</rss>

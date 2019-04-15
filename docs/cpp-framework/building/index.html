@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MISA&#43;&#43; Framework</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2019-04-15T17:34:14 CEST">
+<title>Building :: MISA&#43;&#43; Framework</title>
+<link rel="shortcut icon" href="/applied-systems-biology.github.io/misa-framework/images/favicon.png" type="image/x-icon" />
+<link href="/applied-systems-biology.github.io/misa-framework/css/font-awesome.min.css" rel="stylesheet">
+<link href="/applied-systems-biology.github.io/misa-framework/css/nucleus.css" rel="stylesheet">
+<link href="/applied-systems-biology.github.io/misa-framework/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/applied-systems-biology.github.io/misa-framework/css/bootstrap.min.css">
+<script src="/applied-systems-biology.github.io/misa-framework/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "applied-systems-biology.github.io\/misa-framework\/";
+</script>
+<link rel="stylesheet" href="/css/custom.css">
+
+
+    
+  </head>
+  <body data-url="applied-systems-biology.github.io/misa-framework/cpp-framework/building/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><a href="/" target="_self"><img src="/img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span></p>
+
+  
+
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="applied-systems-biology.github.io/misa-framework/download"  rel="noopener">
+                  <i class='fa fa-cloud-download'></i> <label>Download</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="applied-systems-biology.github.io/misa-framework/citation"  rel="noopener">
+                  <i class='fa fa-paragraph'></i> <label>Citation</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/applied-systems-biology.github.io/misa-framework/" class="dd-item">
+          <a href="/applied-systems-biology.github.io/misa-framework/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="applied-systems-biology.github.io/misa-framework/imagej/">ImageJ plugin</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/installation/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/imagej/installation/">
+            Installation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/step-by-step/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/imagej/step-by-step/">
+            Tutorial: Step by step analysis
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/module-manager/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/imagej/module-manager/">
+            Managing applications
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/analyzing-data/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/imagej/analyzing-data/">
+            Analyzing data
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/creating-pipelines/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/imagej/creating-pipelines/">
+            Creating pipelines
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/">Analyzing results</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/output-data/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/output-data/">
+            Evaluating output data
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/quantification-results/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/quantification-results/">
+            Browsing quantification results
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/table-analyzer/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/table-analyzer/">
+            Summarizing quantification results
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/plot-builder/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/plot-builder/">
+            Creating plots
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/runtime-log/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/runtime-log/">
+            Analyzing the runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/credits/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/imagej/credits/">
+            Credits
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/">C&#43;&#43; Framework</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/building/" class="dd-item parent active haschildren
+        ">
+      <div>
+      <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/building/">Building</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/building/windows-msys2/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/building/windows-msys2/">
+            Building on Windows
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/running/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/running/">
+            Running
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/development/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/development/">Development</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/development/prerequisites/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/development/prerequisites/">
+            Prerequisites
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/development/development-environment/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/development/development-environment/">
+            Setting up a project
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/development/declaring-data/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/development/declaring-data/">
+            Declaring data
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-tasks/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-tasks/">
+            Creating tasks
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-dispatchers/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-dispatchers/">
+            Creating dispatchers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/development/dispatching-submodules/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/development/dispatching-submodules/">
+            Dispatching submodules
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/development/attaching-data/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/development/attaching-data/">
+            Attaching data
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-caches/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-caches/">
+            Creating caches
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/development/tips/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/development/tips/">
+            Tips and tricks
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/">Standards</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/attachments/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/attachments/">
+            Attachments
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/module-info/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/module-info/">
+            Module info
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/parameter-schema/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/parameter-schema/">
+            Parameter schema
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/parameters/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/parameters/">
+            Parameters
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/public-api/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/public-api/">
+            Public API
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/output-data/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/output-data/">
+            Result folder
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/runtime-log/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/runtime-log/">
+            Runtime log
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/serialization-id/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/serialization-id/">
+            Serialization ID
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/glossary/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/glossary/">
+            Glossary
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/references/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/references/">
+            Class reference
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/credits/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/credits/">
+            Credits
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="applied-systems-biology.github.io/misa-framework/download/" class="dd-item
+        ">
+      <div>
+      <a href="applied-systems-biology.github.io/misa-framework/download/">Download</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="applied-systems-biology.github.io/misa-framework/citation/" class="dd-item
+        ">
+      <div>
+      <a href="applied-systems-biology.github.io/misa-framework/citation/">Citation</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="applied-systems-biology.github.io/misa-framework/imagej/" >
+   ImageJ plugin</option>
+    <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/" >
+   C&#43;&#43; Framework</option> 
+    <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/building/"  selected>
+  - 
+   Building</option> 
+      <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/building/windows-msys2/" >-- Building on Windows</option>
+  
+      <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/running/" >- Running</option>
+    <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/development/" >
+  - 
+   Development</option>
+    <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/" >
+  - 
+   Standards</option>
+      <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/glossary/" >- Glossary</option>
+      <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/references/" >- Class reference</option>
+      <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/credits/" >- Credits</option>
+  
+    <option value="applied-systems-biology.github.io/misa-framework/download/" >
+   Download</option>
+    <option value="applied-systems-biology.github.io/misa-framework/citation/" >
+   Citation</option>
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/applied-systems-biology.github.io/misa-framework/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/applied-systems-biology.github.io/misa-framework/js/auto-complete.js"></script>
+        <link href="/applied-systems-biology.github.io/misa-framework/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "applied-systems-biology.github.io\/misa-framework\/";
+          
+        </script>
+        <script type="text/javascript" src="/applied-systems-biology.github.io/misa-framework/js/search.js"></script>
+      </div>
+    
+
+    <h1>Building</h1>
+    
+    
+    
+
+<p>MISA++ uses the <a href="https://cmake.org/">CMake</a> build system (version 3.12 or higher) and is designed around
+the GCC compiler. We tested compilation under GCC version 7.3.</p>
+
+<p>If you want to use another compiler, check if it supports C++ 2017 or higher and
+OpenMP 4.5 or higher. We only used OpenMP 3.x features, so using an older OpenMP
+version might work.</p>
+
+<p>You will also need following additional libraries:</p>
+
+<table>
+<thead>
+<tr>
+<th>Library</th>
+<th>Version</th>
+<th>Notes</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Boost</td>
+<td>1.67</td>
+<td></td>
+</tr>
+
+<tr>
+<td>SQLite</td>
+<td>3</td>
+<td></td>
+</tr>
+
+<tr>
+<td>OME files</td>
+<td>0.5.0</td>
+<td>See <a href="https://www.openmicroscopy.org/">https://www.openmicroscopy.org/</a> for download and build instructions</td>
+</tr>
+
+<tr>
+<td>OpenCV</td>
+<td>4.0</td>
+<td>OpenCV 3.x might also work</td>
+</tr>
+
+<tr>
+<td>JSON for Modern C++</td>
+<td>3.5.0</td>
+<td>See <a href="https://github.com/nlohmann/json">https://github.com/nlohmann/json</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>The MISA++ libraries and applications we provide depend on each other:</p>
+
+<link href="/applied-systems-biology.github.io/misa-framework/mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
+<script defer src="/applied-systems-biology.github.io/misa-framework/mermaid/mermaid.js">mermaid.initialize({startOnLoad:true});</script>
+<div class="mermaid" align="center" >
+graph TB;
+A[MISA++ Core] --> B[MISA++ Imaging]
+A --> C[MISA++ Result Analyzer]
+B --> D[MISA++ OME]
+D --> E["MISA++ Tissue Segmentation"]
+E --> F["MISA++ Kidney Glomeruli Segmentation"]
+B --> G["MISA++ OME Visualizer"]
+</div>
+
+<p>Please make sure to build the dependencies the correct order.</p>
+
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="applied-systems-biology.github.io/misa-framework/cpp-framework/" title="C&#43;&#43; Framework"> <i class="fa fa-chevron-left"></i><label>C&#43;&#43; Framework</label></a>
+    <a class="nav nav-next" href="applied-systems-biology.github.io/misa-framework/cpp-framework/building/windows-msys2/" title="Building on Windows" style="margin-right: 0px;"><label>Building on Windows</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+    <div class="author">
+        <i class='fa fa-user'></i> <a href="mailto:ruman.gerst@leibniz-hki.de">Ruman Gerst</a>
+    </div>
+    
+
+    
+
+    
+  </div>
+
+
+	<div>
+
+
+  
+    <p>By <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html">Applied Systems Biology, Leibniz Institute for Natural Product Research and Infection Biology – Hans Knöll Institute (HKI), Jena, Germany</a></p>
+
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/applied-systems-biology.github.io/misa-framework/js/clipboard.min.js"></script>
+
+<link href="/applied-systems-biology.github.io/misa-framework/css/featherlight.min.css" rel="stylesheet">
+<script src="/applied-systems-biology.github.io/misa-framework/js/featherlight.min.js"></script>
+
+
+
+<script src="/applied-systems-biology.github.io/misa-framework/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Building on MISA&#43;&#43; Framework</title>
+    <link>applied-systems-biology.github.io/misa-framework/cpp-framework/building/</link>
+    <description>Recent content in Building on MISA&#43;&#43; Framework</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="applied-systems-biology.github.io/misa-framework/cpp-framework/building/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Building on Windows</title>
+      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/building/windows-msys2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/building/windows-msys2/</guid>
+      <description>We tested building on Windows via the MSYS2 environment.
+Please note that the Visual Studio compiler is not supported due to missing OpenMP 3.x capabilities.
+ Prerequisites  Download and install MSYS2. Start MSYS2 (MinGW 64-bit) and update the packages by typing pacman -Syyu Let the process finish and close the terminal as instructed Restart MSYS2 (MinGW 64-bit)  Using the superbuild script We provide fully automated scripts that installs MISA++ Core, the modules we provide, and all necessary dependencies.</description>
+    </item>
+    
+  </channel>
+</rss>

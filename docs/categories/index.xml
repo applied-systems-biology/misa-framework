@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on MISA&#43;&#43; Framework</title>
+    <link>applied-systems-biology.github.io/misa-framework/categories/</link>
+    <description>Recent content in Categories on MISA&#43;&#43; Framework</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="applied-systems-biology.github.io/misa-framework/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

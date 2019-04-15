@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MISA&#43;&#43; Framework</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2019-04-15T17:34:14 CEST">
+<title>Creating caches :: MISA&#43;&#43; Framework</title>
+<link rel="shortcut icon" href="/applied-systems-biology.github.io/misa-framework/images/favicon.png" type="image/x-icon" />
+<link href="/applied-systems-biology.github.io/misa-framework/css/font-awesome.min.css" rel="stylesheet">
+<link href="/applied-systems-biology.github.io/misa-framework/css/nucleus.css" rel="stylesheet">
+<link href="/applied-systems-biology.github.io/misa-framework/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/applied-systems-biology.github.io/misa-framework/css/bootstrap.min.css">
+<script src="/applied-systems-biology.github.io/misa-framework/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "applied-systems-biology.github.io\/misa-framework\/";
+</script>
+<link rel="stylesheet" href="/css/custom.css">
+
+
+    
+  </head>
+  <body data-url="applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-caches/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><a href="/" target="_self"><img src="/img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span></p>
+
+  
+
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="applied-systems-biology.github.io/misa-framework/download"  rel="noopener">
+                  <i class='fa fa-cloud-download'></i> <label>Download</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="applied-systems-biology.github.io/misa-framework/citation"  rel="noopener">
+                  <i class='fa fa-paragraph'></i> <label>Citation</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/applied-systems-biology.github.io/misa-framework/" class="dd-item">
+          <a href="/applied-systems-biology.github.io/misa-framework/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="applied-systems-biology.github.io/misa-framework/imagej/">ImageJ plugin</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/installation/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/imagej/installation/">
+            Installation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/step-by-step/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/imagej/step-by-step/">
+            Tutorial: Step by step analysis
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/module-manager/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/imagej/module-manager/">
+            Managing applications
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/analyzing-data/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/imagej/analyzing-data/">
+            Analyzing data
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/creating-pipelines/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/imagej/creating-pipelines/">
+            Creating pipelines
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/">Analyzing results</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/output-data/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/output-data/">
+            Evaluating output data
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/quantification-results/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/quantification-results/">
+            Browsing quantification results
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/table-analyzer/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/table-analyzer/">
+            Summarizing quantification results
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/plot-builder/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/plot-builder/">
+            Creating plots
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/runtime-log/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/runtime-log/">
+            Analyzing the runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/imagej/credits/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/imagej/credits/">
+            Credits
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/">C&#43;&#43; Framework</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/building/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/building/">Building</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/building/windows-msys2/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/building/windows-msys2/">
+            Building on Windows
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/running/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/running/">
+            Running
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/development/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/development/">Development</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/development/prerequisites/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/development/prerequisites/">
+            Prerequisites
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/development/development-environment/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/development/development-environment/">
+            Setting up a project
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/development/declaring-data/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/development/declaring-data/">
+            Declaring data
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-tasks/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-tasks/">
+            Creating tasks
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-dispatchers/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-dispatchers/">
+            Creating dispatchers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/development/dispatching-submodules/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/development/dispatching-submodules/">
+            Dispatching submodules
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/development/attaching-data/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/development/attaching-data/">
+            Attaching data
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-caches/" class="dd-item active">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-caches/">
+            Creating caches
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/development/tips/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/development/tips/">
+            Tips and tricks
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/">Standards</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/attachments/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/attachments/">
+            Attachments
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/module-info/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/module-info/">
+            Module info
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/parameter-schema/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/parameter-schema/">
+            Parameter schema
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/parameters/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/parameters/">
+            Parameters
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/public-api/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/public-api/">
+            Public API
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/output-data/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/output-data/">
+            Result folder
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/runtime-log/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/runtime-log/">
+            Runtime log
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/serialization-id/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/serialization-id/">
+            Serialization ID
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/glossary/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/glossary/">
+            Glossary
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/references/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/references/">
+            Class reference
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="applied-systems-biology.github.io/misa-framework/cpp-framework/credits/" class="dd-item">
+        <div>
+          <a href="applied-systems-biology.github.io/misa-framework/cpp-framework/credits/">
+            Credits
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="applied-systems-biology.github.io/misa-framework/download/" class="dd-item
+        ">
+      <div>
+      <a href="applied-systems-biology.github.io/misa-framework/download/">Download</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="applied-systems-biology.github.io/misa-framework/citation/" class="dd-item
+        ">
+      <div>
+      <a href="applied-systems-biology.github.io/misa-framework/citation/">Citation</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="applied-systems-biology.github.io/misa-framework/imagej/" >
+   ImageJ plugin</option>
+    <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/" >
+   C&#43;&#43; Framework</option> 
+    <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/building/" >
+  - 
+   Building</option>
+      <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/running/" >- Running</option>
+    <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/development/" >
+  - 
+   Development</option> 
+      <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/development/prerequisites/" >-- Prerequisites</option>
+      <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/development/development-environment/" >-- Setting up a project</option>
+      <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/development/declaring-data/" >-- Declaring data</option>
+      <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-tasks/" >-- Creating tasks</option>
+      <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-dispatchers/" >-- Creating dispatchers</option>
+      <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/development/dispatching-submodules/" >-- Dispatching submodules</option>
+      <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/development/attaching-data/" >-- Attaching data</option>
+      <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-caches/"  selected>-- Creating caches</option>
+      <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/development/tips/" >-- Tips and tricks</option>
+  
+    <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/standards/" >
+  - 
+   Standards</option>
+      <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/glossary/" >- Glossary</option>
+      <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/references/" >- Class reference</option>
+      <option value="applied-systems-biology.github.io/misa-framework/cpp-framework/credits/" >- Credits</option>
+  
+    <option value="applied-systems-biology.github.io/misa-framework/download/" >
+   Download</option>
+    <option value="applied-systems-biology.github.io/misa-framework/citation/" >
+   Citation</option>
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/applied-systems-biology.github.io/misa-framework/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/applied-systems-biology.github.io/misa-framework/js/auto-complete.js"></script>
+        <link href="/applied-systems-biology.github.io/misa-framework/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "applied-systems-biology.github.io\/misa-framework\/";
+          
+        </script>
+        <script type="text/javascript" src="/applied-systems-biology.github.io/misa-framework/js/search.js"></script>
+      </div>
+    
+
+    <h1>Creating caches</h1>
+    
+    
+    
+    
+
+<p>This guide will show you how to create your own cache types. A cache data type consists of four different classes:</p>
+
+<ul>
+<li>The cache implementation</li>
+<li>The cache accessor</li>
+<li>A pattern</li>
+<li>A description</li>
+</ul>
+
+<p>The cache implementation is responsible for dynamically loading and unloading data from/to a folder that is located within the filesystem. Such a folder on the other hand can contain many different files with different names, while an image file cache would for example look for a specific image file within this folder.</p>
+
+<p>Instead of cache-specific functions like a <code>set_file(path)</code> function, a <em>description</em>
+is used as input of a cache. It uses this description to set all internal parameters to function correctly. Descriptions are serializable, making them portable. The <code>describe()</code> function of a cache allows access to this description and implementation-independent modification of its values. This enables easy derivation of exported data from imported data.</p>
+
+<p>A description on the other hand just contains already defined parameters (like for example the filename), which does not solve the issue of caches containing vastly different files. <em>Patterns</em> are objects with the purpose of creating a description from its a folder in a filesystem.</p>
+
+<p>A cache <em>accessor</em> is a shared-pointer-like object with the purpose of allowing easy access to the functionality of a cache. You can use it to add convenient methods that make it easier to work with the specific cache type.</p>
+
+<div class="notices info" ><p>The module interface and workers access a cache only via a cache accessor.</p>
+</div>
+
+
+<link href="/applied-systems-biology.github.io/misa-framework/mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
+<script defer src="/applied-systems-biology.github.io/misa-framework/mermaid/mermaid.js">mermaid.initialize({startOnLoad:true});</script>
+<div class="mermaid" align="center" >
+graph TD;
+Pattern-->|Produce|Description
+Description-->|Link|Cache
+Cache-->|Describe|Description
+Filesystem-->|Produce|Description
+Accessor-->|Access|Cache
+Accessor-.-I["Module interface"]
+</div>
+
+<p>The base types of the necessary cache components are:</p>
+
+<ul>
+<li><code>misaxx::misa_cache</code> and any of <code>misaxx::utils::access::cache</code> for caches</li>
+<li><code>misaxx::misa_cached_data</code> for accessors</li>
+<li><code>misaxx::misa_data_pattern</code> for patterns</li>
+<li><code>misaxx::misa_data_description</code> for desciptions</li>
+</ul>
+
+<h1 id="creating-the-cache-implementation">Creating the cache implementation</h1>
+
+<p>We first show you to use our <code>misaxx::misa_default_cache</code> helper that automates many functions that you would need to define manually.</p>
+
+<p>The <code>misaxx::misa_default_cache</code> helper requires three template arguments:</p>
+
+<ul>
+<li>A mutexed cache of type <code>misaxx::utils::access::cache</code> or <code>misaxx::utils::access::memory_cache</code></li>
+<li>The pattern type</li>
+<li>The description type</li>
+</ul>
+
+<blockquote>
+<p>Please make sure to create a cache-specific description type. This is needed to later identify the cache type. Optional for the pattern type.</p>
+</blockquote>
+
+<p>The <em>mutexed cache</em> is a utility type that models the actual read and write access of the cache implementation. If you create a cache with a small enough footprint that allows it to be stored within memory, you can use <code>misaxx::utils::access::memory_cache</code> instead.</p>
+
+<h2 id="linking-simulating-and-postprocessing">Linking, Simulating and Postprocessing</h2>
+
+<p>The <code>misaxx::misa_default_cache</code> requires you to override following functions:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#111">Description</span> <span style="color:#75af00">produce_description</span><span style="color:#111">(</span><span style="color:#00a8c8">const</span> <span style="color:#111">boost</span><span style="color:#f92672">::</span><span style="color:#111">filesystem</span><span style="color:#f92672">::</span><span style="color:#111">path</span> <span style="color:#f92672">&amp;</span><span style="color:#111">,</span> <span style="color:#00a8c8">const</span> <span style="color:#111">Pattern</span> <span style="color:#f92672">&amp;</span><span style="color:#111">);</span>
+<span style="color:#00a8c8">void</span> <span style="color:#75af00">do_link</span><span style="color:#111">(</span><span style="color:#00a8c8">const</span> <span style="color:#f92672">&lt;</span><span style="color:#111">Description</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span><span style="color:#111">t_description</span><span style="color:#111">);</span>
+<span style="color:#00a8c8">void</span> <span style="color:#75af00">simulate_link</span><span style="color:#111">();</span> <span style="color:#75715e">// Optional
+</span><span style="color:#75715e"></span><span style="color:#00a8c8">void</span> <span style="color:#111">postprocess</span><span style="color:#111">()</span> <span style="color:#75715e">// Optional
+</span><span style="color:#75715e"></span></code></pre></div>
+<p>The <code>produce_description()</code> function is responsible for creating applying the pattern and generating a description that allows the link function to find all necessary data within the folder.</p>
+
+<p>The main link function is <code>do_link()</code>. It takes the description type of the cache and allows you to setup all internal functionality to make reading and writing work. It is only called if the runtime is not creating a parameter schema.</p>
+
+<p>If a parameter schema is created, <code>simulate_link()</code> is called instead. By default, it will ensure that <code>describe()</code> returns a storage that contains both the pattern and description type. If you want to add additional information, just override this method.</p>
+
+<h3 id="example">Example</h3>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">// The parameter schema will have the information that the pattern looks for JSON files
+</span><span style="color:#75715e"></span><span style="color:#00a8c8">void</span> <span style="color:#111">my_cache</span><span style="color:#f92672">::</span><span style="color:#111">simulate_link</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+    <span style="color:#111">describe</span><span style="color:#111">()</span><span style="color:#f92672">-&gt;</span><span style="color:#111">set</span><span style="color:#111">(</span><span style="color:#111">misa_file_pattern</span><span style="color:#111">({</span> <span style="color:#d88200">&#34;.json&#34;</span> <span style="color:#111">}));</span>
+    <span style="color:#111">describe</span><span style="color:#111">()</span><span style="color:#f92672">-&gt;</span><span style="color:#111">access</span><span style="color:#f92672">&lt;</span><span style="color:#111">misa_file_description</span><span style="color:#f92672">&gt;</span><span style="color:#111">();</span>
+<span style="color:#111">}</span>
+</code></pre></div>
+<h3 id="postprocessing">Postprocessing</h3>
+
+<p>The <code>postprocess()</code> method will be called after the runtime has finished all tasks you can use it to clean up the cache or finalize the output.</p>
+
+<h2 id="location-and-unique-location">Location and unique location</h2>
+
+<p>A cache always has a <em>location</em> that corresponds to the location provided in the link function. It is automatically set by the default cache.</p>
+
+<p>Additionally, there is an <em>unique location</em> that should always point to some file within the cache&rsquo;s location folder (use <code>get_location()</code> to obtain it). <strong>Please do not forget to set this unique location using set_unique_location() somewhere in do_link()</strong></p>
+
+<h2 id="sub-caches">Sub-caches</h2>
+
+<p>You can define sub-caches that are manually linked during <code>do_link()</code>. Just make sure that their location is equal to the location of the main cache and that their <strong>unique</strong> location is unique.</p>
+
+<h2 id="thread-safe-data-access">Thread-safe data access</h2>
+
+<p>A cache implementation always inherits from a mutexed cache of type <code>misaxx::utils::access::cache</code>. It will require you to override following methods as well:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#111">T</span> <span style="color:#f92672">&amp;</span><span style="color:#111">get</span><span style="color:#111">()</span> <span style="color:#00a8c8">override</span><span style="color:#111">;</span>
+<span style="color:#00a8c8">const</span> <span style="color:#111">T</span> <span style="color:#f92672">&amp;</span><span style="color:#111">get</span><span style="color:#111">()</span> <span style="color:#00a8c8">const</span> <span style="color:#00a8c8">override</span><span style="color:#111">;</span>
+<span style="color:#00a8c8">void</span> <span style="color:#75af00">set</span><span style="color:#111">(</span><span style="color:#111">T</span> <span style="color:#111">value</span><span style="color:#111">)</span> <span style="color:#00a8c8">override</span><span style="color:#111">;</span>
+<span style="color:#00a8c8">bool</span> <span style="color:#75af00">has</span><span style="color:#111">()</span> <span style="color:#00a8c8">const</span> <span style="color:#00a8c8">override</span><span style="color:#111">;</span>
+<span style="color:#00a8c8">bool</span> <span style="color:#75af00">can_pull</span><span style="color:#111">()</span> <span style="color:#00a8c8">const</span> <span style="color:#00a8c8">override</span><span style="color:#111">;</span>
+<span style="color:#00a8c8">void</span> <span style="color:#75af00">pull</span><span style="color:#111">()</span> <span style="color:#00a8c8">override</span><span style="color:#111">;</span>
+<span style="color:#00a8c8">void</span> <span style="color:#75af00">stash</span><span style="color:#111">()</span> <span style="color:#00a8c8">override</span><span style="color:#111">;</span>
+<span style="color:#00a8c8">void</span> <span style="color:#75af00">push</span><span style="color:#111">()</span> <span style="color:#00a8c8">override</span><span style="color:#111">;</span>
+</code></pre></div>
+<p>The get and set functions do what you would expect. <code>pull()</code> is responsible for loading data into memory, while <code>push()</code> is responsible for writing the current data to files on the harddrive. <code>push()</code> should <strong>not</strong> clear the data. <code>stash()</code> will be called to do only this if necessary. <code>can_pull()</code> should return if loading is possible (e.g. if the file exists).</p>
+
+<p>All methods are called from a thread-safe environment using a shared mutex:</p>
+
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Access</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>get</td>
+<td>shared</td>
+</tr>
+
+<tr>
+<td>has</td>
+<td>shared</td>
+</tr>
+
+<tr>
+<td>can_pull</td>
+<td>shared</td>
+</tr>
+
+<tr>
+<td>pull</td>
+<td>exclusive</td>
+</tr>
+
+<tr>
+<td>stash</td>
+<td>exclusive</td>
+</tr>
+
+<tr>
+<td>push</td>
+<td>exclusive</td>
+</tr>
+</tbody>
+</table>
+
+<div class="notices warning" ><p>Do not call <code>get()</code>, <code>has()</code>, etc. manually unless you know exactly what you do.
+Use <code>readonly_access()</code>, <code>write_access()</code> and <code>readwrite_access()</code> that are provided by the accessor!</p>
+</div>
+
+
+<h2 id="the-cache-accessor">The cache accessor</h2>
+
+<p>A cache accessor is a shared pointer to a cache implementation. It contains additional functions to interact with the cache.</p>
+
+<p>Just inherit from <code>misa_cached_data&lt;CacheImplementation&gt;</code>. You can also inherit from <code>misa_description_accessors_from_cache&lt;CacheImplementation, SELF&gt;</code> to automatically add convenient access to caches that are based on <code>misa_default_cache</code>.</p>
+
+<div class="panel panel-default">
+	<div class="panel-heading">Example</div>
+	<div class="panel-body"><p>We will create a cache that provides access to an integer. It will be stored in a file, so it is sufficient to just use a file pattern and derive our description from misa_file_description.</p>
+
+<h3 id="the-pattern">The pattern</h3>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">/**
+</span><span style="color:#75715e">patterns/integer_pattern.h
+</span><span style="color:#75715e">*/</span>
+
+<span style="color:#00a8c8">struct</span> <span style="color:#111">integer_pattern</span> <span style="color:#111">:</span> <span style="color:#00a8c8">public</span> <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_file_pattern</span> <span style="color:#111">{</span>
+  <span style="color:#75715e">// We only look for .integer files
+</span><span style="color:#75715e"></span>  <span style="color:#111">integer_description</span><span style="color:#111">()</span> <span style="color:#f92672">:</span> <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_file_pattern</span><span style="color:#111">({</span> <span style="color:#d88200">&#34;.integer&#34;</span> <span style="color:#111">})</span> <span style="color:#111">{</span>
+
+  <span style="color:#111">}</span>
+<span style="color:#00a8c8">protected</span><span style="color:#f92672">:</span>
+      <span style="color:#00a8c8">void</span> <span style="color:#111">build_serialization_id_hierarchy</span><span style="color:#111">(</span><span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">vector</span><span style="color:#f92672">&lt;</span><span style="color:#111">misa_serialization_id</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span><span style="color:#111">result</span><span style="color:#111">)</span> <span style="color:#00a8c8">const</span> <span style="color:#00a8c8">override</span><span style="color:#111">;</span>
+<span style="color:#111">}</span>
+
+<span style="color:#00a8c8">inline</span> <span style="color:#00a8c8">void</span> <span style="color:#111">to_json</span><span style="color:#111">(</span><span style="color:#111">nlohmann</span><span style="color:#f92672">::</span><span style="color:#111">json</span><span style="color:#f92672">&amp;</span> <span style="color:#111">j</span><span style="color:#111">,</span> <span style="color:#00a8c8">const</span> <span style="color:#111">integer_pattern</span><span style="color:#f92672">&amp;</span> <span style="color:#111">p</span><span style="color:#111">);</span>
+<span style="color:#00a8c8">inline</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">from_json</span><span style="color:#111">(</span><span style="color:#00a8c8">const</span> <span style="color:#111">nlohmann</span><span style="color:#f92672">::</span><span style="color:#111">json</span><span style="color:#f92672">&amp;</span> <span style="color:#111">j</span><span style="color:#111">,</span> <span style="color:#111">integer_pattern</span><span style="color:#f92672">&amp;</span> <span style="color:#111">p</span><span style="color:#111">);</span>
+</code></pre></div>
+<h3 id="the-description">The description</h3>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">/**
+</span><span style="color:#75715e">descriptions/integer_description.h
+</span><span style="color:#75715e">*/</span>
+
+<span style="color:#00a8c8">struct</span> <span style="color:#111">integer_description</span> <span style="color:#111">:</span> <span style="color:#00a8c8">public</span> <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_file_description</span> <span style="color:#111">{</span>
+  <span style="color:#00a8c8">using</span> <span style="color:#111">misa_file_description</span><span style="color:#f92672">::</span><span style="color:#111">misa_file_description</span><span style="color:#111">;</span>
+<span style="color:#00a8c8">protected</span><span style="color:#f92672">:</span>
+      <span style="color:#00a8c8">void</span> <span style="color:#111">build_serialization_id_hierarchy</span><span style="color:#111">(</span><span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">vector</span><span style="color:#f92672">&lt;</span><span style="color:#111">misa_serialization_id</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span><span style="color:#111">result</span><span style="color:#111">)</span> <span style="color:#00a8c8">const</span> <span style="color:#00a8c8">override</span><span style="color:#111">;</span>
+<span style="color:#111">}</span>
+
+<span style="color:#00a8c8">inline</span> <span style="color:#00a8c8">void</span> <span style="color:#111">to_json</span><span style="color:#111">(</span><span style="color:#111">nlohmann</span><span style="color:#f92672">::</span><span style="color:#111">json</span><span style="color:#f92672">&amp;</span> <span style="color:#111">j</span><span style="color:#111">,</span> <span style="color:#00a8c8">const</span> <span style="color:#111">integer_description</span><span style="color:#f92672">&amp;</span> <span style="color:#111">p</span><span style="color:#111">);</span>
+<span style="color:#00a8c8">inline</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">from_json</span><span style="color:#111">(</span><span style="color:#00a8c8">const</span> <span style="color:#111">nlohmann</span><span style="color:#f92672">::</span><span style="color:#111">json</span><span style="color:#f92672">&amp;</span> <span style="color:#111">j</span><span style="color:#111">,</span> <span style="color:#111">integer_description</span><span style="color:#f92672">&amp;</span> <span style="color:#111">p</span><span style="color:#111">);</span>
+</code></pre></div>
+<h3 id="the-cache-implementation">The cache implementation</h3>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">/**
+</span><span style="color:#75715e">caches/integer_cache.h
+</span><span style="color:#75715e">*/</span>
+
+<span style="color:#00a8c8">struct</span> <span style="color:#111">integer_cache</span> <span style="color:#111">:</span> <span style="color:#00a8c8">public</span> <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_default_cache</span><span style="color:#f92672">&lt;</span>
+  <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">utils</span><span style="color:#f92672">::</span><span style="color:#111">access</span><span style="color:#f92672">::</span><span style="color:#111">cache</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">int</span><span style="color:#f92672">&gt;</span><span style="color:#111">,</span>
+  <span style="color:#111">integer_pattern</span><span style="color:#111">,</span>
+  <span style="color:#111">integer_description</span><span style="color:#f92672">&gt;</span> <span style="color:#111">{</span>
+
+    <span style="color:#75715e">// Inherited from mutexed cache. Just plain I/O
+</span><span style="color:#75715e"></span>    <span style="color:#00a8c8">int</span> <span style="color:#f92672">&amp;</span><span style="color:#111">get</span><span style="color:#111">()</span> <span style="color:#111">{</span> <span style="color:#00a8c8">return</span> <span style="color:#111">m_value</span><span style="color:#111">.</span><span style="color:#111">get</span><span style="color:#111">();</span> <span style="color:#111">}</span>
+
+    <span style="color:#00a8c8">const</span> <span style="color:#00a8c8">int</span> <span style="color:#f92672">&amp;</span><span style="color:#111">get</span><span style="color:#111">()</span> <span style="color:#00a8c8">const</span> <span style="color:#111">{</span> <span style="color:#00a8c8">return</span> <span style="color:#111">m_value</span><span style="color:#111">.</span><span style="color:#111">get</span><span style="color:#111">();</span> <span style="color:#111">}</span>
+
+    <span style="color:#00a8c8">void</span> <span style="color:#111">set</span><span style="color:#111">(</span><span style="color:#00a8c8">int</span> <span style="color:#111">v</span><span style="color:#111">)</span> <span style="color:#111">{</span> <span style="color:#111">m_value</span> <span style="color:#f92672">=</span> <span style="color:#111">v</span><span style="color:#111">;</span> <span style="color:#111">}</span>
+
+    <span style="color:#00a8c8">bool</span> <span style="color:#111">has</span><span style="color:#111">()</span> <span style="color:#00a8c8">const</span> <span style="color:#111">{</span> <span style="color:#00a8c8">return</span> <span style="color:#111">m_value</span><span style="color:#111">.</span><span style="color:#111">has_value</span><span style="color:#111">();</span> <span style="color:#111">}</span>
+
+    <span style="color:#00a8c8">bool</span> <span style="color:#111">can_pull</span><span style="color:#111">()</span> <span style="color:#00a8c8">const</span> <span style="color:#111">{</span> <span style="color:#00a8c8">return</span> <span style="color:#111">boost</span><span style="color:#f92672">::</span><span style="color:#111">filesystem</span><span style="color:#f92672">::</span><span style="color:#111">exists</span><span style="color:#111">(</span><span style="color:#111">m_path</span><span style="color:#111">);</span> <span style="color:#111">}</span>
+
+    <span style="color:#00a8c8">void</span> <span style="color:#111">stash</span><span style="color:#111">()</span> <span style="color:#111">{</span> <span style="color:#111">m_value</span> <span style="color:#f92672">=</span> <span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">nullopt</span><span style="color:#111">;</span> <span style="color:#111">}</span>
+
+    <span style="color:#00a8c8">void</span> <span style="color:#111">pull</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+      <span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">ifstream</span> <span style="color:#111">r</span><span style="color:#111">;</span>
+      <span style="color:#111">r</span><span style="color:#111">.</span><span style="color:#111">open</span><span style="color:#111">(</span><span style="color:#111">m_path</span><span style="color:#111">.</span><span style="color:#111">string</span><span style="color:#111">());</span>
+      <span style="color:#00a8c8">int</span> <span style="color:#111">v</span><span style="color:#111">;</span>
+      <span style="color:#111">r</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#111">v</span><span style="color:#111">;</span>
+      <span style="color:#111">m_value</span> <span style="color:#f92672">=</span> <span style="color:#111">v</span><span style="color:#111">;</span>
+    <span style="color:#111">}</span>
+
+    <span style="color:#00a8c8">void</span> <span style="color:#111">push</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+      <span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">ofstream</span> <span style="color:#111">w</span><span style="color:#111">;</span>
+      <span style="color:#111">w</span><span style="color:#111">.</span><span style="color:#111">open</span><span style="color:#111">(</span><span style="color:#111">m_path</span><span style="color:#111">.</span><span style="color:#111">string</span><span style="color:#111">())</span>
+      <span style="color:#111">w</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#111">m_value</span><span style="color:#111">.</span><span style="color:#111">get</span><span style="color:#111">();</span>
+    <span style="color:#111">}</span>
+
+    <span style="color:#75715e">// Linkage, simulation &amp; postprocessing
+</span><span style="color:#75715e"></span><span style="color:#00a8c8">protected</span><span style="color:#f92672">:</span>
+
+    <span style="color:#111">integer_description</span> <span style="color:#111">produce_description</span><span style="color:#111">(</span><span style="color:#00a8c8">const</span> <span style="color:#111">boost</span><span style="color:#f92672">::</span><span style="color:#111">filesystem</span><span style="color:#f92672">::</span><span style="color:#111">path</span> <span style="color:#f92672">&amp;</span><span style="color:#111">path</span><span style="color:#111">,</span> <span style="color:#00a8c8">const</span> <span style="color:#111">integer_pattern</span> <span style="color:#f92672">&amp;</span><span style="color:#111">pattern</span><span style="color:#111">)</span> <span style="color:#00a8c8">override</span> <span style="color:#111">{</span>
+      <span style="color:#111">integer_description</span> <span style="color:#111">description</span><span style="color:#111">;</span>
+      <span style="color:#111">pattern</span><span style="color:#111">.</span><span style="color:#111">apply</span><span style="color:#111">(</span><span style="color:#111">description</span><span style="color:#111">,</span> <span style="color:#111">path</span><span style="color:#111">);</span> <span style="color:#75715e">// Functionality of misa_file_pattern
+</span><span style="color:#75715e"></span>      <span style="color:#00a8c8">return</span> <span style="color:#111">description</span><span style="color:#111">;</span>
+    <span style="color:#111">}</span>
+
+<span style="color:#00a8c8">public</span><span style="color:#f92672">:</span>
+
+    <span style="color:#00a8c8">void</span> <span style="color:#111">do_link</span><span style="color:#111">(</span><span style="color:#00a8c8">const</span> <span style="color:#111">integer_description</span> <span style="color:#f92672">&amp;</span><span style="color:#111">description</span><span style="color:#111">)</span> <span style="color:#00a8c8">override</span> <span style="color:#111">{</span>
+      <span style="color:#75715e">// Just take the filename in this case
+</span><span style="color:#75715e"></span>      <span style="color:#111">m_path</span> <span style="color:#f92672">=</span> <span style="color:#111">get_location</span><span style="color:#111">()</span> <span style="color:#f92672">/</span> <span style="color:#111">description</span><span style="color:#111">.</span><span style="color:#111">filename</span><span style="color:#111">;</span>
+
+      <span style="color:#75715e">// VERY IMPORTANT
+</span><span style="color:#75715e"></span>      <span style="color:#111">set_unique_location</span><span style="color:#111">(</span><span style="color:#111">m_path</span><span style="color:#111">);</span>
+    <span style="color:#111">}</span>
+
+    <span style="color:#00a8c8">void</span> <span style="color:#111">postprocess</span><span style="color:#111">()</span> <span style="color:#00a8c8">override</span> <span style="color:#111">{</span>
+      <span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">cout</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#d88200">&#34;Nothing&#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#d88200">&#34;</span><span style="color:#8045ff">\n</span><span style="color:#d88200">&#34;</span><span style="color:#111">;</span>
+    <span style="color:#111">}</span>
+
+<span style="color:#00a8c8">private</span><span style="color:#f92672">:</span>
+    <span style="color:#111">boost</span><span style="color:#f92672">::</span><span style="color:#111">filesystem</span><span style="color:#f92672">::</span><span style="color:#111">path</span> <span style="color:#111">m_path</span><span style="color:#111">;</span>
+    <span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">optional</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">int</span><span style="color:#f92672">&gt;</span> <span style="color:#111">m_value</span><span style="color:#111">;</span>
+<span style="color:#111">}</span>
+</code></pre></div>
+<h3 id="cache-accessor">Cache accessor</h3>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">/**
+</span><span style="color:#75715e">accessors/integer.h
+</span><span style="color:#75715e">*/</span>
+
+<span style="color:#00a8c8">struct</span> <span style="color:#111">integer</span> <span style="color:#111">:</span> <span style="color:#00a8c8">public</span> <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_cached_data</span><span style="color:#f92672">&lt;</span><span style="color:#111">integer_cache</span><span style="color:#f92672">&gt;</span> <span style="color:#111">{</span>
+  <span style="color:#00a8c8">using</span> <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_cached_data</span><span style="color:#f92672">&lt;</span><span style="color:#111">integer_cache</span><span style="color:#f92672">&gt;::</span><span style="color:#111">misa_cached_data</span><span style="color:#111">;</span>
+
+  <span style="color:#75715e">// We add some additional functions for convenience
+</span><span style="color:#75715e"></span>  <span style="color:#00a8c8">int</span> <span style="color:#75af00">get</span><span style="color:#111">()</span> <span style="color:#00a8c8">const</span> <span style="color:#111">{</span>
+    <span style="color:#00a8c8">auto</span> <span style="color:#111">access</span> <span style="color:#f92672">=</span> <span style="color:#111">readonly_access</span><span style="color:#111">();</span>
+    <span style="color:#00a8c8">return</span> <span style="color:#111">access</span><span style="color:#111">.</span><span style="color:#111">get</span><span style="color:#111">();</span>
+  <span style="color:#111">}</span>
+
+  <span style="color:#00a8c8">void</span> <span style="color:#75af00">set</span><span style="color:#111">(</span><span style="color:#00a8c8">int</span> <span style="color:#111">value</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+    <span style="color:#00a8c8">auto</span> <span style="color:#111">access</span> <span style="color:#f92672">=</span> <span style="color:#111">write_access</span><span style="color:#111">();</span>
+    <span style="color:#111">access</span><span style="color:#111">.</span><span style="color:#111">set</span><span style="color:#111">(</span><span style="color:#111">value</span><span style="color:#111">);</span>
+  <span style="color:#111">}</span>
+
+<span style="color:#111">}</span>
+</code></pre></div></div>
+	
+</div>
+
+
+<h1 id="sub-caches-1">Sub-caches</h1>
+
+<p>You can create sub-caches that allow access to individual parts of the data. They live within the same filesystem location and are linked in the <code>do_link()</code> method of the main cache.</p>
+
+<p>To make it easier, we provide the <code>misaxx::manual_cache</code> type that can be used as base instead of <code>misaxx::default_cache</code>. It provides the same functionality, but does not require a pattern. Instead, the main cache should provide a valid description.</p>
+
+<p>In the <code>do_link()</code> method, create an uninitialized accessor type of the sub-cache and set its <code>data</code> attribute manually. Then run <code>force_link</code> with the appropriate arguments.
+This will ensure that the sub-cache is registered correctly.</p>
+
+<div class="panel panel-default">
+	<div class="panel-heading">Example</div>
+	<div class="panel-body"><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">void</span> <span style="color:#75af00">do_link</span><span style="color:#111">(</span><span style="color:#111">integer_description</span> <span style="color:#f92672">&amp;</span><span style="color:#111">description</span><span style="color:#111">)</span> <span style="color:#00a8c8">override</span> <span style="color:#111">{</span>
+  <span style="color:#111">decimals</span> <span style="color:#111">accessor</span><span style="color:#111">;</span>
+  <span style="color:#111">accessor</span><span style="color:#111">.</span><span style="color:#111">data</span> <span style="color:#f92672">=</span> <span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">make_shared</span><span style="color:#f92672">&lt;</span><span style="color:#111">decimals_cache</span><span style="color:#f92672">&gt;</span><span style="color:#111">();</span>
+  <span style="color:#75715e">// Manual setup etc.
+</span><span style="color:#75715e"></span>
+  <span style="color:#75715e">// Important:
+</span><span style="color:#75715e"></span>  <span style="color:#111">decimal_description</span> <span style="color:#111">subcache_description</span><span style="color:#111">;</span>
+  <span style="color:#111">accessor</span><span style="color:#111">.</span><span style="color:#111">force_link</span><span style="color:#111">(</span><span style="color:#00a8c8">this</span><span style="color:#f92672">-&gt;</span><span style="color:#111">get_location</span><span style="color:#111">(),</span>
+    <span style="color:#111">misa_description_storage</span><span style="color:#f92672">::</span><span style="color:#111">with</span><span style="color:#111">(</span><span style="color:#111">subcache_description</span><span style="color:#111">));</span>
+
+  <span style="color:#75715e">// Store for later usage
+</span><span style="color:#75715e"></span>  <span style="color:#00a8c8">this</span><span style="color:#f92672">-&gt;</span><span style="color:#111">decimals</span> <span style="color:#f92672">=</span> <span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">move</span><span style="color:#111">(</span><span style="color:#111">accessor</span><span style="color:#111">);</span>
+<span style="color:#111">}</span>
+</code></pre></div></div>
+	
+</div>
+
+
+<h1 id="without-using-misa-default-cache">Without using misa_default_cache</h1>
+
+<p>A cache implementation should inherit from <code>misaxx::misa_cache</code> <strong>and</strong> a mutexed cache (<code>misaxx::utils::access::cache</code>). It should override following methods:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">// Main function that applies the linkage process:
+</span><span style="color:#75715e"></span><span style="color:#00a8c8">void</span> <span style="color:#75af00">link</span><span style="color:#111">(</span><span style="color:#00a8c8">const</span> <span style="color:#111">boost</span><span style="color:#f92672">::</span><span style="color:#111">filesystem</span><span style="color:#f92672">::</span><span style="color:#111">path</span> <span style="color:#f92672">&amp;</span><span style="color:#111">t_location</span><span style="color:#111">,</span> <span style="color:#00a8c8">const</span> <span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">shared_ptr</span><span style="color:#f92672">&lt;</span><span style="color:#111">misa_description_storage</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span><span style="color:#111">t_description</span><span style="color:#111">);</span>
+
+<span style="color:#75715e">// Returns the pattern &amp; description:
+</span><span style="color:#75715e"></span><span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">shared_ptr</span><span style="color:#f92672">&lt;</span><span style="color:#111">misa_description_storage</span><span style="color:#f92672">&gt;</span> <span style="color:#111">describe</span><span style="color:#111">()</span> <span style="color:#00a8c8">const</span><span style="color:#111">;</span>
+
+<span style="color:#75715e">// The absolute folder path where the data is located
+</span><span style="color:#75715e"></span><span style="color:#111">boost</span><span style="color:#f92672">::</span><span style="color:#111">filesystem</span><span style="color:#f92672">::</span><span style="color:#111">path</span> <span style="color:#111">get_location</span><span style="color:#111">()</span> <span style="color:#00a8c8">const</span><span style="color:#111">;</span>
+
+<span style="color:#75715e">// A filename or any other unique file (for an explanation see below)
+</span><span style="color:#75715e"></span><span style="color:#111">boost</span><span style="color:#f92672">::</span><span style="color:#111">filesystem</span><span style="color:#f92672">::</span><span style="color:#111">path</span> <span style="color:#111">get_unique_location</span><span style="color:#111">()</span> <span style="color:#00a8c8">const</span><span style="color:#111">;</span>
+
+<span style="color:#75715e">// Returns true if the cache has currently data
+</span><span style="color:#75715e"></span><span style="color:#00a8c8">bool</span> <span style="color:#75af00">has_data</span><span style="color:#111">();</span>
+
+<span style="color:#75715e">// Returns a &#34;self-description&#34; of the cache location
+</span><span style="color:#75715e"></span><span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">shared_ptr</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">const</span> <span style="color:#111">misa_location</span><span style="color:#f92672">&gt;</span> <span style="color:#111">get_location_interface</span><span style="color:#111">()</span> <span style="color:#00a8c8">const</span>
+
+<span style="color:#75715e">// Optionally: Run after all work is done
+</span><span style="color:#75715e"></span><span style="color:#00a8c8">void</span> <span style="color:#111">postprocess</span><span style="color:#111">()</span>
+
+<span style="color:#75715e">// Additional methods might be necessary depending on the mutexed cache implementation
+</span><span style="color:#75715e"></span></code></pre></div>
+<p>The <code>link()</code> method is provided with an absolute path within the filesystem and a description. The <code>link()</code> function is called independent of the <strong>simulation mode</strong>. This means you have to use <code>misaxx:runtime_properties::is_simulating()</code> to check if the runtime is actually processing data.</p>
+
+<div class="notices warning" ><p>Please make sure that <code>describe()</code> <strong>always</strong> returns a non-empty description storage with <strong>both a pattern and description</strong>. This also applies for parameter schema generation.</p>
+</div>
+
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="applied-systems-biology.github.io/misa-framework/cpp-framework/development/attaching-data/" title="Attaching data"> <i class="fa fa-chevron-left"></i><label>Attaching data</label></a>
+    <a class="nav nav-next" href="applied-systems-biology.github.io/misa-framework/cpp-framework/development/tips/" title="Tips and tricks" style="margin-right: 0px;"><label>Tips and tricks</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+    <div class="author">
+        <i class='fa fa-user'></i> <a href="mailto:ruman.gerst@leibniz-hki.de">Ruman Gerst</a>
+    </div>
+    
+
+    
+
+    
+  </div>
+
+
+	<div>
+
+
+  
+    <p>By <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html">Applied Systems Biology, Leibniz Institute for Natural Product Research and Infection Biology – Hans Knöll Institute (HKI), Jena, Germany</a></p>
+
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/applied-systems-biology.github.io/misa-framework/js/clipboard.min.js"></script>
+
+<link href="/applied-systems-biology.github.io/misa-framework/css/featherlight.min.css" rel="stylesheet">
+<script src="/applied-systems-biology.github.io/misa-framework/js/featherlight.min.js"></script>
+
+
+
+<script src="/applied-systems-biology.github.io/misa-framework/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

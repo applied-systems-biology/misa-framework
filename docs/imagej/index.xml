@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ImageJ plugin on MISA&#43;&#43; Framework</title>
+    <link>applied-systems-biology.github.io/misa-framework/imagej/</link>
+    <description>Recent content in ImageJ plugin on MISA&#43;&#43; Framework</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="applied-systems-biology.github.io/misa-framework/imagej/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Installation</title>
+      <link>applied-systems-biology.github.io/misa-framework/imagej/installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>applied-systems-biology.github.io/misa-framework/imagej/installation/</guid>
+      <description>Building from source Building MISA++ for ImageJ requires the Maven build system and that a JDK installation is present on the current system.
+ Download the source code Navigate into the source directory Run mvn package  The misa_imagej plugin can be found in the target directory. Copy it into the ImageJ plugin directory.
+MISA++ for ImageJ requires additional libraries that do not come pre-installed with ImageJ or Fiji.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial: Step by step analysis</title>
+      <link>applied-systems-biology.github.io/misa-framework/imagej/step-by-step/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>applied-systems-biology.github.io/misa-framework/imagej/step-by-step/</guid>
+      <description>Prerequisites  Make sure that MISA++ Kidney Glomeruli Segmentation and MISA++ Result Analyzer are installed Make sure that the MISA++ ImageJ plugin is installed Download the example data  Video tutorial The video tutorial covers the same steps as the written tutorial.
+ Written tutorial The following step-by-step tutorial shows the quantitative analysis of glomeruli by creating statistics and plots of their diameter.
+ Start ImageJ and open the MISA++ plugin by navigating to Plugins → MISA++ for ImageJ.</description>
+    </item>
+    
+    <item>
+      <title>Managing applications</title>
+      <link>applied-systems-biology.github.io/misa-framework/imagej/module-manager/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>applied-systems-biology.github.io/misa-framework/imagej/module-manager/</guid>
+      <description>The MISA++ ImageJ plugin can be launched by navigating to Plugins → MISA++ for ImageJ. This will open a tool that lists all installed MISA++ applications (modules) and add more modules. 
+
+
+
+The user interface is divided into three sections:
+ The list of applications
+Information and tools that are related to the current application
+A toolbar with global actions
+ Application list This will list all currently known applications with a name, an unique identifier and the version.</description>
+    </item>
+    
+    <item>
+      <title>Analyzing data</title>
+      <link>applied-systems-biology.github.io/misa-framework/imagej/analyzing-data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>applied-systems-biology.github.io/misa-framework/imagej/analyzing-data/</guid>
+      <description>MISA++ applications require a specific set of parameters and that the input data is organized in a certain way. You can either setup those conditions manually (see the MISA++ application’s manual) or use the parameter editor tool that is provided by the MISA++ ImageJ plugin.
+See Current application to see how to open the tool.
+Overview The user interface is divided into three sections:
+ A toolbar with global actions</description>
+    </item>
+    
+    <item>
+      <title>Creating pipelines</title>
+      <link>applied-systems-biology.github.io/misa-framework/imagej/creating-pipelines/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>applied-systems-biology.github.io/misa-framework/imagej/creating-pipelines/</guid>
+      <description>MISA++ applications can make usage of other MISA++ applications via a fixed code dependency. Creation of pipelines using code dependencies on the other hand requires modification of the source code. The MISA++ ImageJ plugin provides a tool that allows creation of pipelines of existing MISA++ applications without writing code.
+The user interface is divided into four sections:
+ Pipeline flow chart
+List of available MISA++ applications (modules) and an overview of samples</description>
+    </item>
+    
+    <item>
+      <title>Credits</title>
+      <link>applied-systems-biology.github.io/misa-framework/imagej/credits/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>applied-systems-biology.github.io/misa-framework/imagej/credits/</guid>
+      <description>The MISA++ ImageJ plugin depends on following libraries:
+
+
+Library
+ Version
+ URL
+ Author/Citation
+  ImageJ
+ImgLib2
+ 2.0.0
+ http://imagej.net/
+ (Rueden et al., 2017)
+  Gson
+ 2.8.5
+ https://github.com/google/gson
+ Google LLC
+  Guava
+ 26.0-jre
+ https://github.com/google/guava
+ Google LLC
+  JFreeChart
+ 1.5.0
+ http://www.jfree.org/jfreechart/
+ Dave Gilbert
+  JFreeSVG
+ 3.3
+ http://www.jfree.org/jfreesvg/
+ Dave Gilbert</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['begin',['begin',['../structmisaxx_1_1imaging_1_1misa__image__stack.html#aae0ae7986cfa7abe222600a8f338bd07',1,'misaxx::imaging::misa_image_stack::begin()'],['../structmisaxx_1_1imaging_1_1misa__image__stack.html#a54e7378c044c1cc31ff11a800cf157ad',1,'misaxx::imaging::misa_image_stack::begin() const']]],
+  ['build_5fserialization_5fid_5fhierarchy',['build_serialization_id_hierarchy',['../structmisaxx_1_1imaging_1_1misa__image__description.html#ac9dd9a0ea4373f13639fceab085eb63a',1,'misaxx::imaging::misa_image_description::build_serialization_id_hierarchy()'],['../structmisaxx_1_1imaging_1_1misa__image__stack__description.html#a18440516785bb1698acbdada6f63fc5a',1,'misaxx::imaging::misa_image_stack_description::build_serialization_id_hierarchy()'],['../structmisaxx_1_1imaging_1_1misa__image__pattern.html#a071103ae38cdaf3e29d98f4bf929ee92',1,'misaxx::imaging::misa_image_pattern::build_serialization_id_hierarchy()'],['../structmisaxx_1_1imaging_1_1misa__image__stack__pattern.html#a25b4e4b09a6117d9f81c64f37bc922f6',1,'misaxx::imaging::misa_image_stack_pattern::build_serialization_id_hierarchy()']]]
+];
