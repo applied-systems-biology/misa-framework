@@ -58,17 +58,11 @@ Library
   OpenMP
  4.5
  https://www.openmp.org/
- (Dagum and Menon, 1998)
+ Dagum, Leonardo, and Ramesh Menon. &amp;ldquo;OpenMP: An industry-standard API for shared-memory programming.&amp;rdquo; Computing in Science &amp;amp; Engineering 1 (1998): 46-55.
   Boost Libraries
  1.67
  https://www.boost.org/
- Beman Dawes, David Abrahams, Rene Rivera; Boost Community
-  SQLite
- 3
- https://www.sqlite.org/
- SQLite Consortium
-  OME-Files
- 0.</description>
+ Beman Dawes, David Abrahams, Rene Rivera; Boost Community</description>
     </item>
     
   </channel>

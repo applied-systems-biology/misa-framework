@@ -44,9 +44,7 @@ following libraries:</p>
 			http://imagej.net/</p>
 		</td>
 		<td ><p >
-			<a href="https://www.zotero.org/google-docs/?51SfGQ">(Rueden </a><a href="https://www.zotero.org/google-docs/?51SfGQ"><i>et
-			al.</i></a><a href="https://www.zotero.org/google-docs/?51SfGQ">,
-			2017)</a></p>
+			Rueden, Curtis T., et al. "ImageJ2: ImageJ for the next generation of scientific image data." BMC bioinformatics 18.1 (2017): 529.</p>
 		</td>
 	</tr>
 	<tr >
@@ -130,9 +128,7 @@ following libraries:</p>
 			http://www.openmicroscopy.org/bio-formats/</p>
 		</td>
 		<td ><p >
-			<a href="https://www.zotero.org/google-docs/?IhIWbt">(Linkert </a><a href="https://www.zotero.org/google-docs/?IhIWbt"><i>et
-			al.</i></a><a href="https://www.zotero.org/google-docs/?IhIWbt">,
-			2010)</a></p>
+			Linkert, Melissa, et al. "Metadata matters: access to image data in the real world." The Journal of cell biology 189.5 (2010): 777-782.</p>
 		</td>
 	</tr>
 	<tr >

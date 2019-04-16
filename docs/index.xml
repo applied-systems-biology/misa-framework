@@ -271,17 +271,11 @@ Library
   OpenMP
  4.5
  https://www.openmp.org/
- (Dagum and Menon, 1998)
+ Dagum, Leonardo, and Ramesh Menon. &amp;ldquo;OpenMP: An industry-standard API for shared-memory programming.&amp;rdquo; Computing in Science &amp;amp; Engineering 1 (1998): 46-55.
   Boost Libraries
  1.67
  https://www.boost.org/
- Beman Dawes, David Abrahams, Rene Rivera; Boost Community
-  SQLite
- 3
- https://www.sqlite.org/
- SQLite Consortium
-  OME-Files
- 0.</description>
+ Beman Dawes, David Abrahams, Rene Rivera; Boost Community</description>
     </item>
     
     <item>
@@ -301,7 +295,7 @@ Library
 ImgLib2
  2.0.0
  http://imagej.net/
- (Rueden et al., 2017)
+ Rueden, Curtis T., et al. &amp;ldquo;ImageJ2: ImageJ for the next generation of scientific image data.&amp;rdquo; BMC bioinformatics 18.1 (2017): 529.
   Gson
  2.8.5
  https://github.com/google/gson
@@ -311,13 +305,7 @@ ImgLib2
  https://github.com/google/guava
  Google LLC
   JFreeChart
- 1.5.0
- http://www.jfree.org/jfreechart/
- Dave Gilbert
-  JFreeSVG
- 3.3
- http://www.jfree.org/jfreesvg/
- Dave Gilbert</description>
+ 1.</description>
     </item>
     
     <item>

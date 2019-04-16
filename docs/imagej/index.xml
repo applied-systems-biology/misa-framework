@@ -90,7 +90,7 @@ Library
 ImgLib2
  2.0.0
  http://imagej.net/
- (Rueden et al., 2017)
+ Rueden, Curtis T., et al. &amp;ldquo;ImageJ2: ImageJ for the next generation of scientific image data.&amp;rdquo; BMC bioinformatics 18.1 (2017): 529.
   Gson
  2.8.5
  https://github.com/google/gson
@@ -100,13 +100,7 @@ ImgLib2
  https://github.com/google/guava
  Google LLC
   JFreeChart
- 1.5.0
- http://www.jfree.org/jfreechart/
- Dave Gilbert
-  JFreeSVG
- 3.3
- http://www.jfree.org/jfreesvg/
- Dave Gilbert</description>
+ 1.</description>
     </item>
     
   </channel>

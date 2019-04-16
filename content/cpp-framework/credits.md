@@ -43,8 +43,7 @@ C++ version 17 and depends on the following libraries and tools:</p>
 			https://www.openmp.org/</p>
 		</td>
 		<td ><p >
-			<a href="https://www.zotero.org/google-docs/?dMXHMD">(Dagum and
-			Menon, 1998)</a></p>
+			Dagum, Leonardo, and Ramesh Menon. "OpenMP: An industry-standard API for shared-memory programming." Computing in Science & Engineering 1 (1998): 46-55.</p>
 		</td>
 	</tr>
 	<tr >
@@ -86,11 +85,8 @@ C++ version 17 and depends on the following libraries and tools:</p>
 			https://www.openmicroscopy.org/</p>
 		</td>
 		<td ><p >
-			<a href="https://www.zotero.org/google-docs/?gsYRUb">(Linkert </a><a href="https://www.zotero.org/google-docs/?gsYRUb"><i>et
-			al.</i></a><a href="https://www.zotero.org/google-docs/?gsYRUb">,
-			2010; Goldberg </a><a href="https://www.zotero.org/google-docs/?gsYRUb"><i>et
-			al.</i></a><a href="https://www.zotero.org/google-docs/?gsYRUb">,
-			2005)</a></p>
+			Linkert, Melissa, et al. "Metadata matters: access to image data in the real world." The Journal of cell biology 189.5 (2010): 777-782.</p>
+			<p>Goldberg, Ilya G., et al. "The Open Microscopy Environment (OME) Data Model and XML file: open tools for informatics and quantitative analysis in biological imaging." Genome biology 6.5 (2005): R47.</p>
 		</td>
 	</tr>
 	<tr >
@@ -104,8 +100,7 @@ C++ version 17 and depends on the following libraries and tools:</p>
 			https://opencv.org/</p>
 		</td>
 		<td ><p >
-			<a href="https://www.zotero.org/google-docs/?I6tp4W">(Bradski,
-			2000)</a></p>
+			Bradski,G. (2000) The OpenCV Library. Dr Dobbs J. Softw. Tools.</p>
 		</td>
 	</tr>
 	<tr >
