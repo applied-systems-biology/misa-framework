@@ -8,6 +8,8 @@ theme = "docdock"
 pygmentsCodeFences = true
 pygmentsStyle = "monokailight"
 publishDir = "docs"
+RelativeURLs=true
+CanonifyURLs=true
 
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir= false
