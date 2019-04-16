@@ -12,7 +12,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 * Make sure that **MISA++ Kidney Glomeruli Segmentation** and **MISA++ Result Analyzer** are installed
 * Make sure that the MISA++ ImageJ plugin is installed
-* [Download the example data](static/distrib/misaxx_example_data.zip)
+* [Download the example data](https://github.com/applied-systems-biology/misa-framework/releases/download/1.0.0/misaxx_example_data.zip)
 
 # Video tutorial
 
