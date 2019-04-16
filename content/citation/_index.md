@@ -10,7 +10,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 Please cite following publication if you use our framework:
 
-{{% panel %}}Insert citation here{{% /panel %}}
+{{% panel %}}Publication is currently in preparation. We will update this page when the publication is ready.{{% /panel %}}
 
 **Thanks!**
 

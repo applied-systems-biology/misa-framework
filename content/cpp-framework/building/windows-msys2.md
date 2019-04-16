@@ -25,7 +25,7 @@ supported due to missing OpenMP 3.x capabilities.{{% /notice %}}
 We provide fully automated scripts that installs MISA++ Core, the modules we
 provide, and all necessary dependencies.
 
-1. Download or clone the [MISA++ Utils repository](https://asb-git.hki-jena.de/RGerst/misaxx-utils)
+1. Download or clone the [MISA++ Utils repository](https://github.com/applied-systems-biology/misaxx-utils)
 2. Open an MSYS2 (MinGW 64-bit) shell and navigate into the `superbuild-win32` folder
 3. Run `./superbuild.sh` and follow the instructions
 

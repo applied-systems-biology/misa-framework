@@ -18,8 +18,8 @@ our framework.
 * Extract and evaluate quantification results
 * Create plots
 
-{{< button href="/imagej/step-by-step" theme="info" >}} Step-by-step tutorial {{< /button >}}
-{{< button href="/download" theme="success" >}} Download {{< /button >}}
+{{< button href="https://applied-systems-biology.github.io/misa-framework/imagej/step-by-step/" theme="info" >}} Step-by-step tutorial {{< /button >}}
+{{< button href="https://applied-systems-biology.github.io/misa-framework/download" theme="success" >}} Download {{< /button >}}
 
 # MISA++ High-performance C++ framework
 
@@ -34,7 +34,7 @@ our framework.
 * Automatically generated human- and machine-readable documentation of data and parameters
 
 <p>
-{{< button href="/download" theme="success" >}} Download {{< /button >}}
+{{< button href="https://applied-systems-biology.github.io/misa-framework/download" theme="success" >}} Download {{< /button >}}
 </p>
 
 {{% panel %}}
