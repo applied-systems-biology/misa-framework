@@ -1,4 +1,4 @@
-baseURL = "applied-systems-biology.github.io/misa-framework/"
+baseURL = "https://applied-systems-biology.github.io/misa-framework/"
 
 languageCode = "en-us"
 DefaultContentLanguage = "en"

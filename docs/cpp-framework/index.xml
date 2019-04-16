@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>C&#43;&#43; Framework on MISA&#43;&#43; Framework</title>
-    <link>applied-systems-biology.github.io/misa-framework/cpp-framework/</link>
+    <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/</link>
     <description>Recent content in C&#43;&#43; Framework on MISA&#43;&#43; Framework</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="applied-systems-biology.github.io/misa-framework/cpp-framework/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://applied-systems-biology.github.io/misa-framework/cpp-framework/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Running</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/running/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/running/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/running/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/running/</guid>
       <description>To run a module, you can either run it using a graphical user interface such as the MISA++ ImageJ plugin or run it directly via the command line.
 Command line interface A worker module is an executable that has a command line interface (CLI). You can always run &amp;lt;module&amp;gt; --help to show all parameters.
 To run a workload, run &amp;lt;module&amp;gt; --parameters &amp;lt;parameter file&amp;gt;. It will start doing the tasks and exits after they are done.</description>
@@ -23,10 +23,10 @@ To run a workload, run &amp;lt;module&amp;gt; --parameters &amp;lt;parameter fil
     
     <item>
       <title>Glossary</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/glossary/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/glossary/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/glossary/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/glossary/</guid>
       <description>MISA++ application Application that uses the MISA++ CLI to create an executable from a MISA++ worker module.
 MISA++ worker module A MISA++ module that contains a module dispatcher, a module interface and a module info function.
 MISA++ module A library that follows the MISA++ public API standard and is built on MISA++ Core.
@@ -35,19 +35,19 @@ Module interface A class that inherits from misaxx::misa_module_interface and is
     
     <item>
       <title>Class reference</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/references/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/references/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/references/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/references/</guid>
       <description>   Library Class reference     MISA++ Core Open    MISA++ Imaging Open    MISA++ OME Open    MISA++ OME Visualizer Open    MISA++ Tissue Segmentation Open    MISA++ Kidney Glomeruli Segmentation Open    MISA++ Result Analyzer Open     </description>
     </item>
     
     <item>
       <title>Credits</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/credits/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/credits/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/credits/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/credits/</guid>
       <description>The MISA++ C++ framework is written in C++ version 17 and depends on the following libraries and tools:
 
 

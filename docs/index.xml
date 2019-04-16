@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MISA&#43;&#43; Framework</title>
-    <link>applied-systems-biology.github.io/misa-framework/</link>
+    <link>https://applied-systems-biology.github.io/misa-framework/</link>
     <description>Recent content on MISA&#43;&#43; Framework</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="applied-systems-biology.github.io/misa-framework/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://applied-systems-biology.github.io/misa-framework/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Evaluating output data</title>
-      <link>applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/output-data/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/output-data/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/output-data/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/output-data/</guid>
       <description>The Data Browser tool lists all input and output data. Its navigation is similar to the parameter editor’s Data category (see Importing data).  
 Depending on the data type, the data browser offers actions such as importing the data back into ImageJ via Bioformats Importer. The “&amp;hellip;” button opens a list of other available options.
 
@@ -30,10 +30,10 @@ Action
     
     <item>
       <title>Installation</title>
-      <link>applied-systems-biology.github.io/misa-framework/imagej/installation/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/imagej/installation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/imagej/installation/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/imagej/installation/</guid>
       <description>Building from source Building MISA++ for ImageJ requires the Maven build system and that a JDK installation is present on the current system.
  Download the source code Navigate into the source directory Run mvn package  The misa_imagej plugin can be found in the target directory. Copy it into the ImageJ plugin directory.
 MISA++ for ImageJ requires additional libraries that do not come pre-installed with ImageJ or Fiji.</description>
@@ -41,10 +41,10 @@ MISA++ for ImageJ requires additional libraries that do not come pre-installed w
     
     <item>
       <title>Prerequisites</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/development/prerequisites/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/development/prerequisites/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/development/prerequisites/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/development/prerequisites/</guid>
       <description>MISA++ uses the CMake build system. Please make sure that CMake version 3.12 or higher is installed.
 The compiler must support C++ version 2017 or higher.
 For Windows, we recommend the MSYS2 environment.
@@ -54,20 +54,20 @@ Please note that the Visual Studio compiler is not supported due to missing Open
     
     <item>
       <title>Browsing quantification results</title>
-      <link>applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/quantification-results/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/quantification-results/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/quantification-results/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/quantification-results/</guid>
       <description>MISA++ applications store quantification results in a standardized and flexible format that is capable of organizing large amounts of metadata. The data is stored as objects such as quantities with units, locations or application-specific objects such as glomeruli.  MISA++ for ImageJ includes a tool to filter, browse and process the quantification results and create tables of only the relevant information.
  Important: The tool is designed to handle millions of data entries and uses a SQLite database to handle such an amount of data.</description>
     </item>
     
     <item>
       <title>Running</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/running/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/running/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/running/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/running/</guid>
       <description>To run a module, you can either run it using a graphical user interface such as the MISA++ ImageJ plugin or run it directly via the command line.
 Command line interface A worker module is an executable that has a command line interface (CLI). You can always run &amp;lt;module&amp;gt; --help to show all parameters.
 To run a workload, run &amp;lt;module&amp;gt; --parameters &amp;lt;parameter file&amp;gt;. It will start doing the tasks and exits after they are done.</description>
@@ -75,10 +75,10 @@ To run a workload, run &amp;lt;module&amp;gt; --parameters &amp;lt;parameter fil
     
     <item>
       <title>Setting up a project</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/development/development-environment/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/development/development-environment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/development/development-environment/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/development/development-environment/</guid>
       <description>The MISA++ Core library contains a CMake script to simplify the creation of modules. The following documentation assumes that this script is used. You are free to setup your project without our helper script.
  Creating the folder structure Each module is designed to be compiled into a shared library (.dll/.so), which requires a strict separation between the API and implementation. Create following folder structure:
 ./CMakeLists.txt ./include/&amp;lt;module-name&amp;gt;/ ./src/&amp;lt;module-name&amp;gt;/  &amp;lt;module-name&amp;gt; is the name of the CMake target, for example misaxx-ome.</description>
@@ -86,10 +86,10 @@ To run a workload, run &amp;lt;module&amp;gt; --parameters &amp;lt;parameter fil
     
     <item>
       <title>Tutorial: Step by step analysis</title>
-      <link>applied-systems-biology.github.io/misa-framework/imagej/step-by-step/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/imagej/step-by-step/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/imagej/step-by-step/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/imagej/step-by-step/</guid>
       <description>Prerequisites  Make sure that MISA++ Kidney Glomeruli Segmentation and MISA++ Result Analyzer are installed Make sure that the MISA++ ImageJ plugin is installed Download the example data  Video tutorial The video tutorial covers the same steps as the written tutorial.
  Written tutorial The following step-by-step tutorial shows the quantitative analysis of glomeruli by creating statistics and plots of their diameter.
  Start ImageJ and open the MISA++ plugin by navigating to Plugins → MISA++ for ImageJ.</description>
@@ -97,20 +97,20 @@ To run a workload, run &amp;lt;module&amp;gt; --parameters &amp;lt;parameter fil
     
     <item>
       <title>Declaring data</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/development/declaring-data/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/development/declaring-data/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/development/declaring-data/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/development/declaring-data/</guid>
       <description>MISA++ organizes input and output data in caches. Caches provide functionality to access large datasets in a memory-efficient way. To be able to achieve this, they are linked to a location within the filesystem (a folder). The cache-implementation loads data into the memory on-demand and frees space if there is no demand left.
 Caches are exclusively created within the module interface that is also responsible for triggering the linking process between a folder and the cache implementation.</description>
     </item>
     
     <item>
       <title>Managing applications</title>
-      <link>applied-systems-biology.github.io/misa-framework/imagej/module-manager/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/imagej/module-manager/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/imagej/module-manager/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/imagej/module-manager/</guid>
       <description>The MISA++ ImageJ plugin can be launched by navigating to Plugins → MISA++ for ImageJ. This will open a tool that lists all installed MISA++ applications (modules) and add more modules. 
 
 
@@ -124,10 +124,10 @@ A toolbar with global actions
     
     <item>
       <title>Summarizing quantification results</title>
-      <link>applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/table-analyzer/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/table-analyzer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/table-analyzer/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/table-analyzer/</guid>
       <description>You can modify, split and summarize tables extracted from quantification results or loaded via the import function. Following actions are available:
 
 
@@ -143,10 +143,10 @@ Action
     
     <item>
       <title>Analyzing data</title>
-      <link>applied-systems-biology.github.io/misa-framework/imagej/analyzing-data/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/imagej/analyzing-data/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/imagej/analyzing-data/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/imagej/analyzing-data/</guid>
       <description>MISA++ applications require a specific set of parameters and that the input data is organized in a certain way. You can either setup those conditions manually (see the MISA++ application’s manual) or use the parameter editor tool that is provided by the MISA++ ImageJ plugin.
 See Current application to see how to open the tool.
 Overview The user interface is divided into three sections:
@@ -155,10 +155,10 @@ Overview The user interface is divided into three sections:
     
     <item>
       <title>Creating plots</title>
-      <link>applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/plot-builder/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/plot-builder/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/plot-builder/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/plot-builder/</guid>
       <description>The integrated plot tool can create various plots from table data. The user interface is divided into three sections:
  The plot
 The plot type and data import/export options
@@ -170,10 +170,10 @@ The plot is displayed on the right side and can be exported into publication-rea
     
     <item>
       <title>Creating tasks</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-tasks/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-tasks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-tasks/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-tasks/</guid>
       <description>The MISA++ framework manages workloads by parallelized execution of atomic tasks. Additionally, dispatchers can be created that acts as inner node within a tree of workers. Tasks on the other hand are always leaves.
 The module dispatcher (./include/&amp;lt;module-name&amp;gt;/module.h) acts as root of this tree and as entry point to define the tasks that process data and their dependencies.
 Tasks contain atomic workloads that should be able to run in parallel.</description>
@@ -181,20 +181,20 @@ Tasks contain atomic workloads that should be able to run in parallel.</descript
     
     <item>
       <title>Analyzing the runtime</title>
-      <link>applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/runtime-log/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/runtime-log/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/runtime-log/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/runtime-log/</guid>
       <description>MISA++ applications always track basic information about the time needed to do an analysis with the option to enable a detailed runtime log. It can be accessed via the analysis tool (see Evaluating output data) or in a standalone-version that is accessible via the list of installed MISA++ applications (see Managing applications).
 The timeline is a Gantt-chart that lists the duration and thread allocation of each calculation step. A full-detailed version that lists each individual task (e.</description>
     </item>
     
     <item>
       <title>Creating dispatchers</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-dispatchers/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-dispatchers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-dispatchers/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-dispatchers/</guid>
       <description>The MISA++ framework manages workloads by parallelized execution of atomic tasks. Additionally, dispatchers can be created that acts as inner node within a tree of workers. Tasks on the other hand are always leaves.
 The module dispatcher (./include/&amp;lt;module-name&amp;gt;/module.h) acts as root of this tree and as entry point to define the tasks that process data and their dependencies.
 Dispatchers require you to override following virtual functions:
@@ -203,10 +203,10 @@ void create_blueprints(misa_dispatcher::blueprint_list &amp;amp;blueprints, misa
     
     <item>
       <title>Creating pipelines</title>
-      <link>applied-systems-biology.github.io/misa-framework/imagej/creating-pipelines/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/imagej/creating-pipelines/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/imagej/creating-pipelines/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/imagej/creating-pipelines/</guid>
       <description>MISA++ applications can make usage of other MISA++ applications via a fixed code dependency. Creation of pipelines using code dependencies on the other hand requires modification of the source code. The MISA++ ImageJ plugin provides a tool that allows creation of pipelines of existing MISA++ applications without writing code.
 The user interface is divided into four sections:
  Pipeline flow chart
@@ -215,10 +215,10 @@ List of available MISA++ applications (modules) and an overview of samples</desc
     
     <item>
       <title>Glossary</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/glossary/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/glossary/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/glossary/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/glossary/</guid>
       <description>MISA++ application Application that uses the MISA++ CLI to create an executable from a MISA++ worker module.
 MISA++ worker module A MISA++ module that contains a module dispatcher, a module interface and a module info function.
 MISA++ module A library that follows the MISA++ public API standard and is built on MISA++ Core.
@@ -227,19 +227,19 @@ Module interface A class that inherits from misaxx::misa_module_interface and is
     
     <item>
       <title>Class reference</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/references/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/references/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/references/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/references/</guid>
       <description>   Library Class reference     MISA++ Core Open    MISA++ Imaging Open    MISA++ OME Open    MISA++ OME Visualizer Open    MISA++ Tissue Segmentation Open    MISA++ Kidney Glomeruli Segmentation Open    MISA++ Result Analyzer Open     </description>
     </item>
     
     <item>
       <title>Dispatching submodules</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/development/dispatching-submodules/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/development/dispatching-submodules/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/development/dispatching-submodules/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/development/dispatching-submodules/</guid>
       <description>You reduce the amount of code in your current project by off-loading work to another MISA++ module. The sub-module will be integrated into the current worker tree and benefit from better parallelization and less post-processing compared to running MISA++ applications in a pipeline.
 Prerequisites Modify the CMakeLists.txt and the cmake/*-config.in to add the submodule as dependency.
 Example In CMakeLists.txt find_package(misaxx-core REQUIRED)find_package(misaxx-tissue-segmentation REQUIRED)# Later: target_link_libraries(my-module PUBLIC misaxx::misaxx-tissue-segmentation) In cmake/*-config.in find_package(misaxx-core REQUIRED)find_package(misaxx-tissue-segmentation REQUIRED)  Submodules within the filesystem A submodule is created on a subfolder of the current virtual filesystem and therefore are handled similar to data.</description>
@@ -247,20 +247,20 @@ Example In CMakeLists.txt find_package(misaxx-core REQUIRED)find_package(misaxx-
     
     <item>
       <title>Attaching data</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/development/attaching-data/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/development/attaching-data/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/development/attaching-data/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/development/attaching-data/</guid>
       <description>The attachment system allows easy attachment of any serializable data to a cache. It can be used to communicate between different tasks and generate quantification output. If the attachment data type supports adding information about its location (e.g. which image plane), the cache will automatically assign the most available information.
 Attaching data to a cache To attach data, just call the void attach&amp;lt;T&amp;gt;(...) member function of a cache accessor. To access an attachment, you can use the T &amp;amp;get&amp;lt;T&amp;gt;() member function, which will throw an exception if the type does not exist.</description>
     </item>
     
     <item>
       <title>Credits</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/credits/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/credits/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/credits/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/credits/</guid>
       <description>The MISA++ C++ framework is written in C++ version 17 and depends on the following libraries and tools:
 
 
@@ -286,10 +286,10 @@ Library
     
     <item>
       <title>Credits</title>
-      <link>applied-systems-biology.github.io/misa-framework/imagej/credits/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/imagej/credits/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/imagej/credits/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/imagej/credits/</guid>
       <description>The MISA++ ImageJ plugin depends on following libraries:
 
 
@@ -322,20 +322,20 @@ ImgLib2
     
     <item>
       <title>Creating caches</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-caches/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-caches/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-caches/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-caches/</guid>
       <description>This guide will show you how to create your own cache types. A cache data type consists of four different classes:
  The cache implementation The cache accessor A pattern A description  The cache implementation is responsible for dynamically loading and unloading data from/to a folder that is located within the filesystem. Such a folder on the other hand can contain many different files with different names, while an image file cache would for example look for a specific image file within this folder.</description>
     </item>
     
     <item>
       <title>Tips and tricks</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/development/tips/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/development/tips/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/development/tips/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/development/tips/</guid>
       <description>Interacting with the runtime The MISA++ runtime is responsible for managing parameters, generation of the parameter schema, managing caches and executing workers.
 There are multiple interface functions avilable that allow extracting information from and manipulation of the runtime.
 misaxx::runtime_properties Contains functions about the current set of workers, the number of threads, the root filesystem and information about the root module.
@@ -344,28 +344,28 @@ The most important function is misaxx::runtime_properties::is_simulating() that 
     
     <item>
       <title></title>
-      <link>applied-systems-biology.github.io/misa-framework/_footer/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/_footer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/_footer/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/_footer/</guid>
       <description>By Applied Systems Biology, Leibniz Institute for Natural Product Research and Infection Biology – Hans Knöll Institute (HKI), Jena, Germany</description>
     </item>
     
     <item>
       <title></title>
-      <link>applied-systems-biology.github.io/misa-framework/_header/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/_header/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/_header/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/_header/</guid>
       <description>by Applied Systems Biology, HKI Jena, Germany</description>
     </item>
     
     <item>
       <title>Attachments</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/standards/attachments/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/attachments/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/standards/attachments/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/attachments/</guid>
       <description>MISA++ comes with a system to attach quantification results and other information to input and output data. The information is stored within objects that are serialized into JSON format, including additional information such as the object type.
 Attachments are saved in the attachments/imported and attachments/exported folders within a MISA++ result folder. The files are structured according to the filesystem (see Parameters).
 An attachment file has the following structure:
@@ -374,10 +374,10 @@ mermaid.initialize({startOnLoad:true}); graph LR; Root[&#34;</description>
     
     <item>
       <title>Building on Windows</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/building/windows-msys2/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/building/windows-msys2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/building/windows-msys2/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/building/windows-msys2/</guid>
       <description>We tested building on Windows via the MSYS2 environment.
 Please note that the Visual Studio compiler is not supported due to missing OpenMP 3.x capabilities.
  Prerequisites  Download and install MSYS2. Start MSYS2 (MinGW 64-bit) and update the packages by typing pacman -Syyu Let the process finish and close the terminal as instructed Restart MSYS2 (MinGW 64-bit)  Using the superbuild script We provide fully automated scripts that installs MISA++ Core, the modules we provide, and all necessary dependencies.</description>
@@ -385,10 +385,10 @@ Please note that the Visual Studio compiler is not supported due to missing Open
     
     <item>
       <title>Module info</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/standards/module-info/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/module-info/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/standards/module-info/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/module-info/</guid>
       <description>The module information is accessible via the command line parameter &amp;lt;module&amp;gt; --module-info and as JSON file in MISA++ output folders (see Result folder).
 It is data in JSON format with following structure:
 mermaid.initialize({startOnLoad:true}); graph LR; Root[&#34;root : object&#34;]--Id[&#34;id : string&#34;] Root --Version[&#34;version : string&#34;] Root -.-|Optional| Name[&#34;name : string&#34;] Root -.-|Optional| Description[&#34;description : string&#34;] Root -.-|Optional| Citation[&#34;citation : string&#34;] Root -.-|Optional| URL[&#34;url : string&#34;] Root -.-|Optional| License[&#34;license : string&#34;] Root -.</description>
@@ -396,10 +396,10 @@ mermaid.initialize({startOnLoad:true}); graph LR; Root[&#34;root : object&#34;]-
     
     <item>
       <title>Parameter schema</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/standards/parameter-schema/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/parameter-schema/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/standards/parameter-schema/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/parameter-schema/</guid>
       <description>The parameter schema can be automatically generated by any MISA++ application and contains all necessary information to create a parameter file (see Parameters).
 It follows a modified JSON Schema draft-07 standard.
 Modifications to JSON Schema draft-07 Property defitions can contain following additional properties:
@@ -408,30 +408,30 @@ Modifications to JSON Schema draft-07 Property defitions can contain following a
     
     <item>
       <title>Parameters</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/standards/parameters/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/parameters/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/standards/parameters/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/parameters/</guid>
       <description>Parameters are in JSON format and have following structure:
 mermaid.initialize({startOnLoad:true}); graph LR; Root[&#34;root : object&#34;]--Filesystem[&#34;filesystem : object&#34;] Filesystem -- FilesystemSource[&#34;source : string&#34;] Filesystem -.-|if source is &#39;json&#39;| FSJsonData[&#34;json-data : string&#34;] Filesystem -.-|if source is &#39;directories&#39;| FSInputDir[&#34;input-directory : string&#34;] Filesystem -.-|if source is &#39;directories&#39;| FSOutputDir[&#34;output-directory : string&#34;] Root --Algorithm[&#34;algorithm : object&#34;] Root --Samples[&#34;samples : object&#34;] Root --Runtime[&#34;runtime : object&#34;] Samples -.-|for each sample| SampleParams[&#34; : object&#34;] Runtime -.-|optional| NumThreads[&#34;num-threads : integer&#34;</description>
     </item>
     
     <item>
       <title>Public API</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/standards/public-api/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/public-api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/standards/public-api/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/public-api/</guid>
       <description>The public API of a MISA++ module should follow a specific structure to make it easier for other developers to use it.
    File/Folder Contains     ./include/&amp;lt;module-name&amp;gt;/accessors/ Derivatives of misaxx::misa_cached_data   ./include/&amp;lt;module-name&amp;gt;/attachments/ Derivatives of misaxx::misa_serializable or misaxx::misa_locatable (preferred). For example quantified data.   ./include/&amp;lt;module-name&amp;gt;/caches/ Derivatives of misaxx::misa_cache   ./include/&amp;lt;module-name&amp;gt;/descriptions/ Derivatives of misaxx::misa_data_description   ./include/&amp;lt;module-name&amp;gt;/patterns/ Derivatives of misaxx::misa_data_pattern   ./include/&amp;lt;module-name&amp;gt;/utils/ Anything else (non-serializable data types, converters, helpers, &amp;hellip;)   .</description>
     </item>
     
     <item>
       <title>Result folder</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/standards/output-data/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/output-data/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/standards/output-data/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/output-data/</guid>
       <description>MISA++ framework applications write their output into a folder that contains all neccessary information to repeat the analysis.
 The folder has following structure:
 mermaid.initialize({startOnLoad:true}); graph LR; A[&#34;Result folder : directory&#34;] -- B[&#34;Parameters : file&#34;] A -- C[&#34;Module Info : file&#34;] A -- D[&#34;Parameter schema : file&#34;] A -- E[&#34;Runtime log : file&#34;] A -- G[&#34;Attachments : folder&#34;] G -- H[&#34;Attachment serialization schemata : file&#34;] G -.-|optional|I[&#34;imported : folder&#34;] G -.</description>
@@ -439,10 +439,10 @@ mermaid.initialize({startOnLoad:true}); graph LR; A[&#34;Result folder : directo
     
     <item>
       <title>Runtime log</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/standards/runtime-log/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/runtime-log/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/standards/runtime-log/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/runtime-log/</guid>
       <description>The runtime log contains detailed information about individual tasks executed by a MISA++ application.
 It is in JSON format and has following structure:
 mermaid.initialize({startOnLoad:true}); graph LR; Root[&#34;root : object&#34;]--Entries[&#34;entries : object&#34;] Entries --|for each thread| ThreadEntry[&#34; : array of task-entry&#34;] TaskEntry[&#34;task-entry : object&#34;] -- Name[&#34;name : string&#34;] TaskEntry -- StartTime[&#34;start-time : number&#34;] TaskEntry -- EndTime[&#34;end-time : number&#34;] TaskEntry -- Unit[&#34;unit : string&#34;]  entries A map from thread$ where $ is the thread number to a list of task-entry.</description>
@@ -450,10 +450,10 @@ mermaid.initialize({startOnLoad:true}); graph LR; Root[&#34;root : object&#34;]-
     
     <item>
       <title>Serialization ID</title>
-      <link>applied-systems-biology.github.io/misa-framework/cpp-framework/standards/serialization-id/</link>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/serialization-id/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>applied-systems-biology.github.io/misa-framework/cpp-framework/standards/serialization-id/</guid>
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/serialization-id/</guid>
       <description>A serialization ID uniquely identifies an object type. It consists of two parts separated by a colon:
 mermaid.initialize({startOnLoad:true}); graph LR; M[&#34;Module&#34;] -- C[&#34;:&#34;] C -- T[&#34;Type&#34;]  Module Lower-case string that consists only of a-z, 0-9 and -. Should be consistent with the module ID (see Module Info).
 Type Lower-case string that consists only of a-z, 0-9, -, _ and / and should form a valid path.
