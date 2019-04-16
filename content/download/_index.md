@@ -79,13 +79,13 @@ git clone https://github.com/applied-systems-biology/misaxx-analyzer.git
 
 Download following package for the MISA++ logos:
 
-{{< button href="https://github.com/applied-systems-biology/misa-framework/releases/download/1.0.0/misaxx_example_data.zip" theme="success" >}} Download Logos{{< /button >}}
+{{< button href="https://github.com/applied-systems-biology/misa-framework/releases/download/1.0.0/misaxx_logos.zip" theme="success" >}} Download Logos{{< /button >}}
 
 # Example data
 
 Our [step by step guide](/imagej/step-by-step) requires you to download example data:
 
-{{< button href="https://github.com/applied-systems-biology/misa-framework/releases/download/1.0.0/misaxx_logos.zip" theme="success" >}} Download example data{{< /button >}}
+{{< button href="https://github.com/applied-systems-biology/misa-framework/releases/download/1.0.0/misaxx_example_data.zip" theme="success" >}} Download example data{{< /button >}}
 
 The example data was published by Klingberg *et. al*
 
