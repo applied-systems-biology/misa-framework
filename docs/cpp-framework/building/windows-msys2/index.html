@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-04-16T15:52:59 CEST">
+<meta name="revised" content="2019-04-25T15:21:43 CEST">
 <title>Building on Windows :: MISA&#43;&#43; Framework</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -451,23 +451,41 @@ for ImageJ and the MISA++ applications, run following command:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./superbuild.sh
 ./package.py
 ./package-fiji.sh</code></pre></div>
+<div class="panel panel-danger">
+	<div class="panel-heading">Warning</div>
+	<div class="panel-body"><p>The OME libraries might be incompatible with the boost version provided by MSYS2 (Cannot find libraries).
+If this is the case four you, remove boost via <code>pacman -R mingw-w64-x86_64-boost</code> and remove the
+<code>mingw-w64-$MSYS2_PLATFORM-boost \</code> line in <code>superbuild.sh</code>.</p>
+
+<p>First make sure that <code>patch</code> is installed by running <code>pacman -S patch</code>.</p>
+
+<p>Clone the MSYS2 package build script repository via <code>git clone https://github.com/msys2/MINGW-packages.git</code>
+and go back to the commit that contains the script to install Boost version 1.69 by navigating into the
+<code>MINGW-packages</code> repository and running <code>git checkout fff2fc0d53aa95b85cee0c785e56159b0565ea72</code>.</p>
+
+<p>Navigate into the <code>mingw-w64-boost</code> folder and run <code>makepkg -si</code>. The command will compile the correct Boost
+version and install it.</p>
+</div>
+	
+</div>
+
+
 <h1 id="manually-building">Manually building</h1>
 
 <p>Install the necessary MSYS2 packages:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#111">MSYS2_PLATFORM</span><span style="color:#f92672">=</span>x86_64
-pacman -S --noconfirm --needed unzip mingw-w64-<span style="color:#111">$MSYS2_PLATFORM</span>-cmake <span style="color:#8045ff">\
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pacman -S --noconfirm --needed unzip mingw-w64-x86_64-cmake <span style="color:#8045ff">\
 </span><span style="color:#8045ff"></span>wget <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>mingw-w64-<span style="color:#111">$MSYS2_PLATFORM</span>-toolchain <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>mingw-w64-<span style="color:#111">$MSYS2_PLATFORM</span>-boost <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>mingw-w64-<span style="color:#111">$MSYS2_PLATFORM</span>-make <span style="color:#8045ff">\
+</span><span style="color:#8045ff"></span>mingw-w64-x86_64-toolchain <span style="color:#8045ff">\
+</span><span style="color:#8045ff"></span>mingw-w64-x86_64-boost <span style="color:#8045ff">\
+</span><span style="color:#8045ff"></span>mingw-w64-x86_64-make <span style="color:#8045ff">\
 </span><span style="color:#8045ff"></span>libsqlite <span style="color:#8045ff">\
 </span><span style="color:#8045ff"></span>libsqlite-devel <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>mingw-w64-<span style="color:#111">$MSYS2_PLATFORM</span>-opencv <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>mingw-w64-<span style="color:#111">$MSYS2_PLATFORM</span>-libtiff <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>mingw-w64-<span style="color:#111">$MSYS2_PLATFORM</span>-xerces-c <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>mingw-w64-<span style="color:#111">$MSYS2_PLATFORM</span>-xalan-c <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>mingw-w64-<span style="color:#111">$MSYS2_PLATFORM</span>-libpng <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>mingw-w64-<span style="color:#111">$MSYS2_PLATFORM</span>-python2</code></pre></div>
+</span><span style="color:#8045ff"></span>mingw-w64-x86_64-opencv <span style="color:#8045ff">\
+</span><span style="color:#8045ff"></span>mingw-w64-x86_64-libtiff <span style="color:#8045ff">\
+</span><span style="color:#8045ff"></span>mingw-w64-x86_64-xerces-c <span style="color:#8045ff">\
+</span><span style="color:#8045ff"></span>mingw-w64-x86_64-xalan-c <span style="color:#8045ff">\
+</span><span style="color:#8045ff"></span>mingw-w64-x86_64-libpng <span style="color:#8045ff">\
+</span><span style="color:#8045ff"></span>mingw-w64-x86_64-python2</code></pre></div>
 <p>Obtain the MISA++ sources and the sources of dependencies that are not in
 MSYS2. Build them like any CMake build:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#111">cd</span> <span style="color:#111">$SOURCE_CODE</span>

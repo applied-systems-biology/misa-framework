@@ -45,25 +45,39 @@ for ImageJ and the MISA++ applications, run following command:
 ./package-fiji.sh
 ```
 
+{{% panel theme="danger" header="Warning" %}}
+The OME libraries might be incompatible with the boost version provided by MSYS2 (Cannot find libraries).
+If this is the case four you, remove boost via `pacman -R mingw-w64-x86_64-boost` and remove the
+`mingw-w64-$MSYS2_PLATFORM-boost \` line in `superbuild.sh`.
+
+First make sure that `patch` is installed by running `pacman -S patch`.
+
+Clone the MSYS2 package build script repository via `git clone https://github.com/msys2/MINGW-packages.git`
+and go back to the commit that contains the script to install Boost version 1.69 by navigating into the
+`MINGW-packages` repository and running `git checkout fff2fc0d53aa95b85cee0c785e56159b0565ea72`.
+
+Navigate into the `mingw-w64-boost` folder and run `makepkg -si`. The command will compile the correct Boost
+version and install it.
+{{% /panel %}}
+
 # Manually building
 
 Install the necessary MSYS2 packages:
 
 ```bash
-MSYS2_PLATFORM=x86_64
-pacman -S --noconfirm --needed unzip mingw-w64-$MSYS2_PLATFORM-cmake \
+pacman -S --noconfirm --needed unzip mingw-w64-x86_64-cmake \
 wget \
-mingw-w64-$MSYS2_PLATFORM-toolchain \
-mingw-w64-$MSYS2_PLATFORM-boost \
-mingw-w64-$MSYS2_PLATFORM-make \
+mingw-w64-x86_64-toolchain \
+mingw-w64-x86_64-boost \
+mingw-w64-x86_64-make \
 libsqlite \
 libsqlite-devel \
-mingw-w64-$MSYS2_PLATFORM-opencv \
-mingw-w64-$MSYS2_PLATFORM-libtiff \
-mingw-w64-$MSYS2_PLATFORM-xerces-c \
-mingw-w64-$MSYS2_PLATFORM-xalan-c \
-mingw-w64-$MSYS2_PLATFORM-libpng \
-mingw-w64-$MSYS2_PLATFORM-python2
+mingw-w64-x86_64-opencv \
+mingw-w64-x86_64-libtiff \
+mingw-w64-x86_64-xerces-c \
+mingw-w64-x86_64-xalan-c \
+mingw-w64-x86_64-libpng \
+mingw-w64-x86_64-python2
 ```
 
 Obtain the MISA++ sources and the sources of dependencies that are not in
