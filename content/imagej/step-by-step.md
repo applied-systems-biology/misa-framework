@@ -18,8 +18,8 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 
 The video tutorial covers the same steps as the written tutorial.
 
-<p style="text-align: center;">
-<video src="/media/misaxx_imagej_tutorial.mp4" width="80%" controls preload keepaspectratio></video>
+<p class="video-container">
+<iframe width="80%" src="https://www.youtube-nocookie.com/embed/7Pj98rOefMc?rel=0" frameborder="0" allowfullscreen></iframe>
 </p>
 
 # Written tutorial
