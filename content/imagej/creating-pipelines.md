@@ -300,7 +300,7 @@ appropriate data from the available options.</p>
 </p>
 <h2 class="western"><a name="_rex69vs233a1"></a>Pipeline actions</h2>
 <p >Following actions are available at in
-the toolbar (③):</p>
+the toolbar:</p>
 <p ><br/>
 
 </p>

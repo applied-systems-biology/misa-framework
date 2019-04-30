@@ -36,7 +36,7 @@ update plot </i>button.</p>
 <p ><br/>
 
 </p>
-<p >The plot type can be selected in ②,
+<p >The plot type can be selected in the current plot and data import section,
 which also has following actions:</p>
 <p ><br/>
 
