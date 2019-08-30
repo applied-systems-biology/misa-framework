@@ -1,4 +1,8 @@
+## Configuration for online website:
 baseURL = "https://applied-systems-biology.github.io/misa-framework/"
+
+## Configuration for offline website:
+#uglyURLs = true
 
 languageCode = "en-us"
 DefaultContentLanguage = "en"
