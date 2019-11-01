@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-04-30T17:23:45 CEST">
+<meta name="revised" content="2019-11-01T18:16:55 CET">
 <title>Declaring data :: MISA&#43;&#43; Framework</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     
 	
   
-    <p><a href="../../../" target="_self"><img src="../../../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span></p>
+    <a href="../../../" target="_self"><img src="../../../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span>
 
   
 
@@ -163,6 +163,13 @@
       <a href="../../../cpp-framework/building/">Building</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
+      <li data-nav-id="/cpp-framework/building/building-linux/" class="dd-item">
+        <div>
+          <a href="../../../cpp-framework/building/building-linux/">
+            Building on Linux
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/cpp-framework/building/windows-msys2/" class="dd-item">
         <div>
           <a href="../../../cpp-framework/building/windows-msys2/">
@@ -438,11 +445,11 @@ for triggering the linking process between a folder and the cache implementation
 
 <p>Linking of a cache is done within the <code>setup()</code> method of the module interface. In most cases, it is most reasonable to use the <code>suggest_import_location(...)</code> or <code>suggest_export_location(...)</code> functions to link a cache.</p>
 
-<div class="notices info" ><p>The paths provided to <code>suggest_import_location(...)</code> and <code>suggest_export_location(...)</code> are relative to the
+<div class="notices info" >
+The paths provided to `suggest_import_location(...)` and `suggest_export_location(...)` are relative to the
 virtual filesystem of the current module. The framework will automatically handle the organization of the files within
-the physical filesystem.</p>
+the physical filesystem.
 </div>
-
 
 <h2 id="input-data">Input data</h2>
 
@@ -466,21 +473,24 @@ Filesystem---|link|Cache
 </div>
 
 <div class="panel panel-default">
-	<div class="panel-heading">Example</div>
-	<div class="panel-body"><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">struct</span> <span style="color:#111">module_interface</span> <span style="color:#111">:</span> <span style="color:#00a8c8">public</span> <span style="color:#111">misa_module_interface</span> <span style="color:#111">{</span>
-    <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">ome</span><span style="color:#f92672">::</span><span style="color:#111">misa_ome_tiff</span> <span style="color:#111">m_input</span><span style="color:#111">;</span>
-    <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">ome</span><span style="color:#f92672">::</span><span style="color:#111">misa_ome_tiff</span> <span style="color:#111">m_output</span><span style="color:#111">;</span>
-    <span style="color:#00a8c8">void</span> <span style="color:#75af00">setup</span><span style="color:#111">();</span>
-<span style="color:#111">}</span>
+    <div class="panel-heading">Example</div>
+    <div class="panel-body">
+```cpp
+struct module_interface : public misa_module_interface {
+    misaxx::ome::misa_ome_tiff m_input;
+    misaxx::ome::misa_ome_tiff m_output;
+    void setup();
+}
 
-<span style="color:#111">module_interface</span><span style="color:#f92672">::</span><span style="color:#111">setup</span><span style="color:#111">()</span> <span style="color:#111">{</span>
-    <span style="color:#111">m_input</span><span style="color:#111">.</span><span style="color:#111">suggest_import_location</span><span style="color:#111">(</span><span style="color:#111">filesystem</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;input&#34;</span><span style="color:#111">);</span> <span style="color:#75715e">// Link to &lt;input folder&gt;/input
-</span><span style="color:#75715e"></span>    <span style="color:#111">m_output</span><span style="color:#111">.</span><span style="color:#111">suggest_export_location</span><span style="color:#111">(</span><span style="color:#111">filesystem</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;output&#34;</span><span style="color:#111">,</span> <span style="color:#111">m_input</span><span style="color:#111">.</span><span style="color:#111">describe</span><span style="color:#111">());</span> <span style="color:#75715e">// Link to &lt;output folder&gt;/output. The output cache will have the same properties as the input
-</span><span style="color:#75715e"></span><span style="color:#111">}</span>
-</code></pre></div></div>
-	
+module_interface::setup() {
+    m_input.suggest_import_location(filesystem, "input"); // Link to <input folder>/input
+    m_output.suggest_export_location(filesystem, "output", m_input.describe()); // Link to <output folder>/output. The output cache will have the same properties as the input
+}
+```
 </div>
+    
 
+<p></div></p>
 
 <h1 id="accessing-cached-data">Accessing cached data</h1>
 
@@ -491,16 +501,16 @@ Filesystem---|link|Cache
 </code></pre></div>
 <p>Those methods create proxy objects that ensure the correct state of the cache.</p>
 
-<div class="notices warning" ><p>Make sure to not destroy the proxy objects prematurely. The cache
-might invalidate the data.</p>
+<div class="notices warning" >
+Make sure to not destroy the proxy objects prematurely. The cache
+might invalidate the data.
 </div>
-
 
 <p>Access via proxy-objects or accessor-specific helper methods is thread-safe and uses a shared mutex to allow multiple threads to read the data, but only one thread to write it.</p>
 
-<div class="notices warning" ><p>Please be careful to not circumvent cache access, as it can lead to lost data or errors.</p>
+<div class="notices warning" >
+Please be careful to not circumvent cache access, as it can lead to lost data or errors.
 </div>
-
 
 <h2 id="example">Example</h2>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">void</span> <span style="color:#75af00">work</span><span style="color:#111">()</span> <span style="color:#111">{</span>

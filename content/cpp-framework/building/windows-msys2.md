@@ -12,6 +12,10 @@ We tested building on Windows via the [MSYS2](https://www.msys2.org/) environmen
 {{% notice warning %}}Please note that the Visual Studio compiler is not
 supported due to missing OpenMP 3.x capabilities.{{% /notice %}}
 
+{{% notice warning %}}We consider building on Windows experimental due to random crashes
+of compiled programs during starting. We were yet not able to find the cause of those crashes,
+although review using library inspection software hints at the inability to load dynamic
+libraries under certain circumstances.{{% /notice %}}
 
 # Prerequisites
 

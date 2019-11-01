@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-04-30T17:23:45 CEST">
+<meta name="revised" content="2019-11-01T18:16:55 CET">
 <title>Download :: MISA&#43;&#43; Framework</title>
 <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon" />
 <link href="../css/font-awesome.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     
 	
   
-    <p><a href="../" target="_self"><img src="../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span></p>
+    <a href="../" target="_self"><img src="../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span>
 
   
 
@@ -162,6 +162,13 @@
       <a href="../cpp-framework/building/">Building</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
+      <li data-nav-id="/cpp-framework/building/building-linux/" class="dd-item">
+        <div>
+          <a href="../cpp-framework/building/building-linux/">
+            Building on Linux
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/cpp-framework/building/windows-msys2/" class="dd-item">
         <div>
           <a href="../cpp-framework/building/windows-msys2/">
@@ -400,22 +407,7 @@
 
 
 
-<h1 id="misa-for-imagej">MISA++ for ImageJ</h1>
-
-<h2 id="misa-ready-to-use-fiji-distribution">MISA++ ready-to-use Fiji distribution</h2>
-
-<p>We provide a ready-to-use <a href="https://fiji.sc/">Fiji</a> distribution that comes pre-installed with
-<strong>MISA++ for ImageJ</strong>, <em>MISA++ Kidney Glomeruli Segmentation</em>,
-<em>MISA++ Tissue Segmentation</em>, <em>MISA++ OME Visualizer</em> and <em>MISA++ Result Analyzer</em>.</p>
-
-
-
-<button class="btn  btn-success" type="button"  onclick="location.href='https:\/\/github.com\/applied-systems-biology\/misa-framework\/releases\/download\/1.0.0\/misa-imagej-fiji-standalone-win32.zip'" > Download Fiji+MISA (Windows)</button>
-
-
-
-
-<h2 id="imagej-plugin">ImageJ plugin</h2>
+<h1 id="all-platforms-imagej-plugin">All platforms: ImageJ plugin</h1>
 
 <p>If you only want the plugin or are using an operating system other than Windows,
 download following package:</p>
@@ -427,50 +419,55 @@ download following package:</p>
 
 
 
-<p>Our plugin is Open Source and licensed under <a href="https://opensource.org/licenses/BSD-2-Clause">BSD-2-Clause</a>.
-You can find the code under following link:</p>
+<div class="notices info" >This download contains only the plugin and dependency libraries. Please do not forget to obtain compiled MISA++ packages for your operating system
+that are interfaced with the plugin.</div>
+
+<h1 id="linux">Linux</h1>
+
+<p>We provide ready-to-install packages for Ubuntu 18.04 and Ubuntu 19.10 that contains following components:</p>
+
+<ul>
+<li>MISA++ core components (MISA++ Core, MISA++ Analyzer)</li>
+<li>Example implementations of third-party library integrations (OpenCV, OME TIFF)</li>
+<li>Example implementations of image analysis algorithms (Tissue segmentation, Kidney glomeruli segmenation, OME visualizer)</li>
+<li>ImageJ plugin binaries, including dependency libraries</li>
+</ul>
+
+<p>
+
+<button class="btn  btn-success" type="button"  onclick="location.href='https:\/\/github.com\/applied-systems-biology\/misa-framework\/releases\/download\/1.0.0\/misaxx-linux-ubuntu-18.04.zip'" > Download MISA++ for Ubuntu 18.04</button>
+
+
+ 
+
+<button class="btn  btn-success" type="button"  onclick="location.href='https:\/\/github.com\/applied-systems-biology\/misa-framework\/releases\/download\/1.0.0\/misaxx-linux-ubuntu-19.10.zip'" > Download MISA++ for Ubuntu 19.10</button>
+
+
+</p>
+
+<p>You can install the *.deb packages using <code>sudo apt install ./*.deb</code>. Put the plugin files (located in the <code>misa-imagej</code> folder)
+into an existing <a href="https://fiji.sc/">Fiji</a> installation to install the ImageJ plugin.</p>
+
+<h1 id="windows">Windows</h1>
+
+<p>We provide a ready-to-use <a href="https://fiji.sc/">Fiji</a> distribution that comes pre-installed with
+<strong>MISA++ for ImageJ</strong>, <em>MISA++ Kidney Glomeruli Segmentation</em>,
+<em>MISA++ Tissue Segmentation</em>, <em>MISA++ OME Visualizer</em> and <em>MISA++ Result Analyzer</em>.</p>
 
 
 
-<button class="btn  btn-info" type="button"  onclick="location.href='https:\/\/github.com\/applied-systems-biology\/misa-imagej'" > Download source code </button>
+<button class="btn  btn-success" type="button"  onclick="location.href='https:\/\/github.com\/applied-systems-biology\/misa-framework\/releases\/download\/1.0.0\/misa-imagej-fiji-standalone-win32.zip'" > Download MISA+Fiji for Windows</button>
 
 
 
 
-<h1 id="misa-high-performance-framework">MISA++ High-performance framework</h1>
+<div class="notices info" >MISA++ is developed on Linux - We consider this Windows release as experimental. We are aware of a bug that prevents the execution of compiled *.exe files.
+Under certain circumstances, pressing "Refresh" in the list of MISA++ modules solves this issue.</div>
 
-<p>The framework is Open Source and licensed under <a href="https://opensource.org/licenses/BSD-2-Clause">BSD-2-Clause</a>.</p>
+<h1 id="source-code">Source code</h1>
 
-<h2 id="windows-super-build-source-code">Windows super build source code</h2>
-
-<p>If you use Windows, you can use our superbuild that automates downloading and installing of MISA++ and
-MISA++ for ImageJ. See <a href="../cpp-framework/building/windows-msys2">our guide</a> for more information.</p>
-
-
-
-<button class="btn  btn-info" type="button"  onclick="location.href='https:\/\/github.com\/applied-systems-biology\/misaxx-utils'" > Download Windows superbuild sources </button>
-
-
-
-
-<div class="expand">
-    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
-        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
-        <span>
-        
-        
-        Git repository
-        
-        </span>
-    </div>
-    <div class="expand-content" style="display: none;">
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/applied-systems-biology/misaxx-utils.git</code></pre></div>
-    </div>
-</div>
-
-<h2 id="source-code">Source code</h2>
-
-<p>You can find the source codes of the MISA++ framework, modules and applications
+<p>The software is Open Source and licensed under <a href="https://opensource.org/licenses/BSD-2-Clause">BSD-2-Clause</a>.
+You can find the source codes of the MISA++ framework, modules and applications
 under following links:</p>
 
 <table>
@@ -524,29 +521,34 @@ under following links:</p>
 <td><a href="https://github.com/applied-systems-biology/misaxx-analyzer" target="_blank"> Download source code </a></td>
 <td><a href="../docs/misaxx-analyzer" target="_blank"> Open </a></td>
 </tr>
+
+<tr>
+<td>MISA++ for ImageJ</td>
+<td><a href="https://github.com/applied-systems-biology/misa-imagej" target="_blank"> Download source code </a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
-
-<div class="expand">
-    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
-        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
-        <span>
-        
-        
-        Git repositories
-        
-        </span>
-    </div>
-    <div class="expand-content" style="display: none;">
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/applied-systems-biology/misaxx-core.git
 git clone https://github.com/applied-systems-biology/misaxx-imaging.git
 git clone https://github.com/applied-systems-biology/misaxx-ome.git
 git clone https://github.com/applied-systems-biology/misaxx-ome-visualizer.git
 git clone https://github.com/applied-systems-biology/misaxx-tissue.git
 git clone https://github.com/applied-systems-biology/misaxx-kidney-glomeruli.git
-git clone https://github.com/applied-systems-biology/misaxx-analyzer.git</code></pre></div>
-    </div>
-</div>
+git clone https://github.com/applied-systems-biology/misaxx-analyzer.git
+git clone https://github.com/applied-systems-biology/misa-imagej.git</code></pre></div>
+<h2 id="linux-docker-builds">Linux docker builds</h2>
+
+<p>We use automated build scripts to compile Linux packages. These scripts use a
+Docker environment and can be found <a href="https://github.com/applied-systems-biology/misaxx-utils/linux-builds">here</a>.</p>
+
+<h2 id="windows-msys2-builds-experimental">Windows MSYS2 builds (experimental)</h2>
+
+<p>To build MISA++ on Windows, we use the <a href="https://msys2.org/">MSYS2</a> environment.
+Our script can be found <a href="https://github.com/applied-systems-biology/misaxx-utils/linux-builds">here</a>.</p>
+
+<div class="notices info" >The Windows build is currently experimental. The build process might fail due to changes in MSYS2.
+We also experience issues in compiled executabled failing to load dynamic libraries, causing crashes.</div>
 
 <h1 id="logos">Logos</h1>
 
@@ -583,7 +585,7 @@ Journal of the American Society of Nephrology 28.2 (2017): 452-459.</p>
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="../cpp-framework/credits/" title="Credits"> <i class="fa fa-chevron-left"></i><label>Credits</label></a>
+<a class="nav nav-prev" href="../cpp-framework/standards/serialization-id/" title="Serialization ID"> <i class="fa fa-chevron-left"></i><label>Serialization ID</label></a>
     <a class="nav nav-next" href="../citation/" title="Citation" style="margin-right: 0px;"><label>Citation</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 

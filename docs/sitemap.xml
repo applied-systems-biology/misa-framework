@@ -132,18 +132,25 @@
   
   <url>
     <loc>https://applied-systems-biology.github.io/misa-framework/_footer/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://applied-systems-biology.github.io/misa-framework/_header/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://applied-systems-biology.github.io/misa-framework/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/attachments/</loc>
+  </url>
+  
+  <url>
+    <loc>https://applied-systems-biology.github.io/misa-framework/cpp-framework/building/building-linux/</loc>
   </url>
   
   <url>
@@ -152,7 +159,6 @@
   
   <url>
     <loc>https://applied-systems-biology.github.io/misa-framework/categories/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -185,7 +191,6 @@
   
   <url>
     <loc>https://applied-systems-biology.github.io/misa-framework/tags/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>

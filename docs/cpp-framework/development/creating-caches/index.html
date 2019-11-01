@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-04-30T17:23:45 CEST">
+<meta name="revised" content="2019-11-01T18:16:55 CET">
 <title>Creating caches :: MISA&#43;&#43; Framework</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     
 	
   
-    <p><a href="../../../" target="_self"><img src="../../../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span></p>
+    <a href="../../../" target="_self"><img src="../../../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span>
 
   
 
@@ -163,6 +163,13 @@
       <a href="../../../cpp-framework/building/">Building</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
+      <li data-nav-id="/cpp-framework/building/building-linux/" class="dd-item">
+        <div>
+          <a href="../../../cpp-framework/building/building-linux/">
+            Building on Linux
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/cpp-framework/building/windows-msys2/" class="dd-item">
         <div>
           <a href="../../../cpp-framework/building/windows-msys2/">
@@ -442,9 +449,9 @@ is used as input of a cache. It uses this description to set all internal parame
 
 <p>A cache <em>accessor</em> is a shared-pointer-like object with the purpose of allowing easy access to the functionality of a cache. You can use it to add convenient methods that make it easier to work with the specific cache type.</p>
 
-<div class="notices info" ><p>The module interface and workers access a cache only via a cache accessor.</p>
+<div class="notices info" >
+The module interface and workers access a cache only via a cache accessor.
 </div>
-
 
 <link href="../../../mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
 <script defer src="../../../mermaid/mermaid.js">mermaid.initialize({startOnLoad:true});</script>
@@ -492,7 +499,7 @@ Accessor-.-I["Module interface"]
 <span style="color:#00a8c8">void</span> <span style="color:#75af00">do_link</span><span style="color:#111">(</span><span style="color:#00a8c8">const</span> <span style="color:#f92672">&lt;</span><span style="color:#111">Description</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span><span style="color:#111">t_description</span><span style="color:#111">);</span>
 <span style="color:#00a8c8">void</span> <span style="color:#75af00">simulate_link</span><span style="color:#111">();</span> <span style="color:#75715e">// Optional
 </span><span style="color:#75715e"></span><span style="color:#00a8c8">void</span> <span style="color:#111">postprocess</span><span style="color:#111">()</span> <span style="color:#75715e">// Optional
-</span><span style="color:#75715e"></span></code></pre></div>
+</span></code></pre></div>
 <p>The <code>produce_description()</code> function is responsible for creating applying the pattern and generating a description that allows the link function to find all necessary data within the folder.</p>
 
 <p>The main link function is <code>do_link()</code>. It takes the description type of the cache and allows you to setup all internal functionality to make reading and writing work. It is only called if the runtime is not creating a parameter schema.</p>
@@ -577,10 +584,10 @@ Accessor-.-I["Module interface"]
 </tbody>
 </table>
 
-<div class="notices warning" ><p>Do not call <code>get()</code>, <code>has()</code>, etc. manually unless you know exactly what you do.
-Use <code>readonly_access()</code>, <code>write_access()</code> and <code>readwrite_access()</code> that are provided by the accessor!</p>
+<div class="notices warning" >
+Do not call `get()`, `has()`, etc. manually unless you know exactly what you do.
+Use `readonly_access()`, `write_access()` and `readwrite_access()` that are provided by the accessor!
 </div>
-
 
 <h2 id="the-cache-accessor">The cache accessor</h2>
 
@@ -589,129 +596,145 @@ Use <code>readonly_access()</code>, <code>write_access()</code> and <code>readwr
 <p>Just inherit from <code>misa_cached_data&lt;CacheImplementation&gt;</code>. You can also inherit from <code>misa_description_accessors_from_cache&lt;CacheImplementation, SELF&gt;</code> to automatically add convenient access to caches that are based on <code>misa_default_cache</code>.</p>
 
 <div class="panel panel-default">
-	<div class="panel-heading">Example</div>
-	<div class="panel-body"><p>We will create a cache that provides access to an integer. It will be stored in a file, so it is sufficient to just use a file pattern and derive our description from misa_file_description.</p>
+    <div class="panel-heading">Example</div>
+    <div class="panel-body">
 
-<h3 id="the-pattern">The pattern</h3>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">/**
-</span><span style="color:#75715e">patterns/integer_pattern.h
-</span><span style="color:#75715e">*/</span>
+We will create a cache that provides access to an integer. It will be stored in a file, so it is sufficient to just use a file pattern and derive our description from misa_file_description.
 
-<span style="color:#00a8c8">struct</span> <span style="color:#111">integer_pattern</span> <span style="color:#111">:</span> <span style="color:#00a8c8">public</span> <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_file_pattern</span> <span style="color:#111">{</span>
-  <span style="color:#75715e">// We only look for .integer files
-</span><span style="color:#75715e"></span>  <span style="color:#111">integer_description</span><span style="color:#111">()</span> <span style="color:#f92672">:</span> <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_file_pattern</span><span style="color:#111">({</span> <span style="color:#d88200">&#34;.integer&#34;</span> <span style="color:#111">})</span> <span style="color:#111">{</span>
+### The pattern
 
-  <span style="color:#111">}</span>
-<span style="color:#00a8c8">protected</span><span style="color:#f92672">:</span>
-      <span style="color:#00a8c8">void</span> <span style="color:#111">build_serialization_id_hierarchy</span><span style="color:#111">(</span><span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">vector</span><span style="color:#f92672">&lt;</span><span style="color:#111">misa_serialization_id</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span><span style="color:#111">result</span><span style="color:#111">)</span> <span style="color:#00a8c8">const</span> <span style="color:#00a8c8">override</span><span style="color:#111">;</span>
-<span style="color:#111">}</span>
+```cpp
+/**
+patterns/integer_pattern.h
+*/
 
-<span style="color:#00a8c8">inline</span> <span style="color:#00a8c8">void</span> <span style="color:#111">to_json</span><span style="color:#111">(</span><span style="color:#111">nlohmann</span><span style="color:#f92672">::</span><span style="color:#111">json</span><span style="color:#f92672">&amp;</span> <span style="color:#111">j</span><span style="color:#111">,</span> <span style="color:#00a8c8">const</span> <span style="color:#111">integer_pattern</span><span style="color:#f92672">&amp;</span> <span style="color:#111">p</span><span style="color:#111">);</span>
-<span style="color:#00a8c8">inline</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">from_json</span><span style="color:#111">(</span><span style="color:#00a8c8">const</span> <span style="color:#111">nlohmann</span><span style="color:#f92672">::</span><span style="color:#111">json</span><span style="color:#f92672">&amp;</span> <span style="color:#111">j</span><span style="color:#111">,</span> <span style="color:#111">integer_pattern</span><span style="color:#f92672">&amp;</span> <span style="color:#111">p</span><span style="color:#111">);</span>
-</code></pre></div>
-<h3 id="the-description">The description</h3>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">/**
-</span><span style="color:#75715e">descriptions/integer_description.h
-</span><span style="color:#75715e">*/</span>
+struct integer_pattern : public misaxx::misa_file_pattern {
+  // We only look for .integer files
+  integer_description() : misaxx::misa_file_pattern({ ".integer" }) {
 
-<span style="color:#00a8c8">struct</span> <span style="color:#111">integer_description</span> <span style="color:#111">:</span> <span style="color:#00a8c8">public</span> <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_file_description</span> <span style="color:#111">{</span>
-  <span style="color:#00a8c8">using</span> <span style="color:#111">misa_file_description</span><span style="color:#f92672">::</span><span style="color:#111">misa_file_description</span><span style="color:#111">;</span>
-<span style="color:#00a8c8">protected</span><span style="color:#f92672">:</span>
-      <span style="color:#00a8c8">void</span> <span style="color:#111">build_serialization_id_hierarchy</span><span style="color:#111">(</span><span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">vector</span><span style="color:#f92672">&lt;</span><span style="color:#111">misa_serialization_id</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span><span style="color:#111">result</span><span style="color:#111">)</span> <span style="color:#00a8c8">const</span> <span style="color:#00a8c8">override</span><span style="color:#111">;</span>
-<span style="color:#111">}</span>
+  }
+protected:
+      void build_serialization_id_hierarchy(std::vector<misa_serialization_id> &result) const override;
+}
 
-<span style="color:#00a8c8">inline</span> <span style="color:#00a8c8">void</span> <span style="color:#111">to_json</span><span style="color:#111">(</span><span style="color:#111">nlohmann</span><span style="color:#f92672">::</span><span style="color:#111">json</span><span style="color:#f92672">&amp;</span> <span style="color:#111">j</span><span style="color:#111">,</span> <span style="color:#00a8c8">const</span> <span style="color:#111">integer_description</span><span style="color:#f92672">&amp;</span> <span style="color:#111">p</span><span style="color:#111">);</span>
-<span style="color:#00a8c8">inline</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">from_json</span><span style="color:#111">(</span><span style="color:#00a8c8">const</span> <span style="color:#111">nlohmann</span><span style="color:#f92672">::</span><span style="color:#111">json</span><span style="color:#f92672">&amp;</span> <span style="color:#111">j</span><span style="color:#111">,</span> <span style="color:#111">integer_description</span><span style="color:#f92672">&amp;</span> <span style="color:#111">p</span><span style="color:#111">);</span>
-</code></pre></div>
-<h3 id="the-cache-implementation">The cache implementation</h3>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">/**
-</span><span style="color:#75715e">caches/integer_cache.h
-</span><span style="color:#75715e">*/</span>
+inline void to_json(nlohmann::json& j, const integer_pattern& p);
+inline void from_json(const nlohmann::json& j, integer_pattern& p);
+```
 
-<span style="color:#00a8c8">struct</span> <span style="color:#111">integer_cache</span> <span style="color:#111">:</span> <span style="color:#00a8c8">public</span> <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_default_cache</span><span style="color:#f92672">&lt;</span>
-  <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">utils</span><span style="color:#f92672">::</span><span style="color:#111">access</span><span style="color:#f92672">::</span><span style="color:#111">cache</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">int</span><span style="color:#f92672">&gt;</span><span style="color:#111">,</span>
-  <span style="color:#111">integer_pattern</span><span style="color:#111">,</span>
-  <span style="color:#111">integer_description</span><span style="color:#f92672">&gt;</span> <span style="color:#111">{</span>
+### The description
 
-    <span style="color:#75715e">// Inherited from mutexed cache. Just plain I/O
-</span><span style="color:#75715e"></span>    <span style="color:#00a8c8">int</span> <span style="color:#f92672">&amp;</span><span style="color:#111">get</span><span style="color:#111">()</span> <span style="color:#111">{</span> <span style="color:#00a8c8">return</span> <span style="color:#111">m_value</span><span style="color:#111">.</span><span style="color:#111">get</span><span style="color:#111">();</span> <span style="color:#111">}</span>
+```cpp
+/**
+descriptions/integer_description.h
+*/
 
-    <span style="color:#00a8c8">const</span> <span style="color:#00a8c8">int</span> <span style="color:#f92672">&amp;</span><span style="color:#111">get</span><span style="color:#111">()</span> <span style="color:#00a8c8">const</span> <span style="color:#111">{</span> <span style="color:#00a8c8">return</span> <span style="color:#111">m_value</span><span style="color:#111">.</span><span style="color:#111">get</span><span style="color:#111">();</span> <span style="color:#111">}</span>
+struct integer_description : public misaxx::misa_file_description {
+  using misa_file_description::misa_file_description;
+protected:
+      void build_serialization_id_hierarchy(std::vector<misa_serialization_id> &result) const override;
+}
 
-    <span style="color:#00a8c8">void</span> <span style="color:#111">set</span><span style="color:#111">(</span><span style="color:#00a8c8">int</span> <span style="color:#111">v</span><span style="color:#111">)</span> <span style="color:#111">{</span> <span style="color:#111">m_value</span> <span style="color:#f92672">=</span> <span style="color:#111">v</span><span style="color:#111">;</span> <span style="color:#111">}</span>
+inline void to_json(nlohmann::json& j, const integer_description& p);
+inline void from_json(const nlohmann::json& j, integer_description& p);
 
-    <span style="color:#00a8c8">bool</span> <span style="color:#111">has</span><span style="color:#111">()</span> <span style="color:#00a8c8">const</span> <span style="color:#111">{</span> <span style="color:#00a8c8">return</span> <span style="color:#111">m_value</span><span style="color:#111">.</span><span style="color:#111">has_value</span><span style="color:#111">();</span> <span style="color:#111">}</span>
+```
 
-    <span style="color:#00a8c8">bool</span> <span style="color:#111">can_pull</span><span style="color:#111">()</span> <span style="color:#00a8c8">const</span> <span style="color:#111">{</span> <span style="color:#00a8c8">return</span> <span style="color:#111">boost</span><span style="color:#f92672">::</span><span style="color:#111">filesystem</span><span style="color:#f92672">::</span><span style="color:#111">exists</span><span style="color:#111">(</span><span style="color:#111">m_path</span><span style="color:#111">);</span> <span style="color:#111">}</span>
+### The cache implementation
 
-    <span style="color:#00a8c8">void</span> <span style="color:#111">stash</span><span style="color:#111">()</span> <span style="color:#111">{</span> <span style="color:#111">m_value</span> <span style="color:#f92672">=</span> <span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">nullopt</span><span style="color:#111">;</span> <span style="color:#111">}</span>
+```cpp
+/**
+caches/integer_cache.h
+*/
 
-    <span style="color:#00a8c8">void</span> <span style="color:#111">pull</span><span style="color:#111">()</span> <span style="color:#111">{</span>
-      <span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">ifstream</span> <span style="color:#111">r</span><span style="color:#111">;</span>
-      <span style="color:#111">r</span><span style="color:#111">.</span><span style="color:#111">open</span><span style="color:#111">(</span><span style="color:#111">m_path</span><span style="color:#111">.</span><span style="color:#111">string</span><span style="color:#111">());</span>
-      <span style="color:#00a8c8">int</span> <span style="color:#111">v</span><span style="color:#111">;</span>
-      <span style="color:#111">r</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#111">v</span><span style="color:#111">;</span>
-      <span style="color:#111">m_value</span> <span style="color:#f92672">=</span> <span style="color:#111">v</span><span style="color:#111">;</span>
-    <span style="color:#111">}</span>
+struct integer_cache : public misaxx::misa_default_cache<
+  misaxx::utils::access::cache<int>,
+  integer_pattern,
+  integer_description> {
 
-    <span style="color:#00a8c8">void</span> <span style="color:#111">push</span><span style="color:#111">()</span> <span style="color:#111">{</span>
-      <span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">ofstream</span> <span style="color:#111">w</span><span style="color:#111">;</span>
-      <span style="color:#111">w</span><span style="color:#111">.</span><span style="color:#111">open</span><span style="color:#111">(</span><span style="color:#111">m_path</span><span style="color:#111">.</span><span style="color:#111">string</span><span style="color:#111">())</span>
-      <span style="color:#111">w</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#111">m_value</span><span style="color:#111">.</span><span style="color:#111">get</span><span style="color:#111">();</span>
-    <span style="color:#111">}</span>
+    // Inherited from mutexed cache. Just plain I/O
+    int &get() { return m_value.get(); }
 
-    <span style="color:#75715e">// Linkage, simulation &amp; postprocessing
-</span><span style="color:#75715e"></span><span style="color:#00a8c8">protected</span><span style="color:#f92672">:</span>
+    const int &get() const { return m_value.get(); }
 
-    <span style="color:#111">integer_description</span> <span style="color:#111">produce_description</span><span style="color:#111">(</span><span style="color:#00a8c8">const</span> <span style="color:#111">boost</span><span style="color:#f92672">::</span><span style="color:#111">filesystem</span><span style="color:#f92672">::</span><span style="color:#111">path</span> <span style="color:#f92672">&amp;</span><span style="color:#111">path</span><span style="color:#111">,</span> <span style="color:#00a8c8">const</span> <span style="color:#111">integer_pattern</span> <span style="color:#f92672">&amp;</span><span style="color:#111">pattern</span><span style="color:#111">)</span> <span style="color:#00a8c8">override</span> <span style="color:#111">{</span>
-      <span style="color:#111">integer_description</span> <span style="color:#111">description</span><span style="color:#111">;</span>
-      <span style="color:#111">pattern</span><span style="color:#111">.</span><span style="color:#111">apply</span><span style="color:#111">(</span><span style="color:#111">description</span><span style="color:#111">,</span> <span style="color:#111">path</span><span style="color:#111">);</span> <span style="color:#75715e">// Functionality of misa_file_pattern
-</span><span style="color:#75715e"></span>      <span style="color:#00a8c8">return</span> <span style="color:#111">description</span><span style="color:#111">;</span>
-    <span style="color:#111">}</span>
+    void set(int v) { m_value = v; }
 
-<span style="color:#00a8c8">public</span><span style="color:#f92672">:</span>
+    bool has() const { return m_value.has_value(); }
 
-    <span style="color:#00a8c8">void</span> <span style="color:#111">do_link</span><span style="color:#111">(</span><span style="color:#00a8c8">const</span> <span style="color:#111">integer_description</span> <span style="color:#f92672">&amp;</span><span style="color:#111">description</span><span style="color:#111">)</span> <span style="color:#00a8c8">override</span> <span style="color:#111">{</span>
-      <span style="color:#75715e">// Just take the filename in this case
-</span><span style="color:#75715e"></span>      <span style="color:#111">m_path</span> <span style="color:#f92672">=</span> <span style="color:#111">get_location</span><span style="color:#111">()</span> <span style="color:#f92672">/</span> <span style="color:#111">description</span><span style="color:#111">.</span><span style="color:#111">filename</span><span style="color:#111">;</span>
+    bool can_pull() const { return boost::filesystem::exists(m_path); }
 
-      <span style="color:#75715e">// VERY IMPORTANT
-</span><span style="color:#75715e"></span>      <span style="color:#111">set_unique_location</span><span style="color:#111">(</span><span style="color:#111">m_path</span><span style="color:#111">);</span>
-    <span style="color:#111">}</span>
+    void stash() { m_value = std::nullopt; }
 
-    <span style="color:#00a8c8">void</span> <span style="color:#111">postprocess</span><span style="color:#111">()</span> <span style="color:#00a8c8">override</span> <span style="color:#111">{</span>
-      <span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">cout</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#d88200">&#34;Nothing&#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#d88200">&#34;</span><span style="color:#8045ff">\n</span><span style="color:#d88200">&#34;</span><span style="color:#111">;</span>
-    <span style="color:#111">}</span>
+    void pull() {
+      std::ifstream r;
+      r.open(m_path.string());
+      int v;
+      r >> v;
+      m_value = v;
+    }
 
-<span style="color:#00a8c8">private</span><span style="color:#f92672">:</span>
-    <span style="color:#111">boost</span><span style="color:#f92672">::</span><span style="color:#111">filesystem</span><span style="color:#f92672">::</span><span style="color:#111">path</span> <span style="color:#111">m_path</span><span style="color:#111">;</span>
-    <span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">optional</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">int</span><span style="color:#f92672">&gt;</span> <span style="color:#111">m_value</span><span style="color:#111">;</span>
-<span style="color:#111">}</span>
-</code></pre></div>
-<h3 id="cache-accessor">Cache accessor</h3>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">/**
-</span><span style="color:#75715e">accessors/integer.h
-</span><span style="color:#75715e">*/</span>
+    void push() {
+      std::ofstream w;
+      w.open(m_path.string())
+      w << m_value.get();
+    }
 
-<span style="color:#00a8c8">struct</span> <span style="color:#111">integer</span> <span style="color:#111">:</span> <span style="color:#00a8c8">public</span> <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_cached_data</span><span style="color:#f92672">&lt;</span><span style="color:#111">integer_cache</span><span style="color:#f92672">&gt;</span> <span style="color:#111">{</span>
-  <span style="color:#00a8c8">using</span> <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_cached_data</span><span style="color:#f92672">&lt;</span><span style="color:#111">integer_cache</span><span style="color:#f92672">&gt;::</span><span style="color:#111">misa_cached_data</span><span style="color:#111">;</span>
+    // Linkage, simulation & postprocessing
+protected:
 
-  <span style="color:#75715e">// We add some additional functions for convenience
-</span><span style="color:#75715e"></span>  <span style="color:#00a8c8">int</span> <span style="color:#75af00">get</span><span style="color:#111">()</span> <span style="color:#00a8c8">const</span> <span style="color:#111">{</span>
-    <span style="color:#00a8c8">auto</span> <span style="color:#111">access</span> <span style="color:#f92672">=</span> <span style="color:#111">readonly_access</span><span style="color:#111">();</span>
-    <span style="color:#00a8c8">return</span> <span style="color:#111">access</span><span style="color:#111">.</span><span style="color:#111">get</span><span style="color:#111">();</span>
-  <span style="color:#111">}</span>
+    integer_description produce_description(const boost::filesystem::path &path, const integer_pattern &pattern) override {
+      integer_description description;
+      pattern.apply(description, path); // Functionality of misa_file_pattern
+      return description;
+    }
 
-  <span style="color:#00a8c8">void</span> <span style="color:#75af00">set</span><span style="color:#111">(</span><span style="color:#00a8c8">int</span> <span style="color:#111">value</span><span style="color:#111">)</span> <span style="color:#111">{</span>
-    <span style="color:#00a8c8">auto</span> <span style="color:#111">access</span> <span style="color:#f92672">=</span> <span style="color:#111">write_access</span><span style="color:#111">();</span>
-    <span style="color:#111">access</span><span style="color:#111">.</span><span style="color:#111">set</span><span style="color:#111">(</span><span style="color:#111">value</span><span style="color:#111">);</span>
-  <span style="color:#111">}</span>
+public:
 
-<span style="color:#111">}</span>
-</code></pre></div></div>
-	
+    void do_link(const integer_description &description) override {
+      // Just take the filename in this case
+      m_path = get_location() / description.filename;
+
+      // VERY IMPORTANT
+      set_unique_location(m_path);
+    }
+
+    void postprocess() override {
+      std::cout << "Nothing" << "\n";
+    }
+
+private:
+    boost::filesystem::path m_path;
+    std::optional<int> m_value;
+}
+```
+
+### Cache accessor
+
+```cpp
+/**
+accessors/integer.h
+*/
+
+struct integer : public misaxx::misa_cached_data<integer_cache> {
+  using misaxx::misa_cached_data<integer_cache>::misa_cached_data;
+
+  // We add some additional functions for convenience
+  int get() const {
+    auto access = readonly_access();
+    return access.get();
+  }
+
+  void set(int value) {
+    auto access = write_access();
+    access.set(value);
+  }
+
+}
+```
+
 </div>
+    
 
+<p></div></p>
 
 <h1 id="sub-caches-1">Sub-caches</h1>
 
@@ -723,24 +746,29 @@ Use <code>readonly_access()</code>, <code>write_access()</code> and <code>readwr
 This will ensure that the sub-cache is registered correctly.</p>
 
 <div class="panel panel-default">
-	<div class="panel-heading">Example</div>
-	<div class="panel-body"><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">void</span> <span style="color:#75af00">do_link</span><span style="color:#111">(</span><span style="color:#111">integer_description</span> <span style="color:#f92672">&amp;</span><span style="color:#111">description</span><span style="color:#111">)</span> <span style="color:#00a8c8">override</span> <span style="color:#111">{</span>
-  <span style="color:#111">decimals</span> <span style="color:#111">accessor</span><span style="color:#111">;</span>
-  <span style="color:#111">accessor</span><span style="color:#111">.</span><span style="color:#111">data</span> <span style="color:#f92672">=</span> <span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">make_shared</span><span style="color:#f92672">&lt;</span><span style="color:#111">decimals_cache</span><span style="color:#f92672">&gt;</span><span style="color:#111">();</span>
-  <span style="color:#75715e">// Manual setup etc.
-</span><span style="color:#75715e"></span>
-  <span style="color:#75715e">// Important:
-</span><span style="color:#75715e"></span>  <span style="color:#111">decimal_description</span> <span style="color:#111">subcache_description</span><span style="color:#111">;</span>
-  <span style="color:#111">accessor</span><span style="color:#111">.</span><span style="color:#111">force_link</span><span style="color:#111">(</span><span style="color:#00a8c8">this</span><span style="color:#f92672">-&gt;</span><span style="color:#111">get_location</span><span style="color:#111">(),</span>
-    <span style="color:#111">misa_description_storage</span><span style="color:#f92672">::</span><span style="color:#111">with</span><span style="color:#111">(</span><span style="color:#111">subcache_description</span><span style="color:#111">));</span>
+    <div class="panel-heading">Example</div>
+    <div class="panel-body">
 
-  <span style="color:#75715e">// Store for later usage
-</span><span style="color:#75715e"></span>  <span style="color:#00a8c8">this</span><span style="color:#f92672">-&gt;</span><span style="color:#111">decimals</span> <span style="color:#f92672">=</span> <span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">move</span><span style="color:#111">(</span><span style="color:#111">accessor</span><span style="color:#111">);</span>
-<span style="color:#111">}</span>
-</code></pre></div></div>
-	
+```cpp
+void do_link(integer_description &description) override {
+  decimals accessor;
+  accessor.data = std::make_shared<decimals_cache>();
+  // Manual setup etc.
+
+  // Important:
+  decimal_description subcache_description;
+  accessor.force_link(this->get_location(),
+    misa_description_storage::with(subcache_description));
+
+  // Store for later usage
+  this->decimals = std::move(accessor);
+}
+```
+
 </div>
+    
 
+<p></div></p>
 
 <h1 id="without-using-misa-default-cache">Without using misa_default_cache</h1>
 
@@ -767,12 +795,12 @@ This will ensure that the sub-cache is registered correctly.</p>
 </span><span style="color:#75715e"></span><span style="color:#00a8c8">void</span> <span style="color:#111">postprocess</span><span style="color:#111">()</span>
 
 <span style="color:#75715e">// Additional methods might be necessary depending on the mutexed cache implementation
-</span><span style="color:#75715e"></span></code></pre></div>
+</span></code></pre></div>
 <p>The <code>link()</code> method is provided with an absolute path within the filesystem and a description. The <code>link()</code> function is called independent of the <strong>simulation mode</strong>. This means you have to use <code>misaxx:runtime_properties::is_simulating()</code> to check if the runtime is actually processing data.</p>
 
-<div class="notices warning" ><p>Please make sure that <code>describe()</code> <strong>always</strong> returns a non-empty description storage with <strong>both a pattern and description</strong>. This also applies for parameter schema generation.</p>
+<div class="notices warning" >
+Please make sure that `describe()` **always** returns a non-empty description storage with **both a pattern and description**. This also applies for parameter schema generation.
 </div>
-
 
 
     

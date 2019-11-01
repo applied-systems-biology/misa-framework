@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="revised" content="2019-11-01T18:16:55 CET">
-<title>Building on Windows :: MISA&#43;&#43; Framework</title>
+<title>Building on Linux :: MISA&#43;&#43; Framework</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
 <link href="../../../css/nucleus.css" rel="stylesheet">
@@ -22,7 +22,7 @@
 
     
   </head>
-  <body data-url="/cpp-framework/building/windows-msys2/">
+  <body data-url="/cpp-framework/building/building-linux/">
     
       <header>
   <div class="logo">
@@ -164,14 +164,14 @@
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/cpp-framework/building/building-linux/" class="dd-item">
+      <li data-nav-id="/cpp-framework/building/building-linux/" class="dd-item active">
         <div>
           <a href="../../../cpp-framework/building/building-linux/">
             Building on Linux
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/cpp-framework/building/windows-msys2/" class="dd-item active">
+      <li data-nav-id="/cpp-framework/building/windows-msys2/" class="dd-item">
         <div>
           <a href="../../../cpp-framework/building/windows-msys2/">
             Building on Windows
@@ -378,8 +378,8 @@
     <option value="/cpp-framework/building/" >
   - 
    Building</option> 
-      <option value="/cpp-framework/building/building-linux/" >-- Building on Linux</option>
-      <option value="/cpp-framework/building/windows-msys2/"  selected>-- Building on Windows</option>
+      <option value="/cpp-framework/building/building-linux/"  selected>-- Building on Linux</option>
+      <option value="/cpp-framework/building/windows-msys2/" >-- Building on Windows</option>
   
       <option value="/cpp-framework/running/" >- Running</option>
     <option value="/cpp-framework/development/" >
@@ -418,110 +418,170 @@
       </div>
     
 
-    <h1>Building on Windows</h1>
+    <h1>Building on Linux</h1>
     
     
     
     
 
-<p>We tested building on Windows via the <a href="https://www.msys2.org/">MSYS2</a> environment.</p>
+<p>This building guide was tested for Ubuntu 18.04 and 19.10. To build *.deb packages, you
+can alternatively use our <a href="https://github.com/applied-systems-biology/misaxx-utils/linux-builds">Docker-based
+Linux build scripts</a>.</p>
 
-<div class="notices warning" >Please note that the Visual Studio compiler is not
-supported due to missing OpenMP 3.x capabilities.</div>
+<h1 id="building-the-c-framework">Building the C++ framework</h1>
 
-<div class="notices warning" >We consider building on Windows experimental due to random crashes
-of compiled programs during starting. We were yet not able to find the cause of those crashes,
-although review using library inspection software hints at the inability to load dynamic
-libraries under certain circumstances.</div>
+<h2 id="misa-core">MISA++ Core</h2>
 
-<h1 id="prerequisites">Prerequisites</h1>
+<p>The core library requires at least GCC version 8 and the Boost libraries.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install libboost-filesystem-dev libboost-regex-dev libboost-program-options-dev build-essential gcc-8 git
+git clone https://github.com/applied-systems-biology/misaxx-core.git
 
-<ol>
-<li>Download and install <a href="https://www.msys2.org/">MSYS2</a>.</li>
-<li>Start MSYS2 (MinGW 64-bit) and update the packages by typing <code>pacman -Syyu</code></li>
-<li>Let the process finish and <strong>close</strong> the terminal as instructed</li>
-<li>Restart MSYS2 (MinGW 64-bit)</li>
-</ol>
-
-<h1 id="using-the-superbuild-script">Using the superbuild script</h1>
-
-<p>We provide fully automated scripts that installs MISA++ Core, the modules we
-provide, and all necessary dependencies.</p>
-
-<ol>
-<li>Download or clone the <a href="https://github.com/applied-systems-biology/misaxx-utils">MISA++ Utils repository</a></li>
-<li>Open an MSYS2 (MinGW 64-bit) shell and navigate into the <code>superbuild-win32</code> folder</li>
-<li>Run <code>./superbuild.sh</code> and follow the instructions</li>
-</ol>
-
-<p>To create a distributable package of the MISA++ applications, run following command:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./superbuild.sh
-./package.py</code></pre></div>
-<p>To create a <a href="http://fiji.sc/">Fiji</a> distribution that comes pre-installed with MISA++
-for ImageJ and the MISA++ applications, run following command:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./superbuild.sh
-./package.py
-./package-fiji.sh</code></pre></div>
-<div class="panel panel-danger">
-    <div class="panel-heading">Warning</div>
-    <div class="panel-body">
-The OME libraries might be incompatible with the boost version provided by MSYS2 (Cannot find libraries).
-If this is the case four you, remove boost via `pacman -R mingw-w64-x86_64-boost` and remove the
-`mingw-w64-$MSYS2_PLATFORM-boost \` line in `superbuild.sh`.
-
-First make sure that `patch` is installed by running `pacman -S patch`.
-
-Clone the MSYS2 package build script repository via `git clone https://github.com/msys2/MINGW-packages.git`
-and go back to the commit that contains the script to install Boost version 1.69 by navigating into the
-`MINGW-packages` repository and running `git checkout fff2fc0d53aa95b85cee0c785e56159b0565ea72`.
-
-Navigate into the `mingw-w64-boost` folder and run `makepkg -si`. The command will compile the correct Boost
-version and install it.
-</div>
-    
-
-<p></div></p>
-
-<h1 id="manually-building">Manually building</h1>
-
-<p>Install the necessary MSYS2 packages:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pacman -S --noconfirm --needed unzip mingw-w64-x86_64-cmake <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>wget <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>mingw-w64-x86_64-toolchain <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>mingw-w64-x86_64-boost <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>mingw-w64-x86_64-make <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>libsqlite <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>libsqlite-devel <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>mingw-w64-x86_64-opencv <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>mingw-w64-x86_64-libtiff <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>mingw-w64-x86_64-xerces-c <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>mingw-w64-x86_64-xalan-c <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>mingw-w64-x86_64-libpng <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>mingw-w64-x86_64-python2</code></pre></div>
-<p>Obtain the MISA++ sources and the sources of dependencies that are not in
-MSYS2. Build them like any CMake build:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#111">cd</span> <span style="color:#111">$SOURCE_CODE</span>
+<span style="color:#111">pushd</span> misaxx-core
 mkdir build
-<span style="color:#111">cd</span> build
-cmake -DCMAKE_BUILD_TYPE<span style="color:#f92672">=</span>Release -DBUILD_SHARED_LIBS<span style="color:#f92672">=</span>OFF -DCMAKE_INSTALL_PREFIX<span style="color:#f92672">=</span>/mingw64/ -G <span style="color:#d88200">&#34;Unix Makefiles&#34;</span> ..</code></pre></div>
-<div class="panel panel-danger">
-    <div class="panel-heading">Warning</div>
-    <div class="panel-body">
-* Building OME libraries dynamically caused segmentation faults during application runtime (Error 0xc0000005). Build the libraries statically to avoid the issue.
-* Dynamically built MISA++ libraries caused random (~ every 10th execution) 0xc0000005 errors. We again decided to only link statically.
-* OME Model requires `OME_HOME` to be set to `/mingw64/` or any other folder that contains `./share/xml` and `./share/xsl`
-</div>
-    
+<span style="color:#111">pushd</span> build
+cmake -DCMAKE_BUILD_TYPE<span style="color:#f92672">=</span>Release ..
+make
+sudo make install
+<span style="color:#111">popd</span>
+popd</code></pre></div>
+<h2 id="misa-analyzer">MISA++ Analyzer</h2>
 
-<p></div></p>
+<p>The analyzer application requires an installation of the core libraries.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install libsqlite3-dev
+git clone https://github.com/applied-systems-biology/misaxx-analyzer.git
 
+<span style="color:#111">pushd</span> misaxx-analyzer
+mkdir build
+<span style="color:#111">pushd</span> build
+cmake -DCMAKE_BUILD_TYPE<span style="color:#f92672">=</span>Release ..
+make
+sudo make install
+<span style="color:#111">popd</span>
+popd</code></pre></div>
+<h2 id="misa-imaging-opencv-integration">MISA++ Imaging (OpenCV integration)</h2>
+
+<p>The OpenCV integration requires OpenCV 3.x or 4.x.</p>
+
+<div class="notices warning" >We have experienced that multiple installations of OpenCV
+can lead to the build system making use of the wrong library files - even
+with CMake claiming to have found the correct version.</div>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install libopencv-dev libtiff5-dev
+git clone https://github.com/applied-systems-biology/misaxx-imaging.git
+
+<span style="color:#111">pushd</span> misaxx-imaging
+mkdir build
+<span style="color:#111">pushd</span> build
+cmake -DCMAKE_BUILD_TYPE<span style="color:#f92672">=</span>Release ..
+make
+sudo make install
+<span style="color:#111">popd</span>
+popd</code></pre></div>
+<h2 id="misa-ome-ome-tiff-integration">MISA++ OME (OME TIFF integration)</h2>
+
+<p>The OME TIFF integration requires an installation of <code>misaxx-imaging</code> and the
+<a href="https://www.openmicroscopy.org/ome-files/">OME Files library</a>.</p>
+
+<div class="notices warning" >We have experienced issues with Boost 1.70 or higher in building
+the OME libraries. This is caused by a change in how Boost handles CMake targets.</div>
+
+<div class="notices warning" >During the build process of OME Model, a Python2 script is used to
+generate C++ code. Due to lack of Python version specification, the script will crash
+if Python3 is the default Python. In this case, create a Python2 virtualenv and
+restart the build process.</div>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install libxerces-c-dev libxalan-c-dev python wget libboost-all-dev
+
+git clone https://github.com/applied-systems-biology/misaxx-ome.git
+wget <span style="color:#d88200">&#34;https://downloads.openmicroscopy.org/ome-common-cpp/5.5.0/source/ome-common-cpp-5.5.0.zip&#34;</span>
+unzip ome-common-cpp-5.5.0.zip
+wget <span style="color:#d88200">&#34;https://downloads.openmicroscopy.org/ome-model/5.6.0/source/ome-model-5.6.0.zip&#34;</span>
+unzip ome-model-5.6.0.zip
+wget <span style="color:#d88200">&#34;https://downloads.openmicroscopy.org/ome-files-cpp/0.5.0/source/ome-files-cpp-0.5.0.zip&#34;</span>
+unzip ome-files-cpp-0.5.0.zip
+
+<span style="color:#111">pushd</span> ome-common-cpp-5.5.0
+mkdir build
+<span style="color:#111">pushd</span> build
+cmake -DCMAKE_BUILD_TYPE<span style="color:#f92672">=</span>Release ..
+make
+sudo make install
+<span style="color:#111">popd</span>
+<span style="color:#111">popd</span>
+
+<span style="color:#111">pushd</span> ome-model-5.6.0
+mkdir build
+<span style="color:#111">pushd</span> build
+cmake -DCMAKE_BUILD_TYPE<span style="color:#f92672">=</span>Release ..
+make
+sudo make install
+<span style="color:#111">popd</span>
+<span style="color:#111">popd</span>
+
+<span style="color:#111">pushd</span> ome-files-cpp-0.5.0
+mkdir build
+<span style="color:#111">pushd</span> build
+cmake -DCMAKE_BUILD_TYPE<span style="color:#f92672">=</span>Release ..
+make
+sudo make install
+<span style="color:#111">popd</span>
+<span style="color:#111">popd</span>
+
+<span style="color:#111">pushd</span> misaxx-ome
+mkdir build
+<span style="color:#111">pushd</span> build
+cmake -DCMAKE_BUILD_TYPE<span style="color:#f92672">=</span>Release ..
+make
+sudo make install
+<span style="color:#111">popd</span>
+popd</code></pre></div>
+<h2 id="misa-ome-visualizer-example-application">MISA++ OME Visualizer (Example application)</h2>
+
+<p>This application allows visualization of int32 OME TIFF files and requires
+that <code>misaxx-ome</code> is installed.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/applied-systems-biology/misaxx-ome-visualizer.git
+
+<span style="color:#111">pushd</span> misaxx-ome-visualizer
+mkdir build
+<span style="color:#111">pushd</span> build
+cmake -DCMAKE_BUILD_TYPE<span style="color:#f92672">=</span>Release ..
+make
+sudo make install
+<span style="color:#111">popd</span>
+popd</code></pre></div>
+<h2 id="misa-tissue-segmentation-example-application">MISA++ Tissue segmentation (Example application)</h2>
+
+<p>This application segments tissue from whole-organ light-sheet microscopy images and requires
+that <code>misaxx-ome</code> is installed.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/applied-systems-biology/misaxx-tissue.git
+
+<span style="color:#111">pushd</span> misaxx-tissue
+mkdir build
+<span style="color:#111">pushd</span> build
+cmake -DCMAKE_BUILD_TYPE<span style="color:#f92672">=</span>Release ..
+make
+sudo make install
+<span style="color:#111">popd</span>
+popd</code></pre></div>
+<h2 id="misa-kidney-glomeruli-segmentation-example-application">MISA++ Kidney glomeruli segmentation (Example application)</h2>
+
+<p>This application segments the glomeruli in whole organ light-sheet microscopy images and requires
+that <code>misaxx-tissue</code> is installed.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/applied-systems-biology/misaxx-kidney-glomeruli.git
+
+<span style="color:#111">pushd</span> misaxx-kidney-glomeruli
+mkdir build
+<span style="color:#111">pushd</span> build
+cmake -DCMAKE_BUILD_TYPE<span style="color:#f92672">=</span>Release ..
+make
+sudo make install
+<span style="color:#111">popd</span>
+popd</code></pre></div>
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="../../../cpp-framework/building/building-linux/" title="Building on Linux"> <i class="fa fa-chevron-left"></i><label>Building on Linux</label></a>
-    <a class="nav nav-next" href="../../../cpp-framework/development/" title="Development" style="margin-right: 0px;"><label>Development</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="../../../cpp-framework/building/" title="Building"> <i class="fa fa-chevron-left"></i><label>Building</label></a>
+    <a class="nav nav-next" href="../../../cpp-framework/building/windows-msys2/" title="Building on Windows" style="margin-right: 0px;"><label>Building on Windows</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>

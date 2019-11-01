@@ -38,7 +38,13 @@ Use following command to obtain the website source:
 
 ```bash
 git clone https://github.com/applied-systems-biology/misa-framework.git
+git submodule init
 git submodule update
+```
+
+To preview the website during development, run following command:
+```bash
+hugo server
 ```
 
 To generate the final website, run following command:

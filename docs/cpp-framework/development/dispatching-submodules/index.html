@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-04-30T17:23:45 CEST">
+<meta name="revised" content="2019-11-01T18:16:55 CET">
 <title>Dispatching submodules :: MISA&#43;&#43; Framework</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     
 	
   
-    <p><a href="../../../" target="_self"><img src="../../../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span></p>
+    <a href="../../../" target="_self"><img src="../../../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span>
 
   
 
@@ -163,6 +163,13 @@
       <a href="../../../cpp-framework/building/">Building</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
+      <li data-nav-id="/cpp-framework/building/building-linux/" class="dd-item">
+        <div>
+          <a href="../../../cpp-framework/building/building-linux/">
+            Building on Linux
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/cpp-framework/building/windows-msys2/" class="dd-item">
         <div>
           <a href="../../../cpp-framework/building/windows-msys2/">
@@ -434,19 +441,27 @@ compared to running MISA++ applications in a pipeline.</p>
 <p>Modify the <code>CMakeLists.txt</code> and the <code>cmake/*-config.in</code> to add the submodule as dependency.</p>
 
 <div class="panel panel-default">
-	<div class="panel-heading">Example</div>
-	<div class="panel-body"><h3 id="in-cmakelists-txt">In CMakeLists.txt</h3>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmake" data-lang="cmake"><span style="color:#111">find_package</span><span style="color:#111">(</span><span style="color:#d88200">misaxx-core</span> <span style="color:#d88200">REQUIRED</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#111">find_package</span><span style="color:#111">(</span><span style="color:#d88200">misaxx-tissue-segmentation</span> <span style="color:#d88200">REQUIRED</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Later:
-</span><span style="color:#75715e"></span><span style="color:#111">target_link_libraries</span><span style="color:#111">(</span><span style="color:#d88200">my-module</span> <span style="color:#d88200">PUBLIC</span> <span style="color:#d88200">misaxx::misaxx-tissue-segmentation</span><span style="color:#111">)</span></code></pre></div>
-<h3 id="in-cmake-config-in">In cmake/*-config.in</h3>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmake" data-lang="cmake"><span style="color:#111">find_package</span><span style="color:#111">(</span><span style="color:#d88200">misaxx-core</span> <span style="color:#d88200">REQUIRED</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#111">find_package</span><span style="color:#111">(</span><span style="color:#d88200">misaxx-tissue-segmentation</span> <span style="color:#d88200">REQUIRED</span><span style="color:#111">)</span></code></pre></div></div>
-	
-</div>
+    <div class="panel-heading">Example</div>
+    <div class="panel-body">
+### In CMakeLists.txt
+```cmake
+find_package(misaxx-core REQUIRED)
+find_package(misaxx-tissue-segmentation REQUIRED)
 
+# Later:
+target_link_libraries(my-module PUBLIC misaxx::misaxx-tissue-segmentation)
+```
+
+### In cmake/\*-config.in
+
+```cmake
+find_package(misaxx-core REQUIRED)
+find_package(misaxx-tissue-segmentation REQUIRED)
+```
+</div>
+    
+
+<p></div></p>
 
 <h1 id="submodules-within-the-filesystem">Submodules within the filesystem</h1>
 
@@ -468,15 +483,16 @@ S1 ==> M1["Submodule"]
 S2 ==> M2["Submodule"]
 </div>
 
-<p><div class="notices warning" ><p>Please do not name sub-modules like existing data.
-This also means that the name of a submodule must be <strong>unique</strong> across the whole module.</p>
+<div class="notices warning" >
+Please do not name sub-modules like existing data.
+This also means that the name of a submodule must be **unique** across the whole module.
 
-<p>This does not apply to submodules of the submodules, as each sub-module gets its own virtual filesystem.</p>
+This does not apply to submodules of the submodules, as each sub-module gets its own virtual filesystem.
 </div>
 
-<div class="notices info" ><p>Submodules are independent of the dispatcher where they are instantiated. They only depend on the filesystem of the instantiating module.</p>
+<div class="notices info" >
+Submodules are independent of the dispatcher where they are instantiated. They only depend on the filesystem of the instantiating module.
 </div>
-</p>
 
 <h1 id="dispatching-a-submodule">Dispatching a submodule</h1>
 

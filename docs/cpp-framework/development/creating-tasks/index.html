@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-04-30T17:23:45 CEST">
+<meta name="revised" content="2019-11-01T18:16:55 CET">
 <title>Creating tasks :: MISA&#43;&#43; Framework</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     
 	
   
-    <p><a href="../../../" target="_self"><img src="../../../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span></p>
+    <a href="../../../" target="_self"><img src="../../../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span>
 
   
 
@@ -163,6 +163,13 @@
       <a href="../../../cpp-framework/building/">Building</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
+      <li data-nav-id="/cpp-framework/building/building-linux/" class="dd-item">
+        <div>
+          <a href="../../../cpp-framework/building/building-linux/">
+            Building on Linux
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/cpp-framework/building/windows-msys2/" class="dd-item">
         <div>
           <a href="../../../cpp-framework/building/windows-msys2/">
@@ -439,20 +446,23 @@
 <p>To be able to automatically generate the parameter schema, the MISA++ framework requires you to initialize  parameters within the <code>create_parameters(...)</code> function.</p>
 
 <div class="panel panel-default">
-	<div class="panel-heading">Example</div>
-	<div class="panel-body"><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">struct</span> <span style="color:#111">my_task</span> <span style="color:#111">:</span> <span style="color:#00a8c8">public</span> <span style="color:#111">misa_task</span> <span style="color:#111">{</span>
-    <span style="color:#00a8c8">using</span> <span style="color:#111">misa_task</span><span style="color:#f92672">::</span><span style="color:#111">misa_task</span><span style="color:#111">;</span>
+    <div class="panel-heading">Example</div>
+    <div class="panel-body">
+```cpp
+struct my_task : public misa_task {
+    using misa_task::misa_task;
 
-    <span style="color:#111">parameter</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">int</span><span style="color:#f92672">&gt;</span> <span style="color:#111">m_radius</span><span style="color:#111">;</span>
+    parameter<int> m_radius;
 
-    <span style="color:#00a8c8">void</span> <span style="color:#75af00">create_parameters</span><span style="color:#111">(</span><span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_parameter_builder</span> <span style="color:#f92672">&amp;</span><span style="color:#111">parameters</span><span style="color:#111">)</span> <span style="color:#111">{</span>
-        <span style="color:#111">m_radius</span> <span style="color:#f92672">=</span> <span style="color:#111">parameters</span><span style="color:#111">.</span><span style="color:#111">create_algorithm_parameter</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">int</span><span style="color:#f92672">&gt;</span><span style="color:#111">(</span><span style="color:#d88200">&#34;radius&#34;</span><span style="color:#111">,</span> <span style="color:#ae81ff">10</span><span style="color:#111">);</span> <span style="color:#75715e">// Will be independent of the current sample
-</span><span style="color:#75715e"></span>    <span style="color:#111">}</span>
-<span style="color:#111">}</span>
-</code></pre></div></div>
-	
+    void create_parameters(misaxx::misa_parameter_builder &parameters) {
+        m_radius = parameters.create_algorithm_parameter<int>("radius", 10); // Will be independent of the current sample
+    }
+}
+```
 </div>
+    
 
+<p></div></p>
 
 <p>There are 3 types of parameters that are available:</p>
 
@@ -492,19 +502,22 @@
 Access to the current module interface is available via the <code>get_module()</code> and <code>get_module_as&lt;T&gt;()</code> functions. This applies to all workers (tasks and dispatchers).</p>
 
 <div class="panel panel-default">
-	<div class="panel-heading">Example</div>
-	<div class="panel-body"><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">struct</span> <span style="color:#111">my_task</span> <span style="color:#111">:</span> <span style="color:#00a8c8">public</span> <span style="color:#111">misa_task</span> <span style="color:#111">{</span>
-    <span style="color:#00a8c8">using</span> <span style="color:#111">misa_task</span><span style="color:#f92672">::</span><span style="color:#111">misa_task</span><span style="color:#111">;</span>
+    <div class="panel-heading">Example</div>
+    <div class="panel-body">
+```cpp
+struct my_task : public misa_task {
+    using misa_task::misa_task;
 
-    <span style="color:#00a8c8">void</span> <span style="color:#75af00">work</span><span style="color:#111">()</span> <span style="color:#111">{</span>
-        <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">ome</span><span style="color:#f92672">::</span><span style="color:#111">misa_ome_tiff</span> <span style="color:#111">tiff</span> <span style="color:#f92672">=</span> <span style="color:#111">get_module_as</span><span style="color:#f92672">&lt;</span><span style="color:#111">my_module_interface</span><span style="color:#f92672">&gt;</span><span style="color:#111">()</span><span style="color:#f92672">-&gt;</span><span style="color:#111">m_input_data</span><span style="color:#111">;</span>
-        <span style="color:#75715e">// Do something with tiff
-</span><span style="color:#75715e"></span>    <span style="color:#111">}</span>
-<span style="color:#111">}</span>
-</code></pre></div></div>
-	
+    void work() {
+        misaxx::ome::misa_ome_tiff tiff = get_module_as<my_module_interface>()->m_input_data;
+        // Do something with tiff
+    }
+}
+```
 </div>
+    
 
+<p></div></p>
 
 
     
