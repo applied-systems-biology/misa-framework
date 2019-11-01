@@ -141,11 +141,6 @@
   </url>
   
   <url>
-    <loc>https://applied-systems-biology.github.io/misa-framework/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/attachments/</loc>
   </url>
   
@@ -159,6 +154,10 @@
   
   <url>
     <loc>https://applied-systems-biology.github.io/misa-framework/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://applied-systems-biology.github.io/misa-framework/</loc>
   </url>
   
   <url>
