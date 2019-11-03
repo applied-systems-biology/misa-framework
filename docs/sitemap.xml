@@ -149,6 +149,10 @@
   </url>
   
   <url>
+    <loc>https://applied-systems-biology.github.io/misa-framework/cpp-framework/building/windows-cygwin/</loc>
+  </url>
+  
+  <url>
     <loc>https://applied-systems-biology.github.io/misa-framework/cpp-framework/building/windows-msys2/</loc>
   </url>
   

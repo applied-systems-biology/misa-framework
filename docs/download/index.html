@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-11-01T18:23:52 CET">
+<meta name="revised" content="2019-11-03T23:08:31 CET">
 <title>Download :: MISA&#43;&#43; Framework</title>
 <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon" />
 <link href="../css/font-awesome.min.css" rel="stylesheet">
@@ -169,10 +169,17 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/cpp-framework/building/windows-cygwin/" class="dd-item">
+        <div>
+          <a href="../cpp-framework/building/windows-cygwin/">
+            Building on Windows Cygwin
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/cpp-framework/building/windows-msys2/" class="dd-item">
         <div>
           <a href="../cpp-framework/building/windows-msys2/">
-            Building on Windows
+            Building on Windows MSYS2
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
@@ -454,15 +461,23 @@ into an existing <a href="https://fiji.sc/">Fiji</a> installation to install the
 <strong>MISA++ for ImageJ</strong>, <em>MISA++ Kidney Glomeruli Segmentation</em>,
 <em>MISA++ Tissue Segmentation</em>, <em>MISA++ OME Visualizer</em> and <em>MISA++ Result Analyzer</em>.</p>
 
+<p>Alternatively, you can download only the MISA++ binaries.</p>
+
+<p>
+
+<button class="btn  btn-success" type="button"  onclick="location.href='https:\/\/github.com\/applied-systems-biology\/misa-framework\/releases\/download\/1.0.0\/misaxx-fiji-aio-windows.zip'" > Download MISA+Fiji for Windows</button>
 
 
-<button class="btn  btn-success" type="button"  onclick="location.href='https:\/\/github.com\/applied-systems-biology\/misa-framework\/releases\/download\/1.0.0\/misa-imagej-fiji-standalone-win32.zip'" > Download MISA+Fiji for Windows</button>
+ 
+
+<button class="btn  btn-success" type="button"  onclick="location.href='https:\/\/github.com\/applied-systems-biology\/misa-framework\/releases\/download\/1.0.0\/misaxx-bin-windows.zip'" > Download MISA++ binaries for Windows</button>
 
 
+</p>
 
+<div class="notices info" >MISA++ is developed on Linux - We consider this Windows release as experimental. We are aware of a bug that causes freezes of multi-threaded MISA++ workloads if executed from within ImageJ.</div>
 
-<div class="notices info" >MISA++ is developed on Linux - We consider this Windows release as experimental. We are aware of a bug that prevents the execution of compiled *.exe files.
-Under certain circumstances, pressing "Refresh" in the list of MISA++ modules solves this issue.</div>
+<div class="notices info" >Please make sure that your anti virus protection does not block the MISA++ application. Try refreshing the list of modules if a module could not be loaded.</div>
 
 <h1 id="source-code">Source code</h1>
 
@@ -542,13 +557,10 @@ git clone https://github.com/applied-systems-biology/misa-imagej.git</code></pre
 <p>We use automated build scripts to compile Linux packages. These scripts use a
 Docker environment and can be found <a href="https://github.com/applied-systems-biology/misaxx-utils/linux-builds">here</a>.</p>
 
-<h2 id="windows-msys2-builds-experimental">Windows MSYS2 builds (experimental)</h2>
+<h2 id="windows-cygwin-builds-experimental">Windows Cygwin builds (experimental)</h2>
 
-<p>To build MISA++ on Windows, we use the <a href="https://msys2.org/">MSYS2</a> environment.
+<p>To build MISA++ on Windows, we use the <a href="https://cygwin.com/">Cygwin</a> environment.
 Our script can be found <a href="https://github.com/applied-systems-biology/misaxx-utils/linux-builds">here</a>.</p>
-
-<div class="notices info" >The Windows build is currently experimental. The build process might fail due to changes in MSYS2.
-We also experience issues in compiled executabled failing to load dynamic libraries, causing crashes.</div>
 
 <h1 id="logos">Logos</h1>
 

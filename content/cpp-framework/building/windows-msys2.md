@@ -1,11 +1,16 @@
 +++
-title = "Building on Windows"
+title = "Building on Windows MSYS2"
 type="page"
 creatordisplayname = "Ruman Gerst"
 creatoremail = "ruman.gerst@leibniz-hki.de"
 lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
+
+{{% notice warning %}}Update: Due to the rolling release nature of MSYS2,
+the MSYS2 build process is currently broken. The Boost 1.70+ library that
+is provided by MSYS2 is incompatible with OME libraries due to a change in
+CMake targets. Please use our guide for Cygwin to build MISA++ on Windows.{{% /notice %}}
 
 We tested building on Windows via the [MSYS2](https://www.msys2.org/) environment.
 
@@ -30,7 +35,7 @@ We provide fully automated scripts that installs MISA++ Core, the modules we
 provide, and all necessary dependencies.
 
 1. Download or clone the [MISA++ Utils repository](https://github.com/applied-systems-biology/misaxx-utils)
-2. Open an MSYS2 (MinGW 64-bit) shell and navigate into the `superbuild-win32` folder
+2. Open an MSYS2 (MinGW 64-bit) shell and navigate into the `windows-builds/msys2/superbuild-win32` folder
 3. Run `./superbuild.sh` and follow the instructions
 
 To create a distributable package of the MISA++ applications, run following command:

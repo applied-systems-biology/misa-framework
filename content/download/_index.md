@@ -38,10 +38,13 @@ We provide a ready-to-use [Fiji](https://fiji.sc/) distribution that comes pre-i
 **MISA++ for ImageJ**, *MISA++ Kidney Glomeruli Segmentation*,
 *MISA++ Tissue Segmentation*, *MISA++ OME Visualizer* and *MISA++ Result Analyzer*.
 
-{{< button href="https://github.com/applied-systems-biology/misa-framework/releases/download/1.0.0/misa-imagej-fiji-standalone-win32.zip" theme="success" >}} Download MISA+Fiji for Windows{{< /button >}}
+Alternatively, you can download only the MISA++ binaries.
 
-{{% notice info %}}MISA++ is developed on Linux - We consider this Windows release as experimental. We are aware of a bug that prevents the execution of compiled *.exe files.
-Under certain circumstances, pressing "Refresh" in the list of MISA++ modules solves this issue.{{% /notice %}}
+{{< button href="https://github.com/applied-systems-biology/misa-framework/releases/download/1.0.0/misaxx-fiji-aio-windows.zip" theme="success" >}} Download MISA+Fiji for Windows{{< /button >}} {{< button href="https://github.com/applied-systems-biology/misa-framework/releases/download/1.0.0/misaxx-bin-windows.zip" theme="success" >}} Download MISA++ binaries for Windows{{< /button >}}
+
+{{% notice info %}}MISA++ is developed on Linux - We consider this Windows release as experimental. We are aware of a bug that causes freezes of multi-threaded MISA++ workloads if executed from within ImageJ.{{% /notice %}}
+
+{{% notice info %}}Please make sure that your anti virus protection does not block the MISA++ application. Try refreshing the list of modules if a module could not be loaded.{{% /notice %}}
 
 # Source code
 
@@ -77,13 +80,10 @@ git clone https://github.com/applied-systems-biology/misa-imagej.git
 We use automated build scripts to compile Linux packages. These scripts use a
 Docker environment and can be found [here](https://github.com/applied-systems-biology/misaxx-utils/linux-builds).
 
-## Windows MSYS2 builds (experimental)
+## Windows Cygwin builds (experimental)
 
-To build MISA++ on Windows, we use the [MSYS2](https://msys2.org/) environment.
+To build MISA++ on Windows, we use the [Cygwin](https://cygwin.com/) environment.
 Our script can be found [here](https://github.com/applied-systems-biology/misaxx-utils/linux-builds).
-
-{{% notice info %}}The Windows build is currently experimental. The build process might fail due to changes in MSYS2.
-We also experience issues in compiled executabled failing to load dynamic libraries, causing crashes.{{% /notice %}}
 
 # Logos
 

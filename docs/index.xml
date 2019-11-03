@@ -370,13 +370,23 @@ sudo apt install libboost-filesystem-dev libboost-regex-dev libboost-program-opt
     </item>
     
     <item>
-      <title>Building on Windows</title>
+      <title>Building on Windows Cygwin</title>
+      <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/building/windows-cygwin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/building/windows-cygwin/</guid>
+      <description>We tested building on Windows via the Cygwin64 environment.
+Please note that the Visual Studio compiler is not supported due to missing OpenMP 3.x capabilities. We consider building on Windows experimental due to unexplained freezing of multi-threaded workloads if started from ImageJ (running directly within the command line does not show this behavior). Prerequisites Download and install Cygwin64. Please consider our Readme file for a list of required packages.</description>
+    </item>
+    
+    <item>
+      <title>Building on Windows MSYS2</title>
       <link>https://applied-systems-biology.github.io/misa-framework/cpp-framework/building/windows-msys2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/building/windows-msys2/</guid>
-      <description>We tested building on Windows via the MSYS2 environment.
-Please note that the Visual Studio compiler is not supported due to missing OpenMP 3.x capabilities. We consider building on Windows experimental due to random crashes of compiled programs during starting. We were yet not able to find the cause of those crashes, although review using library inspection software hints at the inability to load dynamic libraries under certain circumstances. Prerequisites  Download and install MSYS2.</description>
+      <description>Update: Due to the rolling release nature of MSYS2, the MSYS2 build process is currently broken. The Boost 1.70+ library that is provided by MSYS2 is incompatible with OME libraries due to a change in CMake targets. Please use our guide for Cygwin to build MISA++ on Windows. We tested building on Windows via the MSYS2 environment.
+Please note that the Visual Studio compiler is not supported due to missing OpenMP 3.</description>
     </item>
     
     <item>
