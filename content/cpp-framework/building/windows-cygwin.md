@@ -17,7 +17,7 @@ freezing of multi-threaded workloads if started from ImageJ (running directly wi
 
 # Prerequisites
 
-Download and install [Cygwin64](https://www.cygwin.com/). Please consider our [Readme file](https://github.com/applied-systems-biology/misaxx-utils/blob/master/windows-builds/cygwin/README.txt) for a list of required packages.
+Download and install [Cygwin64](https://www.cygwin.com/). Please consider our [Readme file](https://github.com/applied-systems-biology/misaxx-utils/blob/master/windows-builds/cygwin/README.md) for a list of required packages.
 
 # Using the superbuild script
 
