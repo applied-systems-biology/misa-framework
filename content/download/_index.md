@@ -78,12 +78,12 @@ git clone https://github.com/applied-systems-biology/misa-imagej.git
 ## Linux docker builds
 
 We use automated build scripts to compile Linux packages. These scripts use a
-Docker environment and can be found [here](https://github.com/applied-systems-biology/misaxx-utils/linux-builds).
+Docker environment and can be found [here](https://github.com/applied-systems-biology/misaxx-utils/tree/master/linux-builds).
 
 ## Windows Cygwin builds (experimental)
 
 To build MISA++ on Windows, we use the [Cygwin](https://cygwin.com/) environment.
-Our script can be found [here](https://github.com/applied-systems-biology/misaxx-utils/linux-builds).
+Our script can be found [here](https://github.com/applied-systems-biology/misaxx-utils/tree/master/windows-builds).
 
 # Logos
 
