@@ -10,6 +10,11 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 This building guide was tested for Ubuntu 18.04 and 19.10. To build \*.deb packages, you
 can alternatively use our [Docker-based
 Linux build scripts](https://github.com/applied-systems-biology/misaxx-utils/linux-builds).
+We also provide generic Linux build scripts that should work for any Linux distribution,
+given that the dependencies are installed.
+
+{{% notice warning %}}Due to the differences between different Linux distributions,
+we cannot guarantee that the generic build script runs without error.{{% /notice %}}
 
 # Building the C++ framework
 
