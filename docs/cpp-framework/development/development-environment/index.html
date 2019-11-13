@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2019-11-05T12:08:15 CET">
+<meta name="revised" content="2019-11-13T13:44:06 CET">
 <title>Setting up a project :: MISA&#43;&#43; Framework</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -438,13 +438,34 @@
     
     
 
-<div class="notices note" >
-The MISA++ Core library contains a CMake script to simplify the creation of modules.
-The following documentation assumes that this script is used.
-You are free to setup your project without our helper script.
-</div>
+<h1 id="automated-project-creation">Automated project creation</h1>
 
-<h1 id="creating-the-folder-structure">Creating the folder structure</h1>
+<p>We provide scripts for Linux and Windows that automate creating a valid MISA++ project.
+The resulting project folders can be directly compiled.</p>
+
+<p>You can find the scripts <a href="https://github.com/applied-systems-biology/misaxx-utils/tree/master/project-management">on our GitHub page</a>.</p>
+
+<h2 id="linux">Linux</h2>
+
+<ol>
+<li>Copy the <code>misaxx-create-project.sh</code> script into a folder</li>
+<li>Open a terminal and make the script executable via <code>chmod +x misaxx-create-project.sh</code></li>
+<li>Run <code>misaxx-create-project.sh</code> and follow the instructions</li>
+</ol>
+
+<h2 id="windows">Windows</h2>
+
+<ol>
+<li>Copy the <code>misaxx-create-project.ps1</code> script into a folder</li>
+<li>Right click the script and click &ldquo;Run in Powershell&rdquo;</li>
+<li>Follow the instructions</li>
+</ol>
+
+<h1 id="manual-project-creation">Manual project creation</h1>
+
+<p>Following guide shows how to create a project manually.</p>
+
+<h2 id="creating-the-folder-structure">Creating the folder structure</h2>
 
 <p>Each module is designed to be compiled into a shared library (.dll/.so), which requires a strict separation between the API and implementation. Create following folder structure:</p>
 
@@ -456,7 +477,13 @@ You are free to setup your project without our helper script.
 <p><code>&lt;module-name&gt;</code> is the name of the CMake target, for example <code>misaxx-ome</code>.
 The <code>include</code> directory contains the public API of the module and will be installed into the global include directory. The <code>src</code> directory contains implementation-only files and will not be installed.</p>
 
-<h1 id="creating-the-cmakelists-txt">Creating the CMakeLists.txt</h1>
+<h2 id="creating-the-cmakelists-txt">Creating the CMakeLists.txt</h2>
+
+<div class="notices note" >
+The following CMakeLists.txt file makes use of helper functions that are automatically imported on
+making use of the MISA++ Core package.
+You are of course free to setup your project without those functions.
+</div>
 
 <p>Fill the <code>CMakeLists.txt</code> file with following information:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmake" data-lang="cmake"><span style="color:#111">cmake_minimum_required</span><span style="color:#111">(</span><span style="color:#d88200">VERSION</span> <span style="color:#d88200">3.11</span><span style="color:#111">)</span> <span style="color:#75715e"># Or higher if required
@@ -483,7 +510,7 @@ The <code>include</code> directory contains the public API of the module and wil
 </span><span style="color:#75715e"></span><span style="color:#111">misaxx_with_default_executable</span><span style="color:#111">()</span></code></pre></div>
 <p>Please note that <code>&lt;module-name&gt;</code> and <code>&lt;module_name&gt;</code> might be different. <code>&lt;module_name&gt;</code> must be a name that is valid in C++.</p>
 
-<h1 id="for-worker-modules-create-the-module-interface-and-module-dispatcher">For worker modules: Create the module interface and module dispatcher</h1>
+<h2 id="for-worker-modules-create-the-module-interface-and-module-dispatcher">For worker modules: Create the module interface and module dispatcher</h2>
 
 <p>If you want to create a module that performs processing of data, create the following files:</p>
 
@@ -495,7 +522,7 @@ The <code>include</code> directory contains the public API of the module and wil
 
 <p>Please no not forget to add them to the <code>CMakeLists.txt</code></p>
 
-<h2 id="module-interface-h">module_interface.h</h2>
+<h3 id="module-interface-h">module_interface.h</h3>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;misaxx/core/misa_module_interface.h&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e"></span>
 <span style="color:#00a8c8">namespace</span> <span style="color:#f92672">&lt;</span><span style="color:#111">module_name</span><span style="color:#f92672">&gt;</span> <span style="color:#111">{</span>
