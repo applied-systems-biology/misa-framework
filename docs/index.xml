@@ -365,9 +365,8 @@ mermaid.initialize({startOnLoad:true}); graph LR; Root[&#34;</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/building/building-linux/</guid>
-      <description>This building guide was tested for Ubuntu 18.04 and 19.10. To build *.deb packages, you can alternatively use our Docker-based Linux build scripts.
-Building the C++ framework MISA++ Core The core library requires at least GCC version 8 and the Boost libraries.
-sudo apt install libboost-filesystem-dev libboost-regex-dev libboost-program-options-dev build-essential gcc-8 git git clone https://github.com/applied-systems-biology/misaxx-core.git pushd misaxx-core mkdir build pushd build cmake -DCMAKE_BUILD_TYPE=Release .. make sudo make install popd popd MISA++ Analyzer The analyzer application requires an installation of the core libraries.</description>
+      <description>This building guide was tested for Ubuntu 18.04 and 19.10. To build *.deb packages, you can alternatively use our Docker-based Linux build scripts. We also provide generic Linux build scripts that should work for any Linux distribution, given that the dependencies are installed.
+Due to the differences between different Linux distributions, we cannot guarantee that the generic build script runs without error. Building the C++ framework MISA++ Core The core library requires at least GCC version 8 and the Boost libraries.</description>
     </item>
     
     <item>
