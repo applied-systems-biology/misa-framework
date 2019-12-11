@@ -8,13 +8,30 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-{{% notice note %}}
-The MISA++ Core library contains a CMake script to simplify the creation of modules.
-The following documentation assumes that this script is used.
-You are free to setup your project without our helper script.
-{{% /notice %}}
+# Automated project creation
 
-# Creating the folder structure
+We provide scripts for Linux and Windows that automate creating a valid MISA++ project.
+The resulting project folders can be directly compiled.
+
+You can find the scripts [on our GitHub page](https://github.com/applied-systems-biology/misaxx-utils/tree/master/project-management).
+
+## Linux
+
+1. Copy the `misaxx-create-project.sh` script into a folder
+2. Open a terminal and make the script executable via `chmod +x misaxx-create-project.sh`
+2. Run `misaxx-create-project.sh` and follow the instructions
+
+## Windows
+
+1. Copy the `misaxx-create-project.ps1` script into a folder
+2. Right click the script and click "Run in Powershell"
+3. Follow the instructions
+
+# Manual project creation
+
+Following guide shows how to create a project manually.
+
+## Creating the folder structure
 
 Each module is designed to be compiled into a shared library (.dll/.so), which requires a strict separation between the API and implementation. Create following folder structure:
 
@@ -27,7 +44,13 @@ Each module is designed to be compiled into a shared library (.dll/.so), which r
 `<module-name>` is the name of the CMake target, for example `misaxx-ome`.
 The `include` directory contains the public API of the module and will be installed into the global include directory. The `src` directory contains implementation-only files and will not be installed.
 
-# Creating the CMakeLists.txt
+## Creating the CMakeLists.txt
+
+{{% notice note %}}
+The following CMakeLists.txt file makes use of helper functions that are automatically imported on
+making use of the MISA++ Core package.
+You are of course free to setup your project without those functions.
+{{% /notice %}}
 
 Fill the `CMakeLists.txt` file with following information:
 
@@ -58,7 +81,7 @@ misaxx_with_default_executable()
 
 Please note that `<module-name>` and `<module_name>` might be different. `<module_name>` must be a name that is valid in C++.
 
-# For worker modules: Create the module interface and module dispatcher
+## For worker modules: Create the module interface and module dispatcher
 
 If you want to create a module that performs processing of data, create the following files:
 
@@ -71,7 +94,7 @@ If you want to create a module that performs processing of data, create the foll
 
 Please no not forget to add them to the `CMakeLists.txt`
 
-## module_interface.h
+### module_interface.h
 
 ```cpp
 #include <misaxx/core/misa_module_interface.h>
