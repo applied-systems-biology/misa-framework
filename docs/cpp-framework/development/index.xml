@@ -16,10 +16,11 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/development/prerequisites/</guid>
-      <description>MISA++ uses the CMake build system. Please make sure that CMake version 3.12 or higher is installed.
+      <description>MISA++ uses the CMake build system. Please make sure that CMake version 3.13 or higher is installed.
 The compiler must support C++ version 2017 or higher.
-For Windows, we recommend the MSYS2 environment.
-Please note that the Visual Studio compiler is not supported due to missing OpenMP 3.x capabilities. Make sure that MISA++ Core and any other dependency modules are installed. See Building for more information about building MISA++ and already existing modules.</description>
+For Windows, we recommend the Cygwin environment.
+Please note that the Visual Studio compiler is not supported due to missing OpenMP 3.x capabilities.
+ Make sure that MISA++ Core and any other dependency modules are installed. See Building for more information about building MISA++ and already existing modules.</description>
     </item>
     
     <item>
@@ -73,7 +74,7 @@ void create_blueprints(misa_dispatcher::blueprint_list &amp;amp;blueprints, misa
       <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/development/dispatching-submodules/</guid>
       <description>You reduce the amount of code in your current project by off-loading work to another MISA++ module. The sub-module will be integrated into the current worker tree and benefit from better parallelization and less post-processing compared to running MISA++ applications in a pipeline.
 Prerequisites Modify the CMakeLists.txt and the cmake/*-config.in to add the submodule as dependency.
-Example ### In CMakeLists.txt ```cmake find_package(misaxx-core REQUIRED) find_package(misaxx-tissue-segmentation REQUIRED) # Later: target_link_libraries(my-module PUBLIC misaxx::misaxx-tissue-segmentation) ``` ### In cmake/\*-config.</description>
+ExampleIn CMakeLists.txt find_package(misaxx-core REQUIRED)find_package(misaxx-tissue-segmentation REQUIRED)# Later: target_link_libraries(my-module PUBLIC misaxx::misaxx-tissue-segmentation) In cmake/*-config.in find_package(misaxx-core REQUIRED)find_package(misaxx-tissue-segmentation REQUIRED) Submodules within the filesystem A submodule is created on a subfolder of the current virtual filesystem and therefore are handled similar to data.</description>
     </item>
     
     <item>

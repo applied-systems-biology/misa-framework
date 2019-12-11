@@ -36,7 +36,7 @@ into an existing [Fiji](https://fiji.sc/) installation to install the ImageJ plu
 
 We provide a ready-to-use [Fiji](https://fiji.sc/) distribution that comes pre-installed with
 **MISA++ for ImageJ**, *MISA++ Kidney Glomeruli Segmentation*,
-*MISA++ Tissue Segmentation*, *MISA++ OME Visualizer* and *MISA++ Result Analyzer*.
+*MISA++ Tissue Segmentation*, *MISA++ OME Visualizer*, *MISA++ Microbenchmarks*, *MISA++ Deconvolution Simulation*, *MISA++ Cell Segmentation* and *MISA++ Result Analyzer*.
 
 Alternatively, you can download only the MISA++ binaries.
 
@@ -56,6 +56,9 @@ under following links:
 | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
 | MISA++ Core                          | <a href="https://github.com/applied-systems-biology/misaxx-core" target="_blank"> Download source code </a>             | <a href="/docs/misaxx-core" target="_blank"> Open </a>             |
 | MISA++ Imaging                       | <a href="https://github.com/applied-systems-biology/misaxx-imaging" target="_blank"> Download source code </a>          | <a href="/docs/misaxx-imaging" target="_blank"> Open </a>          |
+| MISA++ Microbenchmarks               | <a href="https://github.com/applied-systems-biology/misaxx-microbench" target="_blank"> Download source code</a>        |                                                                    |
+| MISA++ Deconvolution Simulation      | <a href="https://github.com/applied-systems-biology/misaxx-deconvolve" target="_blank"> Download source code</a>        |                                                                    |
+| MISA++ Cell Segmentation             | <a href="https://github.com/applied-systems-biology/misaxx-segment-cells" target="_blank"> Download source code</a>     |                                                                    |
 | MISA++ OME                           | <a href="https://github.com/applied-systems-biology/misaxx-ome" target="_blank"> Download source code </a>              | <a href="/docs/misaxx-ome" target="_blank"> Open </a>              |
 | MISA++ OME Visualizer                | <a href="https://github.com/applied-systems-biology/misaxx-ome-visualizer" target="_blank"> Download source code </a>   | <a href="/docs/misaxx-ome-visualizer" target="_blank"> Open </a>   |
 | MISA++ Tissue Segmentation           | <a href="https://github.com/applied-systems-biology/misaxx-tissue" target="_blank"> Download source code </a>           | <a href="/docs/misaxx-tissue" target="_blank"> Open </a>           |
@@ -67,6 +70,9 @@ under following links:
 ```bash
 git clone https://github.com/applied-systems-biology/misaxx-core.git
 git clone https://github.com/applied-systems-biology/misaxx-imaging.git
+git clone https://github.com/applied-systems-biology/misaxx-microbench.git
+git clone https://github.com/applied-systems-biology/misaxx-deconvolve.git
+git clone https://github.com/applied-systems-biology/misaxx-segment-cells.git
 git clone https://github.com/applied-systems-biology/misaxx-ome.git
 git clone https://github.com/applied-systems-biology/misaxx-ome-visualizer.git
 git clone https://github.com/applied-systems-biology/misaxx-tissue.git
