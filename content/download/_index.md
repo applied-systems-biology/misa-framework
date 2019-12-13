@@ -24,7 +24,7 @@ We provide ready-to-install packages for Ubuntu 18.04 and Ubuntu 19.10 that cont
 
 * MISA++ core components (MISA++ Core, MISA++ Analyzer)
 * Example implementations of third-party library integrations (OpenCV, OME TIFF)
-* Example implementations of image analysis algorithms (Tissue segmentation, Kidney glomeruli segmenation, OME visualizer)
+* Example implementations of image analysis algorithms (Tissue segmentation, Kidney glomeruli segmenation, OME visualizer, and more)
 * ImageJ plugin binaries, including dependency libraries
 
 {{< button href="https://github.com/applied-systems-biology/misa-framework/releases/download/1.0.0/misaxx-linux-ubuntu-18.04.zip" theme="success" >}} Download MISA++ for Ubuntu 18.04{{< /button >}} {{< button href="https://github.com/applied-systems-biology/misa-framework/releases/download/1.0.0/misaxx-linux-ubuntu-19.10.zip" theme="success" >}} Download MISA++ for Ubuntu 19.10{{< /button >}}
@@ -107,3 +107,21 @@ The example data was published by Klingberg *et. al*
 
 > Klingberg, Anika, et al. "Fully automated evaluation of total glomerular number and capillary tuft size in nephritic kidneys using lightsheet microscopy."
 Journal of the American Society of Nephrology 28.2 (2017): 452-459.
+
+## Other example data
+
+If you want to try out other algorithms (as well as Python and Java implementations), you can find appropriate example data here:
+
+| Algorithm                             | Download                                                                                                                                                 |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Glomeruli segmentation (MISA++)       | [Download example data](https://github.com/applied-systems-biology/misa-framework/releases/download/1.0.0/misaxx_kidney_glomeruli_example_data.zip)      |
+| Glomeruli segmentation (Python, Java) | [Download example data](https://github.com/applied-systems-biology/misa-framework/releases/download/1.0.0/python_java_kidney_glomeruli_example_data.zip) |
+| Cell segmentation (MISA++)            | [Download example data](https://github.com/applied-systems-biology/misa-framework/releases/download/1.0.0/misaxx_segment_cells_example_data.zip)         |
+| Cell segmentation (Python, Java)      | [Download example data](https://github.com/applied-systems-biology/misa-framework/releases/download/1.0.0/python_java_segment_cells_example_data.zip)    |
+| Deconvolution                         | [Download example data](https://github.com/applied-systems-biology/misa-framework/releases/download/1.0.0/misaxx_deconvolve_example_data.zip)            |
+| Single operation benchamrks           | [Download example data](https://github.com/applied-systems-biology/misa-framework/releases/download/1.0.0/misaxx_microbench_example_data.zip)            |
+
+# Publication supplements
+
+In our publication, we compare MISA++ against Java and Python implementations. You can find the compiled Java binaries [here](https://github.com/applied-systems-biology/misa-framework/releases/download/1.0.0/aio-java-imglib2-bin.zip).
+All source codes are available in our [all-in-one code repository](https://github.com/applied-systems-biology/misaxx-softwarex-code).
