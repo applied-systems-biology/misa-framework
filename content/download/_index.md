@@ -40,9 +40,10 @@ We provide a ready-to-use [Fiji](https://fiji.sc/) distribution that comes pre-i
 
 Alternatively, you can download only the MISA++ binaries.
 
-{{< button href="https://github.com/applied-systems-biology/misa-framework/releases/download/1.0.0/misaxx-fiji-aio-windows.zip" theme="success" >}} Download MISA+Fiji for Windows{{< /button >}} {{< button href="https://github.com/applied-systems-biology/misa-framework/releases/download/1.0.0/misaxx-bin-windows.zip" theme="success" >}} Download MISA++ binaries for Windows{{< /button >}}
+{{< button href="https://github.com/applied-systems-biology/misa-framework/releases/download/1.0.0/misaxx-fiji-aio-windows.zip" theme="success" >}} Download MISA+Fiji for Windows x64{{< /button >}} {{< button href="https://github.com/applied-systems-biology/misa-framework/releases/download/1.0.0/misaxx-bin-windows.zip" theme="success" >}} Download MISA++ binaries for Windows x64{{< /button >}}
 
-{{% notice info %}}MISA++ is developed on Linux - We consider this Windows release as experimental. We are aware of a bug that causes freezes of multi-threaded MISA++ workloads if executed from within ImageJ.{{% /notice %}}
+{{% notice info %}}MISA++ is developed on Linux - We consider this Windows release as experimental. We are aware of a bug that causes freezes of multi-threaded MISA++ workloads if executed from within ImageJ.
+As workaround, export MISA++ runs as standalone package and run MISA++ via the command line interface.{{% /notice %}}
 
 {{% notice info %}}Please make sure that your anti virus protection does not block the MISA++ application. Try refreshing the list of modules if a module could not be loaded.{{% /notice %}}
 
