@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Maven: org.knowm.xchart:xchart:3.5.4">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/knowm/xchart/xchart/3.5.4/xchart-3.5.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/knowm/xchart/xchart/3.5.4/xchart-3.5.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,8 @@
+@PACKAGE_INIT@
+
+find_package(misaxx-core REQUIRED)
+find_package(misaxx-imaging REQUIRED)
+
+if(NOT TARGET misaxx-segment-cells)
+include(${CMAKE_CURRENT_LIST_DIR}/misaxx-segment-cells-targets.cmake)
+endif()

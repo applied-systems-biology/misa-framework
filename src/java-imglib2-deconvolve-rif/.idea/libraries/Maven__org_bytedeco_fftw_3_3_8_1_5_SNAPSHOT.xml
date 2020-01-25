@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.bytedeco:fftw:3.3.8-1.5-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/bytedeco/fftw/3.3.8-1.5-SNAPSHOT/fftw-3.3.8-1.5-20190407.225902-417.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/bytedeco/fftw/3.3.8-1.5-SNAPSHOT/fftw-3.3.8-1.5-20190407.225902-417-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/bytedeco/fftw/3.3.8-1.5-SNAPSHOT/fftw-3.3.8-1.5-20190407.225902-417-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

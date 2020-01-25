@@ -1,0 +1,58 @@
+README 
+-------------------------------------------------------------------------------
+This package contains code for counting glomeruli in Light-Sheet microscopy images
+of kidney. Full details of the alogrithm can be found in the paper 
+Klingberg et al. (2017) Fully Automated Evaluation of Total Glomerular Number and 
+Capillary Tuft Size in Nephritic Kidneys Using Lightsheet Microscopy,
+J. Am. Soc. Nephrol., 28: 452-459. 
+
+If any part of this code is used for academic purposes please cite the paper
+above.
+
+Contents
+-------------------------------------------------------------------------------
+analyze_kidney.py:
+	Script for counting glomeruli
+compute_volume.py:
+	Script for computing the volume of the kidney
+LICENCE:
+	Licencing details of this software (BSD License 2.0).
+include/boost.py:
+	functions for parallel image processing
+include/filelib.py:
+	functions for working with files
+
+Requirements:
+-------------------------------------------------------------------------------
+Python 2.7+:
+	Code is developed and tested using Python 2.7.3
+numpy:
+	Tested on numpy 1.9.1. http://www.numpy.org/
+Scipy.ndimage:
+	Tested on scipy.ndimage 2.0 http://www.scipy.org/
+mahotas:
+	Tested on Mahotas 1.0.3
+argparse:
+	Tested on argparse 1.1
+pandas:
+	Tested on pandas 0.15.2 http://pandas.pydata.org/
+
+Usage:
+-------------------------------------------------------------------------------
+To count glomeruli:
+	Run in command line: ``python analyze_kidney.py -i settings.csv``
+To compute kindney volume:
+	Run in command line: ``python compute_volume.py -i settings.csv``
+	
+
+
+
+
+
+
+
+
+
+
+
+

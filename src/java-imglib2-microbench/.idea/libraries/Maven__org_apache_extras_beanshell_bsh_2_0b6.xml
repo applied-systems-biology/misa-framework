@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache-extras.beanshell:bsh:2.0b6">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

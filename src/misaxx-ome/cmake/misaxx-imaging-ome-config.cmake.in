@@ -1,0 +1,29 @@
+# /**
+# * Copyright by Ruman Gerst
+# * Research Group Applied Systems Biology - Head: Prof. Dr. Marc Thilo Figge
+# * https://www.leibniz-hki.de/en/applied-systems-biology.html
+# * HKI-Center for Systems Biology of Infection
+# * Leibniz Institute for Natural Product Research and Infection Biology - Hans Knöll Insitute (HKI)
+# * Adolf-Reichwein-Straße 23, 07745 Jena, Germany
+# *
+# * This code is licensed under BSD 2-Clause
+# * See the LICENSE file provided with this code for the full license.
+# */
+
+@PACKAGE_INIT@
+
+find_package(misaxx-core REQUIRED)
+find_package(misaxx-imaging REQUIRED)
+find_package(Boost 1.63 COMPONENTS REQUIRED system log_setup log iostreams)
+find_package(Threads REQUIRED)
+
+# OME files cannot be called multiple times
+if(NOT TARGET OME::Files)
+find_package(OMEXML 5.6.0 REQUIRED)
+find_package(OMEFiles 0.5.0 REQUIRED)
+endif()
+
+
+if(NOT TARGET misaxx-imaging-ome)
+include(${CMAKE_CURRENT_LIST_DIR}/misaxx-imaging-ome-targets.cmake)
+endif()

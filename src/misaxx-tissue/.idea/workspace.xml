@@ -1,0 +1,1433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="misaxx-tissue" targetName="misaxx" />
+      <config projectName="misaxx-tissue" targetName="imgtest" />
+      <config projectName="misaxx-tissue" targetName="misaxx_tissue" />
+      <config projectName="misaxx-tissue" targetName="misaxx-tissue-segmentation-bin" />
+      <config projectName="misaxx-tissue" targetName="cxx-helpers" />
+      <config projectName="misaxx-tissue" targetName="coixx" />
+      <config projectName="misaxx-tissue" targetName="pattxx" />
+      <config projectName="misaxx-tissue" targetName="misaxx-tissue-segmentation" />
+      <config projectName="misaxx-tissue" targetName="misaxx_test" />
+      <config projectName="misaxx-tissue" targetName="pattxx_test" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Release" CONFIG_NAME="Release" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a01dc362-d10d-4a06-9442-c66631aeba45" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <ignored path="$USER_HOME$/cmake-cache/misaxx_tissue-build-debug/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <ignored path="$PROJECT_DIR$/cmake-build-release/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="clangdShowErrors" value="false" />
+    <option name="clangTidyViaClangd" value="false" />
+    <option name="navigationViaClangd" value="false" />
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation2d/segmentation2d_klingberg_1.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5355">
+              <caret line="357" column="56" selection-start-line="357" selection-start-column="56" selection-end-line="357" selection-end-column="56" />
+              <folding>
+                <element signature="e#490#529#0" expanded="true" />
+                <element signature="e#818#830#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/misaxx-tissue/module.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="36" column="73" selection-start-line="36" selection-start-column="73" selection-end-line="36" selection-end-column="73" />
+              <folding>
+                <element signature="e#490#523#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation2d/segmentation2d_klingberg_1.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/include/misaxx/core/misa_task.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+              <folding>
+                <element signature="e#815#827#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/include/misaxx/core/misa_parameter.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="66" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
+              <folding>
+                <element signature="e#726#738#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/include/misaxx/core/misa_parameter_base.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/include/misaxx/core/misa_json_schema_property.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Quantity&lt;Unit, Value&gt;</find>
+      <find>.pixel_s</find>
+      <find>pixel_size()</find>
+      <find>get_volume()</find>
+      <find>cmake-build-debug</find>
+      <find>&lt;include/</find>
+      <find>&lt;/</find>
+      <find>&lt;misaxx_ome/</find>
+      <find>&lt;misaxx_tissue</find>
+      <find>&lt;coixx/</find>
+      <find>&quot;include</find>
+      <find>using namespace coixx</find>
+      <find>module()</find>
+      <find>get_algorithm_parameters().query</find>
+      <find>#include &lt;misaxx-coixx/</find>
+      <find>&lt;misaxx-ome</find>
+      <find>misaxx_ome</find>
+      <find>&lt;misaxx-imaging</find>
+      <find>imaging/ome</find>
+      <find>::imaging::ome</find>
+      <find>&lt;opencv</find>
+      <find>.get_image</find>
+      <find>#include &lt;misaxx-tissue/attachments/attachments.h&gt;</find>
+      <find>&lt;misaxx/imaging/utils/cv2/</find>
+      <find>colors::labels</find>
+      <find>avg()</find>
+      <find>coixx</find>
+      <find>std::endl</find>
+      <find>segmentation3d</find>
+      <find>23:</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>misaxx_tissue</replace>
+      <replace>segmentation2d_</replace>
+      <replace>module()-&gt;</replace>
+      <replace>.get_unique_location()</replace>
+      <replace>misa_ome_quantity&lt;T, Unit&gt;</replace>
+      <replace>&lt;</replace>
+      <replace>&lt;misaxx-ome/</replace>
+      <replace>&lt;misaxx-tissue</replace>
+      <replace>&lt;misaxx-coixx/</replace>
+      <replace>t_parameters.create_algorithm_parameter</replace>
+      <replace>#include &lt;misaxx-imaging/coixx/</replace>
+      <replace>&lt;misaxx/imaging/ome</replace>
+      <replace>misaxx::imaging::ome</replace>
+      <replace>&lt;misaxx/imaging</replace>
+      <replace>ome</replace>
+      <replace>::ome</replace>
+      <replace />
+      <replace>&lt;cv-toolbox/</replace>
+      <replace>int</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="extended-algorithm" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/misaxx_tissue/tissue_module.h" />
+        <option value="$PROJECT_DIR$/misaxx_tissue/tissue_module.cpp" />
+        <option value="$PROJECT_DIR$/misaxx_tissue/algorithms/segmentation2d/segmentation2d_klingberg_1.cpp" />
+        <option value="$PROJECT_DIR$/misaxx_tissue/algorithms/segmentation2d/segmentation2d_klingberg_2.cpp" />
+        <option value="$PROJECT_DIR$/cmake-build-debug/_deps/coixx-src/coixx/toolbox/toolbox_binarize_huang.h" />
+        <option value="$PROJECT_DIR$/misaxx_tissue/tissue.cpp" />
+        <option value="$PROJECT_DIR$/cmake/misaxx-tissue-config.cmake.in" />
+        <option value="$PROJECT_DIR$/../misaxx-core/src/misaxx/misa_description_storage.cpp" />
+        <option value="$PROJECT_DIR$/include/misaxx-tissue/algorithms/segmentation3d/segmentation3d_none.h" />
+        <option value="$PROJECT_DIR$/src/misaxx-tissue/tissue.cpp" />
+        <option value="$PROJECT_DIR$/include/misaxx-tissue/algorithms/quantification.h" />
+        <option value="$PROJECT_DIR$/include/misaxx-tissue/algorithms/segmentation3d/segmentation3d_base.h" />
+        <option value="$PROJECT_DIR$/include/misaxx-tissue/algorithms/segmentation2d/segmentation2d_base.h" />
+        <option value="$PROJECT_DIR$/include/misaxx-tissue/algorithms/segmentation2d/segmentation2d_klingberg_1.h" />
+        <option value="$PROJECT_DIR$/include/misaxx-tissue/algorithms/segmentation2d/segmentation2d_huang.h" />
+        <option value="$PROJECT_DIR$/include/misaxx-tissue/algorithms/segmentation2d/segmentation2d_klingberg_2.h" />
+        <option value="$PROJECT_DIR$/include/misaxx-tissue/algorithms/segmentation2d/segmentation2d_superpixel_2means.h" />
+        <option value="$PROJECT_DIR$/include/misaxx-tissue/misaxx_tissue_module.h" />
+        <option value="$PROJECT_DIR$/include/misaxx-tissue/tissue.h" />
+        <option value="$PROJECT_DIR$/src/misaxx-tissue/misaxx_tissue_module.cpp" />
+        <option value="$PROJECT_DIR$/include/misaxx-tissue/attachments/attachments.h" />
+        <option value="$PROJECT_DIR$/../misaxx-core/src/misaxx/core/runtime/misa_runtime.cpp" />
+        <option value="$PROJECT_DIR$/cmake/module_info.h.in" />
+        <option value="$PROJECT_DIR$/cmake/module_info.h.in.bak" />
+        <option value="$PROJECT_DIR$/cmake/module_info.cpp.in" />
+        <option value="$PROJECT_DIR$/include/misaxx-tissue/attachments/tissue.cpp" />
+        <option value="$PROJECT_DIR$/cmake/misaxx-tissue-segmentation-config.cmake.in" />
+        <option value="$PROJECT_DIR$/include/misaxx-tissue/attachments/tissue.h" />
+        <option value="$PROJECT_DIR$/include/misaxx-tissue/module.h" />
+        <option value="$PROJECT_DIR$/include/misaxx-tissue/module_info.h" />
+        <option value="$PROJECT_DIR$/include/misaxx-tissue/module_interface.h" />
+        <option value="$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation2d/segmentation2d_base.h" />
+        <option value="$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation2d/segmentation2d_huang.cpp" />
+        <option value="$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation2d/segmentation2d_huang.h" />
+        <option value="$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation2d/segmentation2d_klingberg_2.cpp" />
+        <option value="$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation2d/segmentation2d_klingberg_2.h" />
+        <option value="$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation2d/segmentation2d_superpixel_2means.cpp" />
+        <option value="$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation2d/segmentation2d_superpixel_2means.h" />
+        <option value="$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation3d/segmentation3d_base.h" />
+        <option value="$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation3d/segmentation3d_none.cpp" />
+        <option value="$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation3d/segmentation3d_none.h" />
+        <option value="$PROJECT_DIR$/src/misaxx-tissue/algorithms/quantification.cpp" />
+        <option value="$PROJECT_DIR$/src/misaxx-tissue/algorithms/quantification.h" />
+        <option value="$PROJECT_DIR$/src/misaxx-tissue/attachments/tissue.cpp" />
+        <option value="$PROJECT_DIR$/src/misaxx-tissue/module_info.cpp" />
+        <option value="$PROJECT_DIR$/src/misaxx-tissue/module_interface.cpp" />
+        <option value="$PROJECT_DIR$/src/main.cpp" />
+        <option value="$PROJECT_DIR$/src/misaxx-tissue/module.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation2d/segmentation2d_klingberg_1.h" />
+        <option value="$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation2d/segmentation2d_klingberg_1.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="NamedScopeManager">
+    <scope name="local" pattern="file[misaxx_tissue]:misaxx_tissue//*" />
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1912" />
+    <option name="height" value="1049" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="misaxx-tissue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="misaxx-tissue" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="misaxx-tissue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="misaxx-tissue" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="misaxx-tissue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="misaxx-tissue" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="misaxx-tissue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="misaxx-tissue" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+              <item name="misaxx-tissue" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="misaxx-tissue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="misaxx-tissue" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+              <item name="misaxx-tissue" type="462c0819:PsiDirectoryNode" />
+              <item name="attachments" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="misaxx-tissue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="misaxx-tissue" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="misaxx-tissue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="misaxx-tissue" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="misaxx-tissue" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="misaxx-tissue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="misaxx-tissue" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="misaxx-tissue" type="462c0819:PsiDirectoryNode" />
+              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="misaxx-tissue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="misaxx-tissue" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="misaxx-tissue" type="462c0819:PsiDirectoryNode" />
+              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="segmentation2d" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="misaxx-tissue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="misaxx-tissue" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="misaxx-tissue" type="462c0819:PsiDirectoryNode" />
+              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="segmentation3d" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="misaxx-tissue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="misaxx-tissue" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="misaxx-tissue" type="462c0819:PsiDirectoryNode" />
+              <item name="attachments" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="_att&#9;null&#9;null&#10;histogram&#9;null&#9;null&#10;label_prop&#9;null&#9;null&#10;misa_c&#9;FILE&#9;file:///data/src/misaxx_tissue/cmake-build-debug/_deps/misaxx-src/misaxx/misa_cached_data.h&#10;misa_unsa&#9;FILE&#9;file:///data/src/misaxx_tissue/cmake-build-debug/_deps/misaxx-src/misaxx/caches/misa_unsafe_image_stack.h&#10;misa_desc&#9;FILE&#9;file:///data/src/misaxx_tissue/cmake-build-debug/_deps/misaxx-src/misaxx/misa_description_storage.h&#10;misa_file&#9;FILE&#9;file:///data/src/misaxx_tissue/cmake-build-debug/_deps/misaxx-src/misaxx/filesystem/misa_filesystem_entry.h&#10;misa_i&#9;FILE&#9;file:///data/src/misaxx_tissue/cmake-build-debug/_deps/misaxx-src/misaxx/caches/misa_unsafe_image_stack.h&#10;misa_f&#9;FILE&#9;file:///data/src/misaxx_tissue/cmake-build-debug/_deps/misaxx-src/misaxx/filesystem/misa_filesystem.h&#10;misa_&#9;FILE&#9;file:///data/src/misaxx_tissue/cmake-build-debug/_deps/misaxx-src/misaxx/runtime/misa_cli.h&#10;misa_ca&#9;null&#9;null&#10;misa_cli&#9;FILE&#9;file:///data/src/misaxx_tissue/cmake-build-debug/_deps/misaxx-src/misaxx/runtime/misa_cli.h&#10;misa_task&#9;null&#9;null&#10;misa_filesy&#9;FILE&#9;file:///data/src/misaxx_tissue/cmake-build-debug/_deps/misaxx-src/misaxx/filesystem/misa_filesystem.h&#10;make_par&#9;null&#9;null&#10;misa_w&#9;FILE&#9;file:///data/src/misaxx_tissue/cmake-build-debug/_deps/misaxx-src/misaxx/workers/misa_worker.h&#10;schema_b&#9;FILE&#9;file:///data/src/misaxx_tissue/cmake-build-debug/_deps/misaxx-src/misaxx/json/misa_json_schema_builder.h&#10;misa_pr&#9;null&#9;null&#10;misa_dis&#9;FILE&#9;file:///data/src/misaxx_tissue/cmake-build-debug/_deps/misaxx-src/misaxx/workers/misa_dispatcher.h&#10;misa_file_pa&#9;null&#9;null&#10;misa_cl&#9;null&#9;null&#10;misa_runtime&#9;null&#9;null&#10;misa_r&#9;FILE&#9;file:///data/src/misaxx_tissue/cmake-build-debug/_deps/misaxx-src/misaxx/misa_runtime.h&#10;misa_runt&#9;FILE&#9;file:///data/src/misaxx_tissue/cmake-build-debug/_deps/misaxx-src/misaxx/misa_runtime.h&#10;mis_c&#9;FILE&#9;file:///data/src/misaxx_tissue/cmake-build-debug/_deps/misaxx-src/misaxx/misa_cli.h&#10;unsafe_&#9;null&#9;null" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/misaxx-tissue/attachments" />
+      <recent name="$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation3d" />
+      <recent name="$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation2d" />
+      <recent name="$PROJECT_DIR$/src/misaxx-tissue/algorithms" />
+      <recent name="$PROJECT_DIR$/include/misaxx-tissue/algorithms" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/misaxx_tissue/segmentation2d" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="CMake Application.misaxx-tissue-segmentation-bin">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="misaxx-tissue-segmentation-bin (1)" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--write-parameter-schema $USER_HOME$/tmp/ome_tissue/parameter-schema.json " PASS_PARENT_ENVS_2="true" PROJECT_NAME="misaxx-tissue" TARGET_NAME="misaxx-tissue-segmentation-bin" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="misaxx-tissue" RUN_TARGET_NAME="misaxx-tissue-segmentation-bin">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="misaxx-tissue-segmentation-bin (2)" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--parameters /tmp/ImageJMISA316082647916955770/parameters.json " PASS_PARENT_ENVS_2="true" PROJECT_NAME="misaxx-tissue" TARGET_NAME="misaxx-tissue-segmentation-bin" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="misaxx-tissue" RUN_TARGET_NAME="misaxx-tissue-segmentation-bin">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="misaxx-tissue-segmentation-bin" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--parameters $USER_HOME$/tmp/ome_tissue/parameters-linear.json" PASS_PARENT_ENVS_2="true" PROJECT_NAME="misaxx-tissue" TARGET_NAME="misaxx-tissue-segmentation-bin" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="misaxx-tissue" RUN_TARGET_NAME="misaxx-tissue-segmentation-bin">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="misaxx-tissue-segmentation" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="misaxx-tissue" TARGET_NAME="misaxx-tissue-segmentation" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.Build All" />
+      <item itemvalue="CMake Application.misaxx-tissue-segmentation-bin (1)" />
+      <item itemvalue="CMake Application.misaxx-tissue-segmentation-bin (2)" />
+      <item itemvalue="CMake Application.misaxx-tissue-segmentation-bin" />
+      <item itemvalue="CMake Application.misaxx-tissue-segmentation" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a01dc362-d10d-4a06-9442-c66631aeba45" name="Default Changelist" comment="" />
+      <created>1534511571925</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1534511571925</updated>
+      <workItem from="1534511573139" duration="4983000" />
+      <workItem from="1535974490149" duration="50000" />
+      <workItem from="1535974558777" duration="6745000" />
+      <workItem from="1536047681177" duration="4872000" />
+      <workItem from="1536134367440" duration="3035000" />
+      <workItem from="1536153190480" duration="6681000" />
+      <workItem from="1536324179934" duration="16000" />
+      <workItem from="1536324215719" duration="4175000" />
+      <workItem from="1536573717484" duration="13933000" />
+      <workItem from="1536654183472" duration="17377000" />
+      <workItem from="1536744419908" duration="3670000" />
+      <workItem from="1536757048981" duration="2362000" />
+      <workItem from="1536830263233" duration="1176000" />
+      <workItem from="1536848151216" duration="9000" />
+      <workItem from="1537192201006" duration="639000" />
+      <workItem from="1537258037648" duration="678000" />
+      <workItem from="1537344460975" duration="757000" />
+      <workItem from="1537365413350" duration="597000" />
+      <workItem from="1537430535443" duration="4522000" />
+      <workItem from="1537516978129" duration="5474000" />
+      <workItem from="1537778836138" duration="5106000" />
+      <workItem from="1537863133777" duration="4171000" />
+      <workItem from="1537948598926" duration="599000" />
+      <workItem from="1537964571270" duration="1366000" />
+      <workItem from="1538384947882" duration="6137000" />
+      <workItem from="1538467769561" duration="7454000" />
+      <workItem from="1538643994740" duration="841000" />
+      <workItem from="1539004022396" duration="920000" />
+      <workItem from="1539009936942" duration="855000" />
+      <workItem from="1539073698119" duration="598000" />
+      <workItem from="1539162669978" duration="4000" />
+      <workItem from="1539178111228" duration="3006000" />
+      <workItem from="1539337654101" duration="2461000" />
+      <workItem from="1539357974286" duration="1637000" />
+      <workItem from="1539683164116" duration="726000" />
+      <workItem from="1539691250360" duration="709000" />
+      <workItem from="1539775744435" duration="390000" />
+      <workItem from="1539862939035" duration="46000" />
+      <workItem from="1539865225588" duration="13000" />
+      <workItem from="1539875786299" duration="1954000" />
+      <workItem from="1539947103250" duration="675000" />
+      <workItem from="1539949479932" duration="599000" />
+      <workItem from="1540218669113" duration="5000" />
+      <workItem from="1540219116102" duration="827000" />
+      <workItem from="1540371875840" duration="4200000" />
+      <workItem from="1540466990048" duration="245000" />
+      <workItem from="1540562061299" duration="2015000" />
+      <workItem from="1540803222761" duration="6530000" />
+      <workItem from="1540890290992" duration="7437000" />
+      <workItem from="1540900626500" duration="1838000" />
+      <workItem from="1540905735634" duration="654000" />
+      <workItem from="1541162646778" duration="7375000" />
+      <workItem from="1541422622256" duration="8017000" />
+      <workItem from="1541495898967" duration="1362000" />
+      <workItem from="1541596691428" duration="5640000" />
+      <workItem from="1541775999487" duration="2290000" />
+      <workItem from="1542016309542" duration="70000" />
+      <workItem from="1542018685196" duration="7580000" />
+      <workItem from="1542100903375" duration="15213000" />
+      <workItem from="1542190151088" duration="814000" />
+      <workItem from="1542191218984" duration="3250000" />
+      <workItem from="1542273797220" duration="2645000" />
+      <workItem from="1542814555927" duration="4573000" />
+      <workItem from="1542884048284" duration="3709000" />
+      <workItem from="1542894251188" duration="2238000" />
+      <workItem from="1543310362116" duration="3523000" />
+      <workItem from="1543398529079" duration="154000" />
+      <workItem from="1543406373713" duration="2467000" />
+      <workItem from="1543418955823" duration="1822000" />
+      <workItem from="1543497062773" duration="634000" />
+      <workItem from="1543594035609" duration="18000" />
+      <workItem from="1543930288447" duration="42000" />
+      <workItem from="1543932738252" duration="1855000" />
+      <workItem from="1543934649311" duration="790000" />
+      <workItem from="1543936280899" duration="2849000" />
+      <workItem from="1543939912098" duration="1766000" />
+      <workItem from="1543999663926" duration="594000" />
+      <workItem from="1544019141800" duration="778000" />
+      <workItem from="1544028441018" duration="658000" />
+      <workItem from="1544029681294" duration="637000" />
+      <workItem from="1544030355294" duration="571000" />
+      <workItem from="1544088208119" duration="248000" />
+      <workItem from="1544089771300" duration="5262000" />
+      <workItem from="1544095388567" duration="2876000" />
+      <workItem from="1544101439653" duration="1327000" />
+      <workItem from="1544103515610" duration="4640000" />
+      <workItem from="1544109380064" duration="4030000" />
+      <workItem from="1544114211199" duration="555000" />
+      <workItem from="1544178759630" duration="5495000" />
+      <workItem from="1544186706759" duration="843000" />
+      <workItem from="1544188964235" duration="131000" />
+      <workItem from="1544189177701" duration="2468000" />
+      <workItem from="1544200061893" duration="4228000" />
+      <workItem from="1544708788081" duration="3448000" />
+      <workItem from="1544779775834" duration="448000" />
+      <workItem from="1544780591390" duration="12220000" />
+      <workItem from="1545052358274" duration="857000" />
+      <workItem from="1545065767226" duration="323000" />
+      <workItem from="1545210930138" duration="3362000" />
+      <workItem from="1545220251274" duration="234000" />
+      <workItem from="1545221648130" duration="5525000" />
+      <workItem from="1545229788410" duration="430000" />
+      <workItem from="1545230312740" duration="688000" />
+      <workItem from="1545231301700" duration="667000" />
+      <workItem from="1545238498501" duration="13000" />
+      <workItem from="1545321012743" duration="73000" />
+      <workItem from="1545323941378" duration="982000" />
+      <workItem from="1545382251291" duration="308000" />
+      <workItem from="1545392339050" duration="922000" />
+      <workItem from="1545393801083" duration="83000" />
+      <workItem from="1545393892832" duration="1721000" />
+      <workItem from="1545397168451" duration="111000" />
+      <workItem from="1545397312319" duration="56000" />
+      <workItem from="1545402385804" duration="3835000" />
+      <workItem from="1545410984104" duration="16000" />
+      <workItem from="1546861277431" duration="1432000" />
+      <workItem from="1546863119771" duration="600000" />
+      <workItem from="1546945190646" duration="1416000" />
+      <workItem from="1546952432819" duration="252000" />
+      <workItem from="1546953550403" duration="480000" />
+      <workItem from="1546954454878" duration="825000" />
+      <workItem from="1546959066048" duration="1868000" />
+      <workItem from="1547126618964" duration="724000" />
+      <workItem from="1547469381568" duration="16703000" />
+      <workItem from="1547562516866" duration="7689000" />
+      <workItem from="1547644437062" duration="7000" />
+      <workItem from="1547645063542" duration="1241000" />
+      <workItem from="1547648583920" duration="628000" />
+      <workItem from="1547650070397" duration="2601000" />
+      <workItem from="1547653635555" duration="578000" />
+      <workItem from="1547656603745" duration="163000" />
+      <workItem from="1547722963701" duration="2073000" />
+      <workItem from="1547727859775" duration="37000" />
+      <workItem from="1547728062168" duration="1929000" />
+      <workItem from="1547732306893" duration="231000" />
+      <workItem from="1547732686302" duration="1541000" />
+      <workItem from="1547825841057" duration="918000" />
+      <workItem from="1547828274501" duration="813000" />
+      <workItem from="1548077990026" duration="5000" />
+      <workItem from="1548081859860" duration="4040000" />
+      <workItem from="1548149475665" duration="4000" />
+      <workItem from="1548158800167" duration="73000" />
+      <workItem from="1548160775679" duration="733000" />
+      <workItem from="1548171670618" duration="1556000" />
+      <workItem from="1548249415337" duration="148000" />
+      <workItem from="1548254413168" duration="4317000" />
+      <workItem from="1548338365690" duration="896000" />
+      <workItem from="1548345902177" duration="1418000" />
+      <workItem from="1548431009818" duration="1240000" />
+      <workItem from="1548434732838" duration="920000" />
+      <workItem from="1548514403708" duration="2518000" />
+      <workItem from="1548605233558" duration="765000" />
+      <workItem from="1548843961588" duration="2561000" />
+      <workItem from="1548864752328" duration="4922000" />
+      <workItem from="1548942510425" duration="803000" />
+      <workItem from="1548943948168" duration="145000" />
+      <workItem from="1548945494974" duration="13000" />
+      <workItem from="1548946155206" duration="824000" />
+      <workItem from="1549012115968" duration="209000" />
+      <workItem from="1549015883369" duration="25000" />
+      <workItem from="1549022792829" duration="1599000" />
+      <workItem from="1549024865467" duration="2913000" />
+      <workItem from="1549277738554" duration="687000" />
+      <workItem from="1549289359036" duration="920000" />
+      <workItem from="1549367547591" duration="6000" />
+      <workItem from="1549367575420" duration="12000" />
+      <workItem from="1549372860817" duration="20000" />
+      <workItem from="1549372916745" duration="1209000" />
+      <workItem from="1549631250237" duration="1286000" />
+      <workItem from="1550243597428" duration="1204000" />
+      <workItem from="1550507220480" duration="119000" />
+      <workItem from="1550507808329" duration="727000" />
+      <workItem from="1551098611804" duration="28000" />
+      <workItem from="1551175356038" duration="3058000" />
+      <workItem from="1551357606863" duration="49000" />
+      <workItem from="1551447142147" duration="906000" />
+      <workItem from="1551448783036" duration="174000" />
+      <workItem from="1552314363035" duration="1100000" />
+      <workItem from="1552315606961" duration="25000" />
+      <workItem from="1552483018715" duration="17000" />
+      <workItem from="1553171395998" duration="642000" />
+      <workItem from="1553513204377" duration="116000" />
+      <workItem from="1553517836278" duration="43000" />
+      <workItem from="1553680205880" duration="608000" />
+      <workItem from="1553684235535" duration="4000" />
+      <workItem from="1553874981270" duration="46000" />
+      <workItem from="1554133197115" duration="1472000" />
+      <workItem from="1554216100686" duration="132000" />
+      <workItem from="1554375935604" duration="1312000" />
+      <workItem from="1554456615913" duration="5337000" />
+      <workItem from="1554471253823" duration="6043000" />
+      <workItem from="1554496702720" duration="27000" />
+      <workItem from="1554496769287" duration="303000" />
+      <workItem from="1554806109525" duration="17000" />
+      <workItem from="1554903885264" duration="27000" />
+      <workItem from="1554972723989" duration="7000" />
+    </task>
+    <task id="LOCAL-00024" summary="* Updated to new MISA++">
+      <created>1541175253662</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1541175253662</updated>
+    </task>
+    <task id="LOCAL-00025" summary="* Updated to new MISA++">
+      <created>1541175603869</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1541175603869</updated>
+    </task>
+    <task id="LOCAL-00026" summary="* Updated to new MISA++">
+      <created>1541597034262</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1541597034262</updated>
+    </task>
+    <task id="LOCAL-00027" summary="* Updated to new MISA++">
+      <created>1541777625725</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1541777625725</updated>
+    </task>
+    <task id="LOCAL-00028" summary="* Updated to new MISA++">
+      <created>1542123706524</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1542123706524</updated>
+    </task>
+    <task id="LOCAL-00029" summary="* Updated to new MISA++">
+      <created>1542124469267</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1542124469267</updated>
+    </task>
+    <task id="LOCAL-00030" summary="* Updated to new MISA++">
+      <created>1542891141425</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1542891141426</updated>
+    </task>
+    <task id="LOCAL-00031" summary="* Updated to new MISA++">
+      <created>1543314395201</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1543314395202</updated>
+    </task>
+    <task id="LOCAL-00032" summary="* Updated to new MISA++">
+      <created>1543420480058</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1543420480058</updated>
+    </task>
+    <task id="LOCAL-00033" summary="+ Ported to misa_ome">
+      <created>1544100039261</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1544100039261</updated>
+    </task>
+    <task id="LOCAL-00034" summary="+ Ported to misa_ome">
+      <created>1544114755751</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1544114755751</updated>
+    </task>
+    <task id="LOCAL-00035" summary="* updated to new misa">
+      <created>1544788395873</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1544788395873</updated>
+    </task>
+    <task id="LOCAL-00036" summary="* fix">
+      <created>1545052621786</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1545052621786</updated>
+    </task>
+    <task id="LOCAL-00037" summary="* ported to library">
+      <created>1545223248899</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1545223248899</updated>
+    </task>
+    <task id="LOCAL-00038" summary="* ported to library">
+      <created>1545227604857</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1545227604857</updated>
+    </task>
+    <task id="LOCAL-00039" summary="* fix">
+      <created>1545395431860</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1545395431860</updated>
+    </task>
+    <task id="LOCAL-00040" summary="* fix">
+      <created>1545397269650</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1545397269650</updated>
+    </task>
+    <task id="LOCAL-00041" summary="+ added locatable results">
+      <created>1545406251322</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1545406251322</updated>
+    </task>
+    <task id="LOCAL-00042" summary="* Updated to new MISA++ (blueprint rework)">
+      <created>1547542017278</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1547542017278</updated>
+    </task>
+    <task id="LOCAL-00043" summary="* Updated to new MISA++ (parameter rework)">
+      <created>1547565582802</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1547565582802</updated>
+    </task>
+    <task id="LOCAL-00044" summary="* Updated to new MISA++ (runtime interface rework)">
+      <created>1547642521094</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1547642521094</updated>
+    </task>
+    <task id="LOCAL-00045" summary="* reorganization">
+      <created>1547649245463</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1547649245463</updated>
+    </task>
+    <task id="LOCAL-00046" summary="* updated to new MISA++">
+      <created>1547652868550</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1547652868550</updated>
+    </task>
+    <task id="LOCAL-00047" summary="* updated to new MISA++">
+      <created>1547656738831</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1547656738831</updated>
+    </task>
+    <task id="LOCAL-00048" summary="* updated to new MISA++">
+      <created>1547725123717</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1547725123718</updated>
+    </task>
+    <task id="LOCAL-00049" summary="* fix">
+      <created>1547732528680</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1547732528680</updated>
+    </task>
+    <task id="LOCAL-00050" summary="* updated to new MISA++">
+      <created>1547829087366</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1547829087366</updated>
+    </task>
+    <task id="LOCAL-00051" summary="* updated to new MISA++">
+      <created>1548086160815</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1548086160815</updated>
+    </task>
+    <task id="LOCAL-00052" summary="* updated to new MISA++">
+      <created>1548776697242</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1548776697242</updated>
+    </task>
+    <task id="LOCAL-00053" summary="* updated to new MISA++">
+      <created>1548778980688</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1548778980689</updated>
+    </task>
+    <task id="LOCAL-00054" summary="* Optimized segmentation3d">
+      <created>1549024181539</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1549024181539</updated>
+    </task>
+    <task id="LOCAL-00055" summary="* fix">
+      <created>1549025791582</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1549025791582</updated>
+    </task>
+    <task id="LOCAL-00056" summary="* simplified module">
+      <created>1549027374688</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1549027374688</updated>
+    </task>
+    <task id="LOCAL-00057" summary="* fix">
+      <created>1550507922625</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1550507922626</updated>
+    </task>
+    <task id="LOCAL-00058" summary="* fix">
+      <created>1551098633105</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1551098633106</updated>
+    </task>
+    <task id="LOCAL-00059" summary="* fix">
+      <created>1551357649180</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1551357649181</updated>
+    </task>
+    <task id="LOCAL-00060" summary="* fix">
+      <created>1551447353944</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1551447353945</updated>
+    </task>
+    <task id="LOCAL-00061" summary="* fix">
+      <created>1551448938525</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1551448938525</updated>
+    </task>
+    <task id="LOCAL-00062" summary="* fix">
+      <created>1552315357169</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1552315357171</updated>
+    </task>
+    <task id="LOCAL-00063" summary="* fix">
+      <created>1552315623723</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1552315623724</updated>
+    </task>
+    <task id="LOCAL-00064" summary="+ Updated to new MISA++">
+      <created>1553513284378</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1553513284378</updated>
+    </task>
+    <task id="LOCAL-00065" summary="* fix">
+      <created>1553517871888</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1553517871888</updated>
+    </task>
+    <task id="LOCAL-00066" summary="* fix">
+      <created>1553680212656</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1553680212657</updated>
+    </task>
+    <task id="LOCAL-00067" summary="* fix">
+      <created>1554133288290</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1554133288290</updated>
+    </task>
+    <task id="LOCAL-00068" summary="+ Copyright headers">
+      <created>1554216219408</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1554216219408</updated>
+    </task>
+    <task id="LOCAL-00069" summary="* fix">
+      <created>1554378360425</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1554378360426</updated>
+    </task>
+    <task id="LOCAL-00070" summary="- Removed unpublished algorithms">
+      <created>1554378440218</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1554378440218</updated>
+    </task>
+    <task id="LOCAL-00071" summary="+ resize interpolation parameter">
+      <created>1554717205359</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1554717205361</updated>
+    </task>
+    <task id="LOCAL-00072" summary="+ Linear interpolation for percentile">
+      <created>1554735200526</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1554735200526</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="430643000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1" y="0" width="1922" height="1165" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48123324" visible="true" weight="0.3425827" />
+      <window_info id="Structure" order="1" sideWeight="0.51876676" side_tool="true" weight="0.23639274" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32853025" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32853025" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39865515" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.4994664" weight="0.44860712" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49893278" weight="0.30355427" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010672" side_tool="true" weight="0.3088803" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.2795389" />
+      <window_info anchor="bottom" id="Statistic" order="13" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="LuaJ" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" x="0" y="0" width="430" height="965" id="Documentation" order="5" side_tool="true" weight="0.32977587" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/cmake_modules" />
+      <path value="$PROJECT_DIR$/cmake-build-debug/_deps/misaxx-src/cmake_modules" />
+      <path value="$PROJECT_DIR$/cmake-build-debug/_deps/pattxx-src" />
+      <path value="$PROJECT_DIR$/cmake-build-debug/_deps/pattxx-src/cmake_modules" />
+      <path value="$PROJECT_DIR$/cmake-build-debug/_deps/pattxx-src/documentation/themes/docdock" />
+      <path value="$PROJECT_DIR$/build/_deps/coixx-src" />
+      <path value="$PROJECT_DIR$/build/_deps/cxxh-src" />
+      <path value="$PROJECT_DIR$/build/_deps/misaxx-src" />
+      <path value="$PROJECT_DIR$/build/_deps/misaxx_ome-src" />
+      <path value="$PROJECT_DIR$/build/_deps/misaxx_ome-src/misaxx_cmake" />
+      <path value="$PROJECT_DIR$/cmake-build-debug/_deps/coixx-src" />
+      <path value="$PROJECT_DIR$/cmake-build-debug/_deps/cxxh-src" />
+      <path value="$PROJECT_DIR$/cmake-build-debug/_deps/misaxx-src" />
+      <path value="$PROJECT_DIR$/cmake-build-debug/_deps/misaxx_ome-src" />
+      <path value="$PROJECT_DIR$/cmake-build-debug/_deps/misaxx_ome-src/misaxx_cmake" />
+      <path value="$PROJECT_DIR$/cmake-build-release/_deps/coixx-src" />
+      <path value="$PROJECT_DIR$/cmake-build-release/_deps/cxxh-src" />
+      <path value="$PROJECT_DIR$/cmake-build-release/_deps/misaxx-src" />
+      <path value="$PROJECT_DIR$/cmake-build-release/_deps/misaxx_ome-src" />
+      <path value="$PROJECT_DIR$/cmake-build-release/_deps/misaxx_ome-src/misaxx_cmake" />
+      <path value="$PROJECT_DIR$/misaxx_cmake" />
+    </ignored-roots>
+    <MESSAGE value="+ klingberg_1" />
+    <MESSAGE value="+ huang&#10;+ klingberg_2&#10;+ superpixel_2means" />
+    <MESSAGE value="+ 3d segmentation" />
+    <MESSAGE value="+ quantification" />
+    <MESSAGE value="* updated for data rework" />
+    <MESSAGE value="* Updated MISA++" />
+    <MESSAGE value="* selectable algorithms" />
+    <MESSAGE value="* Updated to new MISA++" />
+    <MESSAGE value="+ Ported to misa_ome" />
+    <MESSAGE value="* updated to new misa" />
+    <MESSAGE value="* ported to library" />
+    <MESSAGE value="+ added locatable results" />
+    <MESSAGE value="* Updated to new MISA++ (blueprint rework)" />
+    <MESSAGE value="* Updated to new MISA++ (parameter rework)" />
+    <MESSAGE value="* Updated to new MISA++ (runtime interface rework)" />
+    <MESSAGE value="* reorganization" />
+    <MESSAGE value="* updated to new MISA++" />
+    <MESSAGE value="* Optimized segmentation3d" />
+    <MESSAGE value="* simplified module" />
+    <MESSAGE value="+ Updated to new MISA++" />
+    <MESSAGE value="+ Copyright headers" />
+    <MESSAGE value="* fix" />
+    <MESSAGE value="- Removed unpublished algorithms" />
+    <MESSAGE value="+ resize interpolation parameter" />
+    <MESSAGE value="+ Linear interpolation for percentile" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ Linear interpolation for percentile" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file:///usr/local/include/misaxx/misa_parameter_builder.h</url>
+          <line>31</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>img.type()</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>img_small.type()</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this-&gt;type()</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>t_worker.get_module()</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this-&gt;get_worker()</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>m_blueprints.at(t_key)</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>misaxx::misa_runtime_base::instance()</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>get_data_description()</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>get_data_description().metadata</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>m_description-&gt;has_description()</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file:///usr/local/include/misaxx/core/misa_mutable_module_info.h" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/include/misaxx-tissue/module_info.h" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/include/misaxx/imaging/module_info.h" />
+    <entry file="file:///usr/local/include/misaxx/ome/module_info.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#13#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/misaxx/imaging/utils/cv2/toolbox/toolbox_semantic_convert.h" />
+    <entry file="file:///usr/local/include/misaxx/imaging/utils/cv2/detail/BMat.h" />
+    <entry file="file:///usr/local/include/cv-toolbox/labeled_image_properties.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/misaxx/core/accessors/misa_exported_attachments.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake/module_info.h.in.bak" />
+    <entry file="file://$PROJECT_DIR$/../misaxx-core/src/misaxx/core/runtime/misa_runtime.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8325">
+          <caret line="555" column="52" lean-forward="true" selection-start-line="555" selection-start-column="52" selection-end-line="555" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../misaxx-core/include/misaxx/core/misa_json_schema_property.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1455">
+          <caret line="97" column="11" selection-start-line="97" selection-start-column="11" selection-end-line="97" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/misaxx/core/misa_parameter_builder.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="63" selection-start-line="36" selection-start-column="63" selection-end-line="36" selection-end-column="63" />
+          <folding>
+            <element signature="e#564#576#0" expanded="true" />
+            <element signature="e#1175#1187#0" expanded="true" />
+            <element signature="e#1785#1797#0" expanded="true" />
+            <element signature="e#2390#2402#0" expanded="true" />
+            <element signature="e#2954#2966#0" expanded="true" />
+            <element signature="e#3561#3573#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/misaxx/ome/attachments/misa_ome_pixel_count.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="29" column="62" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake/module_info.cpp.in" />
+    <entry file="file://$PROJECT_DIR$/cmake/misaxx-tissue-segmentation-config.cmake.in">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/misaxx-tissue/attachments/tissue.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/misaxx-tissue/module.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/misaxx-tissue/module_info.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/misaxx-tissue/module_interface.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="e#56#97#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation2d/segmentation2d_huang.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation2d/segmentation2d_huang.h" />
+    <entry file="file://$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation2d/segmentation2d_klingberg_2.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation2d/segmentation2d_klingberg_2.h" />
+    <entry file="file://$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation2d/segmentation2d_superpixel_2means.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation2d/segmentation2d_superpixel_2means.h" />
+    <entry file="file://$PROJECT_DIR$/src/misaxx-tissue/algorithms/quantification.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="e#56#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/misaxx-tissue/module_info.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/misaxx-tissue/module_interface.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/misaxx-tissue/attachments/tissue.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation3d/segmentation3d_base.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="e#56#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation3d/segmentation3d_none.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation2d/segmentation2d_base.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="56" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/cv-toolbox/toolbox/detail/toolbox_binarize.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/cv-toolbox/BMat.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/opencv4/opencv2/core/mat.hpp" />
+    <entry file="file://$PROJECT_DIR$/src/misaxx-tissue/algorithms/quantification.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="e#490#517#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation3d/segmentation3d_none.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="44" lean-forward="true" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/opencv4/opencv2/core/types.hpp" />
+    <entry file="file:///usr/local/include/opencv4/opencv2/core/mat.inl.hpp" />
+    <entry file="file:///usr/local/include/cv-toolbox/toolbox/detail/toolbox_resize.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/opencv4/opencv2/imgproc.hpp" />
+    <entry file="file://$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation2d/segmentation2d_klingberg_1.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5355">
+          <caret line="357" column="56" selection-start-line="357" selection-start-column="56" selection-end-line="357" selection-end-column="56" />
+          <folding>
+            <element signature="e#490#529#0" expanded="true" />
+            <element signature="e#818#830#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/misaxx-tissue/module.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="73" selection-start-line="36" selection-start-column="73" selection-end-line="36" selection-end-column="73" />
+          <folding>
+            <element signature="e#490#523#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/misaxx-tissue/algorithms/segmentation2d/segmentation2d_klingberg_1.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/misaxx/core/misa_task.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+          <folding>
+            <element signature="e#815#827#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/misaxx/core/misa_parameter.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="66" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
+          <folding>
+            <element signature="e#726#738#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/misaxx/core/misa_parameter_base.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/misaxx/core/misa_json_schema_property.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <last-edited>local</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+          <order>
+            <scope name="local" />
+          </order>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
