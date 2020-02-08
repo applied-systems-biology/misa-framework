@@ -12,7 +12,7 @@ https://applied-systems-biology.github.io/misa-framework/
 
 # About
 
-This repository contains the MISA++ framwork website and binary downloads.
+This repository contains the MISA++ framework website and binary downloads.
 The subfolder "src" contains all source codes associated to the publication.
 The subfolder "docs" contains the website, including documentation as HTML site.
 
