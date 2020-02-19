@@ -116,7 +116,7 @@
 	"title": "Citation",
 	"tags": [],
 	"description": "",
-	"content": "Please cite following publication if you use our framework:\nGerst, Ruman, Anna Medyukhina, and Marc Thilo Figge. \u0026ldquo;MISA++: A standardized interface for automated bioimage analysis.\u0026rdquo; SoftwareX 11 (2020): 100405.\nhttps://doi.org/10.1016/j.softx.2020.100405\n Thanks!\nThe MISA++ framework was developed by Research Group Applied Systems Biology - Head: Prof. Dr. Marc Thilo Figge\nHKI-Center for Systems Biology of Infection\nLeibniz Institute for Natural Product Research and Infection Biology - Hans Knöll Insitute (HKI)\nAdolf-Reichwein-Straße 23, 07745 Jena, Germany\n  \n "
+	"content": "Please cite following publication if you use our framework:\nGerst, R., Medyukhina, A., \u0026amp; Figge, M. T. (2020). MISA++: A standardized interface for automated bioimage analysis. SoftwareX, 11, 100405.\nhttps://doi.org/10.1016/j.softx.2020.100405\n Thanks!\nThe MISA++ framework was developed by Research Group Applied Systems Biology - Head: Prof. Dr. Marc Thilo Figge\nHKI-Center for Systems Biology of Infection\nLeibniz Institute for Natural Product Research and Infection Biology - Hans Knöll Insitute (HKI)\nAdolf-Reichwein-Straße 23, 07745 Jena, Germany\n  \n "
 },
 {
 	"uri": "https://applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/plot-builder/",

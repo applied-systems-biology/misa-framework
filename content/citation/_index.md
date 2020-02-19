@@ -11,7 +11,7 @@ lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 Please cite following publication if you use our framework:
 
 {{% panel %}}
-Gerst, Ruman, Anna Medyukhina, and Marc Thilo Figge. "MISA++: A standardized interface for automated bioimage analysis." SoftwareX 11 (2020): 100405.
+Gerst, R., Medyukhina, A., & Figge, M. T. (2020). MISA++: A standardized interface for automated bioimage analysis. SoftwareX, 11, 100405.
 
 https://doi.org/10.1016/j.softx.2020.100405
 {{% /panel %}}
