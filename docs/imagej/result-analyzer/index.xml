@@ -16,7 +16,11 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/output-data/</guid>
-      <description></description>
+      <description>The Data Browser tool lists all input and output data. Its navigation is similar to the parameter editor’s Data category (see Importing data).  Depending on the data type, the data browser offers actions such as importing the data back into ImageJ via Bioformats Importer. The “...” button opens a list of other available options.
+ Following actions are available by default:
+ Action
+ Description
+  Bioformats import</description>
     </item>
     
     <item>
@@ -25,7 +29,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/quantification-results/</guid>
-      <description>&amp;lt;col /&amp;gt; &amp;lt;tr &amp;gt; &amp;lt;td &amp;gt;&amp;lt;p &amp;gt; &amp;lt;b&amp;gt;Filter&amp;lt;/b&amp;gt;&amp;lt;/p&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td &amp;gt;&amp;lt;p &amp;gt; &amp;lt;b&amp;gt;Description&amp;lt;/b&amp;gt;&amp;lt;/p&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr &amp;gt; &amp;lt;td &amp;gt;&amp;lt;p &amp;gt; &amp;lt;img src=&amp;quot;/img/imagej/userguide_html_7e9251409421e5be.png&amp;quot; name=&amp;quot;image95.png&amp;quot; class=&amp;quot;inline-image&amp;quot; border=&amp;quot;0&amp;quot;/&amp;gt;  Filter by SQLAllows insertion of a custom SQL filter query.Filter by dataFilters quantification results that are attached to specific data.Filter by object typeRestricts the object types (e.g. only list glomeruli).Filter by sampleOnly shows quantification results of specified samples.Filter only direct attachmentsMISA++ quantification results are hierarchical.</description>
+      <description>MISA++ applications store quantification results in a standardized and flexible format that is capable of organizing large amounts of metadata. The data is stored as objects such as quantities with units, locations or application-specific objects such as glomeruli.  MISA++ for ImageJ includes a tool to filter, browse and process the quantification results and create tables of only the relevant information.
+ Important: The tool is designed to handle millions of data entries and uses a SQLite database to handle such an amount of data.</description>
     </item>
     
     <item>
@@ -34,7 +39,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/table-analyzer/</guid>
-      <description></description>
+      <description>You can modify, split and summarize tables extracted from quantification results or loaded via the import function. Following actions are available:
+ Action
+ Description
+  Export
+ Exports the current table as *.csv or *.xlsx
+  Clone
+ Clones the current table into a new table document. This will open a new tab.
+  Undo
+ Undo the previous action. Please note that this function does not work for manually editing a table cell.</description>
     </item>
     
     <item>
@@ -43,7 +56,11 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/plot-builder/</guid>
-      <description></description>
+      <description>The integrated plot tool can create various plots from table data. The user interface is divided into three sections:
+ The plot
+The plot type and data import/export options
+Plot data and additional settings
+  The plot is displayed on the right side and can be exported into publication-ready formats via the Export action. You can disable the automatic update when plot settings or data is changed by disabling the Automatically update plot button.</description>
     </item>
     
     <item>
@@ -52,7 +69,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/runtime-log/</guid>
-      <description></description>
+      <description>MISA++ applications always track basic information about the time needed to do an analysis with the option to enable a detailed runtime log. It can be accessed via the analysis tool (see Evaluating output data) or in a standalone-version that is accessible via the list of installed MISA++ applications (see Managing applications).
+The timeline is a Gantt-chart that lists the duration and thread allocation of each calculation step. A full-detailed version that lists each individual task (e.</description>
     </item>
     
   </channel>
