@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2020-02-19T15:47:20 CET">
+<meta name="revised" content="2020-09-29T15:41:25 CEST">
 <title>Setting up a project :: MISA&#43;&#43; Framework</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     
 	
   
-    <a href="../../../" target="_self"><img src="../../../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span>
+    <p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->by <!-- raw HTML omitted -->Applied Systems Biology, HKI Jena, Germany<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 
   
 
@@ -436,53 +436,36 @@
     
     
     
-    
-
-<h1 id="automated-project-creation">Automated project creation</h1>
-
+    <h1 id="automated-project-creation">Automated project creation</h1>
 <p>We provide scripts for Linux and Windows that automate creating a valid MISA++ project.
 The resulting project folders can be directly compiled.</p>
-
 <p>You can find the scripts <a href="https://github.com/applied-systems-biology/misaxx-utils/tree/master/project-management">on our GitHub page</a>.</p>
-
 <h2 id="linux">Linux</h2>
-
 <ol>
 <li>Copy the <code>misaxx-create-project.sh</code> script into a folder</li>
 <li>Open a terminal and make the script executable via <code>chmod +x misaxx-create-project.sh</code></li>
 <li>Run <code>misaxx-create-project.sh</code> and follow the instructions</li>
 </ol>
-
 <h2 id="windows">Windows</h2>
-
 <ol>
 <li>Copy the <code>misaxx-create-project.ps1</code> script into a folder</li>
 <li>Right click the script and click &ldquo;Run in Powershell&rdquo;</li>
 <li>Follow the instructions</li>
 </ol>
-
 <h1 id="manual-project-creation">Manual project creation</h1>
-
 <p>Following guide shows how to create a project manually.</p>
-
 <h2 id="creating-the-folder-structure">Creating the folder structure</h2>
-
 <p>Each module is designed to be compiled into a shared library (.dll/.so), which requires a strict separation between the API and implementation. Create following folder structure:</p>
-
 <pre><code>./CMakeLists.txt
 ./include/&lt;module-name&gt;/
 ./src/&lt;module-name&gt;/
-</code></pre>
-
-<p><code>&lt;module-name&gt;</code> is the name of the CMake target, for example <code>misaxx-ome</code>.
+</code></pre><p><code>&lt;module-name&gt;</code> is the name of the CMake target, for example <code>misaxx-ome</code>.
 The <code>include</code> directory contains the public API of the module and will be installed into the global include directory. The <code>src</code> directory contains implementation-only files and will not be installed.</p>
+<h2 id="creating-the-cmakeliststxt">Creating the CMakeLists.txt</h2>
 
-<h2 id="creating-the-cmakelists-txt">Creating the CMakeLists.txt</h2>
-
-<div class="notices note" ><p>
-The following CMakeLists.txt file makes use of helper functions that are automatically imported on
+<div class="notices note" ><p><p>The following CMakeLists.txt file makes use of helper functions that are automatically imported on
 making use of the MISA++ Core package.
-You are of course free to setup your project without those functions.
+You are of course free to setup your project without those functions.</p>
 </p></div>
 
 <p>Fill the <code>CMakeLists.txt</code> file with following information:</p>
@@ -507,54 +490,43 @@ You are of course free to setup your project without those functions.
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#111">misaxx_with_default_api</span><span style="color:#111">()</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Only if it&#39;s a worker module:
-</span><span style="color:#75715e"></span><span style="color:#111">misaxx_with_default_executable</span><span style="color:#111">()</span></code></pre></div>
-<p>Please note that <code>&lt;module-name&gt;</code> and <code>&lt;module_name&gt;</code> might be different. <code>&lt;module_name&gt;</code> must be a name that is valid in C++.</p>
-
+</span><span style="color:#75715e"></span><span style="color:#111">misaxx_with_default_executable</span><span style="color:#111">()</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Please note that <code>&lt;module-name&gt;</code> and <code>&lt;module_name&gt;</code> might be different. <code>&lt;module_name&gt;</code> must be a name that is valid in C++.</p>
 <h2 id="for-worker-modules-create-the-module-interface-and-module-dispatcher">For worker modules: Create the module interface and module dispatcher</h2>
-
 <p>If you want to create a module that performs processing of data, create the following files:</p>
-
 <pre><code>./include/&lt;module-name&gt;/module_interface.h
 ./include/&lt;module-name&gt;/module.h
 ./src/&lt;module-name&gt;/module_interface.cpp
 ./src/&lt;module-name&gt;/module.cpp
-</code></pre>
-
-<p>Please no not forget to add them to the <code>CMakeLists.txt</code></p>
-
-<h3 id="module-interface-h">module_interface.h</h3>
+</code></pre><p>Please no not forget to add them to the <code>CMakeLists.txt</code></p>
+<h3 id="module_interfaceh">module_interface.h</h3>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;misaxx/core/misa_module_interface.h&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e"></span>
 <span style="color:#00a8c8">namespace</span> <span style="color:#f92672">&lt;</span><span style="color:#111">module_name</span><span style="color:#f92672">&gt;</span> <span style="color:#111">{</span>
-    <span style="color:#00a8c8">struct</span> <span style="color:#111">module_interface</span> <span style="color:#111">:</span> <span style="color:#00a8c8">public</span> <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_module_interface</span> <span style="color:#111">{</span>
-        <span style="color:#00a8c8">void</span> <span style="color:#111">setup</span><span style="color:#111">()</span> <span style="color:#00a8c8">override</span><span style="color:#111">;</span>
+    <span style="color:#00a8c8">struct</span> <span style="color:#75af00">module_interface</span> <span style="color:#f92672">:</span> <span style="color:#00a8c8">public</span> <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_module_interface</span> <span style="color:#111">{</span>
+        <span style="color:#00a8c8">void</span> <span style="color:#75af00">setup</span><span style="color:#111">()</span> <span style="color:#00a8c8">override</span><span style="color:#111">;</span>
     <span style="color:#111">}</span>
 <span style="color:#111">}</span>
-</code></pre></div>
-<h2 id="module-h">module.h</h2>
+</code></pre></div><h2 id="moduleh">module.h</h2>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;misaxx/core/misa_module.h&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e"></span>
 <span style="color:#00a8c8">namespace</span> <span style="color:#f92672">&lt;</span><span style="color:#111">module_name</span><span style="color:#f92672">&gt;</span> <span style="color:#111">{</span>
-    <span style="color:#00a8c8">struct</span> <span style="color:#111">module</span> <span style="color:#111">:</span> <span style="color:#00a8c8">public</span> <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_module</span><span style="color:#f92672">&lt;</span><span style="color:#111">module_interface</span><span style="color:#f92672">&gt;</span> <span style="color:#111">{</span>
+    <span style="color:#00a8c8">struct</span> <span style="color:#75af00">module</span> <span style="color:#f92672">:</span> <span style="color:#00a8c8">public</span> <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_module</span><span style="color:#f92672">&lt;</span><span style="color:#111">module_interface</span><span style="color:#f92672">&gt;</span> <span style="color:#111">{</span>
         <span style="color:#00a8c8">using</span> <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_module</span><span style="color:#f92672">&lt;</span><span style="color:#111">module_interface</span><span style="color:#f92672">&gt;::</span><span style="color:#111">misa_module</span><span style="color:#111">;</span>
 
         <span style="color:#00a8c8">void</span> <span style="color:#75af00">create_blueprints</span><span style="color:#111">(</span><span style="color:#111">blueprint_list</span> <span style="color:#f92672">&amp;</span><span style="color:#111">t_blueprints</span><span style="color:#111">,</span> <span style="color:#111">parameter_list</span> <span style="color:#f92672">&amp;</span><span style="color:#111">t_parameters</span><span style="color:#111">)</span> <span style="color:#00a8c8">override</span><span style="color:#111">;</span>
         <span style="color:#00a8c8">void</span> <span style="color:#75af00">build</span><span style="color:#111">(</span><span style="color:#00a8c8">const</span> <span style="color:#111">blueprint_builder</span> <span style="color:#f92672">&amp;</span><span style="color:#111">t_builder</span><span style="color:#111">)</span> <span style="color:#00a8c8">override</span><span style="color:#111">;</span>
     <span style="color:#111">}</span>
 <span style="color:#111">}</span>
-</code></pre></div>
-<h1 id="initial-configuration">Initial configuration</h1>
-
+</code></pre></div><h1 id="initial-configuration">Initial configuration</h1>
 <p>Create a building directory and run <code>cmake ..</code> once. This will automatically generate additional code files such as the module info.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir build
 <span style="color:#111">cd</span> build
-cmake ..</code></pre></div>
-<p>Add following files to your CMake target:</p>
-
+cmake ..
+</code></pre></div><p>Add following files to your CMake target:</p>
 <pre><code>./include/&lt;module-name&gt;/module_info.h
 ./src/&lt;module-name&gt;/module_info.cpp
 </code></pre>
-
 
     
     

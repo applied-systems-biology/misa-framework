@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2020-02-19T15:47:21 CET">
+<meta name="revised" content="2020-09-29T15:41:25 CEST">
 <title>Creating tasks :: MISA&#43;&#43; Framework</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     
 	
   
-    <a href="../../../" target="_self"><img src="../../../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span>
+    <p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->by <!-- raw HTML omitted -->Applied Systems Biology, HKI Jena, Germany<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 
   
 
@@ -436,24 +436,16 @@
     
     
     
-    
-
-<p>The MISA++ framework manages workloads by parallelized execution of atomic <em>tasks</em>. Additionally, <em>dispatchers</em> can be created that acts as inner node within a tree of workers. Tasks on the other hand are always leaves.</p>
-
+    <p>The MISA++ framework manages workloads by parallelized execution of atomic <em>tasks</em>. Additionally, <em>dispatchers</em> can be created that acts as inner node within a tree of workers. Tasks on the other hand are always leaves.</p>
 <p>The module dispatcher (<code>./include/&lt;module-name&gt;/module.h</code>) acts as root of this tree and as entry point to define the tasks that process data and their dependencies.</p>
-
 <p>Tasks contain atomic workloads that should be able to run in parallel. All tasks inherit from <code>misaxx::misa_task</code> and require you to inherit following methods:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">void</span> <span style="color:#75af00">create_parameters</span><span style="color:#111">(</span><span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_parameter_builder</span> <span style="color:#f92672">&amp;</span><span style="color:#111">parameters</span><span style="color:#111">);</span>
 <span style="color:#00a8c8">void</span> <span style="color:#75af00">work</span><span style="color:#111">();</span>
-</code></pre></div>
-<p>The <code>create_parameters()</code> function comes with a parameter builder and allows you to create <code>misaxx::misa_parameter&lt;T&gt;</code> instances. The <code>work()</code> function is called when the work should be executed.</p>
-
+</code></pre></div><p>The <code>create_parameters()</code> function comes with a parameter builder and allows you to create <code>misaxx::misa_parameter&lt;T&gt;</code> instances. The <code>work()</code> function is called when the work should be executed.</p>
 <h1 id="creating-parameters">Creating parameters</h1>
-
 <p>To be able to automatically generate the parameter schema, the MISA++ framework requires you to initialize  parameters within the <code>create_parameters(...)</code> function.</p>
 
-
-<div class="panel panel-default"><div class="panel-heading">Example</div><div class="panel-body"><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">struct</span> <span style="color:#111">my_task</span> <span style="color:#111">:</span> <span style="color:#00a8c8">public</span> <span style="color:#111">misa_task</span> <span style="color:#111">{</span>
+<div class="panel panel-default"><div class="panel-heading">Example</div><div class="panel-body"><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">struct</span> <span style="color:#75af00">my_task</span> <span style="color:#f92672">:</span> <span style="color:#00a8c8">public</span> <span style="color:#111">misa_task</span> <span style="color:#111">{</span>
     <span style="color:#00a8c8">using</span> <span style="color:#111">misa_task</span><span style="color:#f92672">::</span><span style="color:#111">misa_task</span><span style="color:#111">;</span>
 
     <span style="color:#111">parameter</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">int</span><span style="color:#f92672">&gt;</span> <span style="color:#111">m_radius</span><span style="color:#111">;</span>
@@ -464,9 +456,7 @@
 <span style="color:#111">}</span>
 </code></pre></div></div></div>
 
-
 <p>There are 3 types of parameters that are available:</p>
-
 <table>
 <thead>
 <tr>
@@ -475,20 +465,17 @@
 <th>Description</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>Algorithm</td>
 <td>/algorithm/../..*</td>
 <td>Independent from current sample. Depends on name and path of current worker</td>
 </tr>
-
 <tr>
 <td>Sample</td>
 <td>/samples/(current sample)/*</td>
 <td>Only depends on sample name.</td>
 </tr>
-
 <tr>
 <td>Runtime</td>
 <td>/runtime/*</td>
@@ -496,14 +483,11 @@
 </tr>
 </tbody>
 </table>
-
 <h1 id="accessing-data">Accessing data</h1>
-
 <p>Data is accessed via the module interface, or alternatively via cache accessor member variables.
 Access to the current module interface is available via the <code>get_module()</code> and <code>get_module_as&lt;T&gt;()</code> functions. This applies to all workers (tasks and dispatchers).</p>
 
-
-<div class="panel panel-default"><div class="panel-heading">Example</div><div class="panel-body"><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">struct</span> <span style="color:#111">my_task</span> <span style="color:#111">:</span> <span style="color:#00a8c8">public</span> <span style="color:#111">misa_task</span> <span style="color:#111">{</span>
+<div class="panel panel-default"><div class="panel-heading">Example</div><div class="panel-body"><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">struct</span> <span style="color:#75af00">my_task</span> <span style="color:#f92672">:</span> <span style="color:#00a8c8">public</span> <span style="color:#111">misa_task</span> <span style="color:#111">{</span>
     <span style="color:#00a8c8">using</span> <span style="color:#111">misa_task</span><span style="color:#f92672">::</span><span style="color:#111">misa_task</span><span style="color:#111">;</span>
 
     <span style="color:#00a8c8">void</span> <span style="color:#75af00">work</span><span style="color:#111">()</span> <span style="color:#111">{</span>

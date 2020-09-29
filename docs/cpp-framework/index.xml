@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>C&#43;&#43; Framework on MISA&#43;&#43; Framework</title>
@@ -48,21 +48,7 @@ Module interface A class that inherits from misaxx::misa_module_interface and is
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/credits/</guid>
-      <description>The MISA++ C++ framework is written in C++ version 17 and depends on the following libraries and tools:
-
-
-Library
- Version
- URL
- Author/Citation
-  OpenMP
- 4.5
- https://www.openmp.org/
- Dagum, Leonardo, and Ramesh Menon. &amp;ldquo;OpenMP: An industry-standard API for shared-memory programming.&amp;rdquo; Computing in Science &amp;amp; Engineering 1 (1998): 46-55.
-  Boost Libraries
- 1.67
- https://www.boost.org/
- Beman Dawes, David Abrahams, Rene Rivera; Boost Community</description>
+      <description></description>
     </item>
     
   </channel>

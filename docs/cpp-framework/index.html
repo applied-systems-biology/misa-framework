@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2020-02-19T15:47:20 CET">
+<meta name="revised" content="2020-09-29T15:41:25 CEST">
 <title>C&#43;&#43; Framework :: MISA&#43;&#43; Framework</title>
 <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon" />
 <link href="../css/font-awesome.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     
 	
   
-    <a href="../" target="_self"><img src="../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span>
+    <p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->by <!-- raw HTML omitted -->Applied Systems Biology, HKI Jena, Germany<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 
   
 
@@ -426,10 +426,7 @@
     
     
 
-
-
 <p>The MISA++ (Modular image stack analysis for C++) framework allows the creation of C++ applications to process data. It features functions that simplify following common requirements of such applications:</p>
-
 <ul>
 <li>Automated parallelization of tasks</li>
 <li>Memory-efficient caching of data on hard-drive</li>
@@ -438,89 +435,112 @@
 <li>Assigning quantitative results to data</li>
 <li>Integration into other tools and pipelines</li>
 </ul>
-
 <p>MISA++ is used to develop <em>modules</em> that either provide additional data types and other utility functions (utility modules) or modules that are compiled into an application that solves a specific task (worker modules).</p>
-
 <p>We also provide additional modules that integrate the open source imaging libraries <a href="http://opencv.org/">OpenCV</a> and <a href="https://www.openmicroscopy.org/ome-files/">OME Files</a> into our framework.</p>
-
 <h1 id="all-features">All features</h1>
-
 <h2 id="core-library">Core library</h2>
-
 <h3 id="creation-of-parallelizeable-workloads">Creation of parallelizeable workloads</h3>
-
 <ul>
 <li>Easy creation of parallelizable and atomic tasks</li>
 <li>Easy structuring of tasks into groups</li>
 <li>Dependency management between workloads</li>
 <li>No need for manual thread creation due to automated parallelization</li>
 </ul>
-
 <h3 id="standardized-input-parameters">Standardized input parameters</h3>
-
 <ul>
 <li>Highly structured and well standardized way to create algorithm parameters</li>
 <li>Different parameter namespaces</li>
-<li>* Algorithm-specific parameters</li>
-<li>* Sample-specific parameters</li>
-<li>* Global parameters</li>
+<li>
+<ul>
+<li>Algorithm-specific parameters</li>
 </ul>
-
+</li>
+<li>
+<ul>
+<li>Sample-specific parameters</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Global parameters</li>
+</ul>
+</li>
+</ul>
 <h3 id="memory-efficient-handling-of-large-data-sets">Memory-efficient handling of large data sets</h3>
-
 <ul>
 <li>Data-access via thread-safe caches</li>
 <li>Easy importing of input data</li>
 <li>Easy creation of output data</li>
 <li>Methods to easily create new cache types</li>
 </ul>
-
 <h3 id="assigning-quantification-results">Assigning quantification results</h3>
-
 <ul>
 <li>Quantification results can be easily attached to input or output data</li>
 <li>Well-defined, fully-automated and portable way to assign quantification results to data for external tools</li>
 <li>Predefined data cache that acts as shared storage for quantified data</li>
 </ul>
-
 <h3 id="cmake-build-system-integration">CMake build system integration</h3>
-
 <ul>
 <li>Automated generation of installable shared libraries</li>
 <li>Automated generation of installable executables for worker modules</li>
 </ul>
-
 <h3 id="support-for-quantified-data">Support for quantified data</h3>
-
 <ul>
 <li>Matrix data type including mathematical operations</li>
 <li>Values with unit</li>
-<li>* Unit conversions</li>
-<li>* Higher order units</li>
+<li>
+<ul>
+<li>Unit conversions</li>
 </ul>
-
+</li>
+<li>
+<ul>
+<li>Higher order units</li>
+</ul>
+</li>
+</ul>
 <h2 id="imaging-capabilities">Imaging capabilities</h2>
-
 <h3 id="opencv-integration">OpenCV integration</h3>
-
 <ul>
 <li>Single-image cache</li>
 <li>Image stack cache</li>
-<li>* Allows access to each single-image cache</li>
-<li>* Easy parallelization</li>
+<li>
+<ul>
+<li>Allows access to each single-image cache</li>
 </ul>
-
+</li>
+<li>
+<ul>
+<li>Easy parallelization</li>
+</ul>
+</li>
+</ul>
 <h3 id="ome-files-integration">OME Files integration</h3>
-
 <ul>
 <li>OME TIFF cache that allows access to individual OME TIFF planes</li>
-<li>* Can read OME TIFF format including metadata</li>
-<li>* Can write OME TIFF format including metadata</li>
+<li>
+<ul>
+<li>Can read OME TIFF format including metadata</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Can write OME TIFF format including metadata</li>
+</ul>
+</li>
 <li>Automated conversion from/to OpenCV images</li>
 <li>Read and write access to OME metadata such as microscopy parameters or physical size</li>
 <li>Support for OME quantity types</li>
-<li>* Including higher-order quantity types such as area and volume</li>
-<li>* Voxel/3D quantity types</li>
+<li>
+<ul>
+<li>Including higher-order quantity types such as area and volume</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Voxel/3D quantity types</li>
+</ul>
+</li>
 </ul>
 
 
@@ -529,7 +549,7 @@
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="../imagej/result-analyzer/runtime-log/" title="Analyzing the runtime"> <i class="fa fa-chevron-left"></i><label>Analyzing the runtime</label></a>
+<a class="nav nav-prev" href="../imagej/credits/" title="Credits"> <i class="fa fa-chevron-left"></i><label>Credits</label></a>
     <a class="nav nav-next" href="../cpp-framework/building/" title="Building" style="margin-right: 0px;"><label>Building</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Development on MISA&#43;&#43; Framework</title>
@@ -52,7 +52,7 @@ Caches are exclusively created within the module interface that is also responsi
       <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/development/creating-tasks/</guid>
       <description>The MISA++ framework manages workloads by parallelized execution of atomic tasks. Additionally, dispatchers can be created that acts as inner node within a tree of workers. Tasks on the other hand are always leaves.
 The module dispatcher (./include/&amp;lt;module-name&amp;gt;/module.h) acts as root of this tree and as entry point to define the tasks that process data and their dependencies.
-Tasks contain atomic workloads that should be able to run in parallel.</description>
+Tasks contain atomic workloads that should be able to run in parallel. All tasks inherit from misaxx::misa_task and require you to inherit following methods:</description>
     </item>
     
     <item>
@@ -64,7 +64,7 @@ Tasks contain atomic workloads that should be able to run in parallel.</descript
       <description>The MISA++ framework manages workloads by parallelized execution of atomic tasks. Additionally, dispatchers can be created that acts as inner node within a tree of workers. Tasks on the other hand are always leaves.
 The module dispatcher (./include/&amp;lt;module-name&amp;gt;/module.h) acts as root of this tree and as entry point to define the tasks that process data and their dependencies.
 Dispatchers require you to override following virtual functions:
-void create_blueprints(misa_dispatcher::blueprint_list &amp;amp;blueprints, misa_dispatcher::parameter_list &amp;amp;parameters); void build(const misa_dispatcher::blueprint_builder &amp;amp;builder);  To allow the automated documentation of the whole tree of tasks, the misaxx::misa_dispatcher interface requires a data-independent declaration of all sub-dispatchers and tasks that the dispatcher might create, as well as all parameters that might be queried from the parameter file.</description>
+void create_blueprints(misa_dispatcher::blueprint_list &amp;amp;blueprints, misa_dispatcher::parameter_list &amp;amp;parameters); void build(const misa_dispatcher::blueprint_builder &amp;amp;builder); To allow the automated documentation of the whole tree of tasks, the misaxx::misa_dispatcher interface requires a data-independent declaration of all sub-dispatchers and tasks that the dispatcher might create, as well as all parameters that might be queried from the parameter file.</description>
     </item>
     
     <item>
@@ -75,7 +75,7 @@ void create_blueprints(misa_dispatcher::blueprint_list &amp;amp;blueprints, misa
       <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/development/dispatching-submodules/</guid>
       <description>You reduce the amount of code in your current project by off-loading work to another MISA++ module. The sub-module will be integrated into the current worker tree and benefit from better parallelization and less post-processing compared to running MISA++ applications in a pipeline.
 Prerequisites Modify the CMakeLists.txt and the cmake/*-config.in to add the submodule as dependency.
-ExampleIn CMakeLists.txt find_package(misaxx-core REQUIRED)find_package(misaxx-tissue-segmentation REQUIRED)# Later: target_link_libraries(my-module PUBLIC misaxx::misaxx-tissue-segmentation) In cmake/*-config.in find_package(misaxx-core REQUIRED)find_package(misaxx-tissue-segmentation REQUIRED) Submodules within the filesystem A submodule is created on a subfolder of the current virtual filesystem and therefore are handled similar to data.</description>
+ExampleIn CMakeLists.txt find_package(misaxx-core REQUIRED)find_package(misaxx-tissue-segmentation REQUIRED)# Later: target_link_libraries(my-module PUBLIC misaxx::misaxx-tissue-segmentation)In cmake/*-config.in find_package(misaxx-core REQUIRED)find_package(misaxx-tissue-segmentation REQUIRED) Submodules within the filesystem A submodule is created on a subfolder of the current virtual filesystem and therefore are handled similar to data.</description>
     </item>
     
     <item>

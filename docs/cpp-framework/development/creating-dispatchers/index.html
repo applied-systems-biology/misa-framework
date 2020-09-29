@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2020-02-19T15:47:21 CET">
+<meta name="revised" content="2020-09-29T15:41:25 CEST">
 <title>Creating dispatchers :: MISA&#43;&#43; Framework</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     
 	
   
-    <a href="../../../" target="_self"><img src="../../../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span>
+    <p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->by <!-- raw HTML omitted -->Applied Systems Biology, HKI Jena, Germany<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 
   
 
@@ -271,6 +271,62 @@
       <a href="../../../cpp-framework/standards/">Standards</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
+      <li data-nav-id="https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/attachments/" class="dd-item">
+        <div>
+          <a href="../../../cpp-framework/standards/attachments/">
+            Attachments
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/module-info/" class="dd-item">
+        <div>
+          <a href="../../../cpp-framework/standards/module-info/">
+            Module info
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/parameter-schema/" class="dd-item">
+        <div>
+          <a href="../../../cpp-framework/standards/parameter-schema/">
+            Parameter schema
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/parameters/" class="dd-item">
+        <div>
+          <a href="../../../cpp-framework/standards/parameters/">
+            Parameters
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/public-api/" class="dd-item">
+        <div>
+          <a href="../../../cpp-framework/standards/public-api/">
+            Public API
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/output-data/" class="dd-item">
+        <div>
+          <a href="../../../cpp-framework/standards/output-data/">
+            Result folder
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/runtime-log/" class="dd-item">
+        <div>
+          <a href="../../../cpp-framework/standards/runtime-log/">
+            Runtime log
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/serialization-id/" class="dd-item">
+        <div>
+          <a href="../../../cpp-framework/standards/serialization-id/">
+            Serialization ID
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
         </ul>
     </li>
       <li data-nav-id="https://applied-systems-biology.github.io/misa-framework/cpp-framework/glossary/" class="dd-item">
@@ -380,31 +436,21 @@
     
     
     
-    
-
-<p>The MISA++ framework manages workloads by parallelized execution of atomic <em>tasks</em>. Additionally, <em>dispatchers</em> can be created that acts as inner node within a tree of workers. Tasks on the other hand are always leaves.</p>
-
+    <p>The MISA++ framework manages workloads by parallelized execution of atomic <em>tasks</em>. Additionally, <em>dispatchers</em> can be created that acts as inner node within a tree of workers. Tasks on the other hand are always leaves.</p>
 <p>The module dispatcher (<code>./include/&lt;module-name&gt;/module.h</code>) acts as root of this tree and as entry point to define the tasks that process data and their dependencies.</p>
-
 <p>Dispatchers require you to override following virtual functions:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">void</span> <span style="color:#75af00">create_blueprints</span><span style="color:#111">(</span><span style="color:#111">misa_dispatcher</span><span style="color:#f92672">::</span><span style="color:#111">blueprint_list</span> <span style="color:#f92672">&amp;</span><span style="color:#111">blueprints</span><span style="color:#111">,</span> <span style="color:#111">misa_dispatcher</span><span style="color:#f92672">::</span><span style="color:#111">parameter_list</span> <span style="color:#f92672">&amp;</span><span style="color:#111">parameters</span><span style="color:#111">);</span>
 <span style="color:#00a8c8">void</span> <span style="color:#75af00">build</span><span style="color:#111">(</span><span style="color:#00a8c8">const</span> <span style="color:#111">misa_dispatcher</span><span style="color:#f92672">::</span><span style="color:#111">blueprint_builder</span> <span style="color:#f92672">&amp;</span><span style="color:#111">builder</span><span style="color:#111">);</span>
-</code></pre></div>
-<p>To allow the automated documentation of the whole tree of tasks, the <code>misaxx::misa_dispatcher</code> interface requires a data-independent declaration of all sub-dispatchers and tasks that the dispatcher might create, as well as all parameters that might be queried from the parameter file.</p>
-
+</code></pre></div><p>To allow the automated documentation of the whole tree of tasks, the <code>misaxx::misa_dispatcher</code> interface requires a data-independent declaration of all sub-dispatchers and tasks that the dispatcher might create, as well as all parameters that might be queried from the parameter file.</p>
 <p>The function that defines all those available options is <code>create_blueprints(...)</code>. After defining all possible tasks, sub-dispatchers and parameters, you can use them within the <code>build(...)</code> function.</p>
 
-<div class="notices warning" ><p>
-Please keep in mind that `create_blueprints(...)` can be run in simulation mode (to acquire the parameter schema), which means that you should not query data or parameters
-from within the function without checking `misaxx::runtime_properties::is_simulating()`.
+<div class="notices warning" ><p><p>Please keep in mind that <code>create_blueprints(...)</code> can be run in simulation mode (to acquire the parameter schema), which means that you should not query data or parameters
+from within the function without checking <code>misaxx::runtime_properties::is_simulating()</code>.</p>
 </p></div>
 
 <h1 id="creating-and-instantiating-blueprints">Creating and instantiating blueprints</h1>
-
 <p>A &ldquo;possible task/dispatcher&rdquo; is called a <em>blueprint</em> and defined within the <code>create_blueprints(...)</code> function. The dispatcher class offers the <code>create_blueprint&lt;T&gt;(...)</code> method that creates such a blueprint. <code>T</code> can be any <strong>non-module</strong> dispatcher or task. The created blueprint must be <strong>added to the blueprint list</strong> to activate it.</p>
-
 <p>Blueprints are instantiated within the <code>build(...)</code> function by using the <code>T &amp;misa_dispatcher::blueprint_builder::build&lt;T&gt;()</code> function.</p>
-
 
 <div class="panel panel-default"><div class="panel-heading">Example</div><div class="panel-body"><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">void</span> <span style="color:#111">module</span><span style="color:#f92672">::</span><span style="color:#111">create_blueprints</span><span style="color:#111">(</span><span style="color:#111">misa_dispatcher</span><span style="color:#f92672">::</span><span style="color:#111">blueprint_list</span> <span style="color:#f92672">&amp;</span><span style="color:#111">blueprint_list</span><span style="color:#111">,</span> <span style="color:#111">misa_dispatcher</span><span style="color:#f92672">::</span><span style="color:#111">parameter_list</span> <span style="color:#f92672">&amp;</span><span style="color:#111">parameters</span><span style="color:#111">)</span> <span style="color:#111">{</span>
     <span style="color:#111">blueprint_list</span><span style="color:#111">.</span><span style="color:#111">add</span><span style="color:#111">(</span><span style="color:#111">create_blueprint</span><span style="color:#f92672">&lt;</span><span style="color:#111">my_task</span><span style="color:#f92672">&gt;</span><span style="color:#111">(</span><span style="color:#d88200">&#34;my-task&#34;</span><span style="color:#111">));</span> <span style="color:#75715e">// Announces a task &#34;my-task&#34;
@@ -421,24 +467,18 @@ from within the function without checking `misaxx::runtime_properties::is_simula
 </code></pre></div></div></div>
 
 
-<div class="notices warning" ><p>
-Instantiating workers does not mean that their work is **executed**. Instantiation only registers them into the runtime for later processing.
+<div class="notices warning" ><p><p>Instantiating workers does not mean that their work is <strong>executed</strong>. Instantiation only registers them into the runtime for later processing.</p>
 </p></div>
 
 <h1 id="dependency-management">Dependency management</h1>
-
 <p>Instantiating a worker with <code>build</code> is sufficient if there are no dependencies between workers.
 If dependencies are required, dispatchers provide functionality to create dependencies between workers.
 The framework runtime automatically ensures that those dependencies are satisfied.</p>
-
 <p>You can use following classes to easily define dependencies:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_dispatcher</span><span style="color:#f92672">::</span><span style="color:#111">group</span>
 <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_dispatcher</span><span style="color:#f92672">::</span><span style="color:#111">chain</span>
-</code></pre></div>
-<h2 id="groups">Groups</h2>
-
+</code></pre></div><h2 id="groups">Groups</h2>
 <p>A group can be used to group workers together. It has two operators <code>&lt;&lt;</code> and <code>&gt;&gt;</code> that allow adding workers to the group and assigning the group as dependency of another worker.</p>
-
 
 <div class="panel panel-default"><div class="panel-heading">Example</div><div class="panel-body"><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">void</span> <span style="color:#111">module</span><span style="color:#f92672">::</span><span style="color:#111">build</span><span style="color:#111">(</span><span style="color:#00a8c8">const</span> <span style="color:#111">misa_dispatcher</span><span style="color:#f92672">::</span><span style="color:#111">blueprint_builder</span> <span style="color:#f92672">&amp;</span><span style="color:#111">builder</span><span style="color:#111">)</span> <span style="color:#111">{</span>
     <span style="color:#111">group</span> <span style="color:#111">parallelized</span><span style="color:#111">;</span>
@@ -448,7 +488,6 @@ The framework runtime automatically ensures that those dependencies are satisfie
     <span style="color:#111">parallelized</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#111">builder</span><span style="color:#111">.</span><span style="color:#111">build</span><span style="color:#f92672">&lt;</span><span style="color:#111">B</span><span style="color:#f92672">&gt;</span><span style="color:#111">(</span><span style="color:#d88200">&#34;B&#34;</span><span style="color:#111">);</span>
 <span style="color:#111">}</span>
 </code></pre></div></div></div>
-
 
 <p>The example builds a group of 3 tasks that have no specific order (<strong>they can be run in parallel</strong>) and another task that waits until all 3 tasks are finished.
 This is the dependency graph that is created:
@@ -460,11 +499,8 @@ A0["A"]-->B
 A1["A"]-->B
 A2["A"]-->B
 </div></p>
-
 <h2 id="chains">Chains</h2>
-
 <p>A chain allows easy creation of chain-dependencies. It only has a <code>&gt;&gt;</code> operator, but can be initialized with a set of dependencies.</p>
-
 
 <div class="panel panel-default"><div class="panel-heading">Example</div><div class="panel-body"><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">void</span> <span style="color:#111">module</span><span style="color:#f92672">::</span><span style="color:#111">build</span><span style="color:#111">(</span><span style="color:#00a8c8">const</span> <span style="color:#111">misa_dispatcher</span><span style="color:#f92672">::</span><span style="color:#111">blueprint_builder</span> <span style="color:#f92672">&amp;</span><span style="color:#111">builder</span><span style="color:#111">)</span> <span style="color:#111">{</span>
     <span style="color:#111">group</span> <span style="color:#111">parallelized</span><span style="color:#111">;</span>
@@ -477,10 +513,8 @@ A2["A"]-->B
 <span style="color:#111">}</span>
 </code></pre></div></div></div>
 
-
 <p>The example builds a group of 3 tasks that have no specific order (<strong>they can be run in parallel</strong>) and a chain of other tasks that are run strictly one-after-another.
 This is the dependency graph that is created:</p>
-
 <link href="../../../mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
 <script defer src="../../../mermaid/mermaid.js">mermaid.initialize({startOnLoad:true});</script>
 <div class="mermaid" align="center" >

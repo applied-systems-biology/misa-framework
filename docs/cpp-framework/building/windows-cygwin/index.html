@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2020-02-19T15:47:21 CET">
+<meta name="revised" content="2020-09-29T15:41:25 CEST">
 <title>Building on Windows Cygwin :: MISA&#43;&#43; Framework</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     
 	
   
-    <a href="../../../" target="_self"><img src="../../../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span>
+    <p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->by <!-- raw HTML omitted -->Applied Systems Biology, HKI Jena, Germany<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 
   
 
@@ -430,25 +430,22 @@
     
     
     
-    
+    <p>We tested building on Windows via the <a href="https://www.cygwin.com/">Cygwin64</a> environment.</p>
 
-<p>We tested building on Windows via the <a href="https://www.cygwin.com/">Cygwin64</a> environment.</p>
+<div class="notices warning" ><p><p>Please note that the Visual Studio compiler is not
+supported due to missing OpenMP 3.x capabilities.</p>
+</p></div>
 
-<div class="notices warning" ><p>Please note that the Visual Studio compiler is not
-supported due to missing OpenMP 3.x capabilities.</p></div>
 
-<div class="notices warning" ><p>We consider building on Windows experimental due to unexplained
-freezing of multi-threaded workloads if started from ImageJ (running directly within the command line does not show this behavior).</p></div>
+<div class="notices warning" ><p><p>We consider building on Windows experimental due to unexplained
+freezing of multi-threaded workloads if started from ImageJ (running directly within the command line does not show this behavior).</p>
+</p></div>
 
 <h1 id="prerequisites">Prerequisites</h1>
-
 <p>Download and install <a href="https://www.cygwin.com/">Cygwin64</a>. Please consider our <a href="https://github.com/applied-systems-biology/misaxx-utils/blob/master/windows-builds/cygwin/README.md">Readme file</a> for a list of required packages.</p>
-
 <h1 id="using-the-superbuild-script">Using the superbuild script</h1>
-
 <p>We provide fully automated scripts that installs MISA++ Core, the modules we
 provide, and all necessary dependencies.</p>
-
 <ol>
 <li>Download or clone the <a href="https://github.com/applied-systems-biology/misaxx-utils">MISA++ Utils repository</a></li>
 <li>Open an Cygwin shell and navigate into the <code>windows-builds/cygwin</code> folder</li>
@@ -456,8 +453,10 @@ provide, and all necessary dependencies.</p>
 <li>Run <code>./package.sh</code></li>
 </ol>
 
-<div class="notices info" ><p>We cannot guarantee that all URLs within the build scripts stay
-valid forever. If a download fails, replace the URL in the affected build script.</p></div>
+<div class="notices info" ><p><p>We cannot guarantee that all URLs within the build scripts stay
+valid forever. If a download fails, replace the URL in the affected build script.</p>
+</p></div>
+
 
 
     

@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2020-02-19T15:47:21 CET">
+<meta name="revised" content="2020-09-29T15:41:25 CEST">
 <title>Building on Windows MSYS2 :: MISA&#43;&#43; Framework</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     
 	
   
-    <a href="../../../" target="_self"><img src="../../../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span>
+    <p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->by <!-- raw HTML omitted -->Applied Systems Biology, HKI Jena, Germany<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 
   
 
@@ -431,68 +431,61 @@
     
     
     
-
-<div class="notices warning" ><p>Update: Due to the rolling release nature of MSYS2,
+<div class="notices warning" ><p><p>Update: Due to the rolling release nature of MSYS2,
 the MSYS2 build process is currently broken. The Boost 1.70+ library that
 is provided by MSYS2 is incompatible with OME libraries due to a change in
-CMake targets. Please use our guide for Cygwin to build MISA++ on Windows.</p></div>
+CMake targets. Please use our guide for Cygwin to build MISA++ on Windows.</p>
+</p></div>
 
 <p>We tested building on Windows via the <a href="https://www.msys2.org/">MSYS2</a> environment.</p>
 
-<div class="notices warning" ><p>Please note that the Visual Studio compiler is not
-supported due to missing OpenMP 3.x capabilities.</p></div>
+<div class="notices warning" ><p><p>Please note that the Visual Studio compiler is not
+supported due to missing OpenMP 3.x capabilities.</p>
+</p></div>
 
-<div class="notices warning" ><p>We consider building on Windows experimental due to random crashes
+
+<div class="notices warning" ><p><p>We consider building on Windows experimental due to random crashes
 of compiled programs during starting. We were yet not able to find the cause of those crashes,
 although review using library inspection software hints at the inability to load dynamic
-libraries under certain circumstances.</p></div>
+libraries under certain circumstances.</p>
+</p></div>
 
 <h1 id="prerequisites">Prerequisites</h1>
-
 <ol>
 <li>Download and install <a href="https://www.msys2.org/">MSYS2</a>.</li>
 <li>Start MSYS2 (MinGW 64-bit) and update the packages by typing <code>pacman -Syyu</code></li>
 <li>Let the process finish and <strong>close</strong> the terminal as instructed</li>
 <li>Restart MSYS2 (MinGW 64-bit)</li>
 </ol>
-
 <h1 id="using-the-superbuild-script">Using the superbuild script</h1>
-
 <p>We provide fully automated scripts that installs MISA++ Core, the modules we
 provide, and all necessary dependencies.</p>
-
 <ol>
 <li>Download or clone the <a href="https://github.com/applied-systems-biology/misaxx-utils">MISA++ Utils repository</a></li>
 <li>Open an MSYS2 (MinGW 64-bit) shell and navigate into the <code>windows-builds/msys2/superbuild-win32</code> folder</li>
 <li>Run <code>./superbuild.sh</code> and follow the instructions</li>
 </ol>
-
 <p>To create a distributable package of the MISA++ applications, run following command:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./superbuild.sh
-./package.py</code></pre></div>
-<p>To create a <a href="http://fiji.sc/">Fiji</a> distribution that comes pre-installed with MISA++
+./package.py
+</code></pre></div><p>To create a <a href="http://fiji.sc/">Fiji</a> distribution that comes pre-installed with MISA++
 for ImageJ and the MISA++ applications, run following command:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./superbuild.sh
 ./package.py
-./package-fiji.sh</code></pre></div>
-
+./package-fiji.sh
+</code></pre></div>
 <div class="panel panel-danger"><div class="panel-heading">Warning</div><div class="panel-body"><p>The OME libraries might be incompatible with the boost version provided by MSYS2 (Cannot find libraries).
 If this is the case four you, remove boost via <code>pacman -R mingw-w64-x86_64-boost</code> and remove the
 <code>mingw-w64-$MSYS2_PLATFORM-boost \</code> line in <code>superbuild.sh</code>.</p>
-
 <p>First make sure that <code>patch</code> is installed by running <code>pacman -S patch</code>.</p>
-
 <p>Clone the MSYS2 package build script repository via <code>git clone https://github.com/msys2/MINGW-packages.git</code>
 and go back to the commit that contains the script to install Boost version 1.69 by navigating into the
 <code>MINGW-packages</code> repository and running <code>git checkout fff2fc0d53aa95b85cee0c785e56159b0565ea72</code>.</p>
-
 <p>Navigate into the <code>mingw-w64-boost</code> folder and run <code>makepkg -si</code>. The command will compile the correct Boost
 version and install it.</p>
 </div></div>
 
-
 <h1 id="manually-building">Manually building</h1>
-
 <p>Install the necessary MSYS2 packages:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pacman -S --noconfirm --needed unzip mingw-w64-x86_64-cmake <span style="color:#8045ff">\
 </span><span style="color:#8045ff"></span>wget <span style="color:#8045ff">\
@@ -506,14 +499,14 @@ version and install it.</p>
 </span><span style="color:#8045ff"></span>mingw-w64-x86_64-xerces-c <span style="color:#8045ff">\
 </span><span style="color:#8045ff"></span>mingw-w64-x86_64-xalan-c <span style="color:#8045ff">\
 </span><span style="color:#8045ff"></span>mingw-w64-x86_64-libpng <span style="color:#8045ff">\
-</span><span style="color:#8045ff"></span>mingw-w64-x86_64-python2</code></pre></div>
-<p>Obtain the MISA++ sources and the sources of dependencies that are not in
+</span><span style="color:#8045ff"></span>mingw-w64-x86_64-python2
+</code></pre></div><p>Obtain the MISA++ sources and the sources of dependencies that are not in
 MSYS2. Build them like any CMake build:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#111">cd</span> <span style="color:#111">$SOURCE_CODE</span>
 mkdir build
 <span style="color:#111">cd</span> build
-cmake -DCMAKE_BUILD_TYPE<span style="color:#f92672">=</span>Release -DBUILD_SHARED_LIBS<span style="color:#f92672">=</span>OFF -DCMAKE_INSTALL_PREFIX<span style="color:#f92672">=</span>/mingw64/ -G <span style="color:#d88200">&#34;Unix Makefiles&#34;</span> ..</code></pre></div>
-
+cmake -DCMAKE_BUILD_TYPE<span style="color:#f92672">=</span>Release -DBUILD_SHARED_LIBS<span style="color:#f92672">=</span>OFF -DCMAKE_INSTALL_PREFIX<span style="color:#f92672">=</span>/mingw64/ -G <span style="color:#d88200">&#34;Unix Makefiles&#34;</span> ..
+</code></pre></div>
 <div class="panel panel-danger"><div class="panel-heading">Warning</div><div class="panel-body"><ul>
 <li>Building OME libraries dynamically caused segmentation faults during application runtime (Error 0xc0000005). Build the libraries statically to avoid the issue.</li>
 <li>Dynamically built MISA++ libraries caused random (~ every 10th execution) 0xc0000005 errors. We again decided to only link statically.</li>
@@ -528,7 +521,7 @@ cmake -DCMAKE_BUILD_TYPE<span style="color:#f92672">=</span>Release -DBUILD_SHAR
         <div class="chevrons">
     <div id="navigation">
 <a class="nav nav-prev" href="../../../cpp-framework/building/windows-cygwin/" title="Building on Windows Cygwin"> <i class="fa fa-chevron-left"></i><label>Building on Windows Cygwin</label></a>
-    <a class="nav nav-next" href="../../../cpp-framework/development/" title="Development" style="margin-right: 0px;"><label>Development</label><i class="fa fa-chevron-right"></i></a></div>
+    <a class="nav nav-next" href="../../../cpp-framework/running/" title="Running" style="margin-right: 0px;"><label>Running</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>

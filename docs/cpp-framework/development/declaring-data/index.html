@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2020-02-19T15:47:20 CET">
+<meta name="revised" content="2020-09-29T15:41:25 CEST">
 <title>Declaring data :: MISA&#43;&#43; Framework</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     
 	
   
-    <a href="../../../" target="_self"><img src="../../../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span>
+    <p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->by <!-- raw HTML omitted -->Applied Systems Biology, HKI Jena, Germany<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 
   
 
@@ -436,40 +436,28 @@
     
     
     
-    
-
-<p>MISA++ organizes input and output data in caches.
+    <p>MISA++ organizes input and output data in caches.
 Caches provide functionality to access large datasets in a memory-efficient way.
 To be able to achieve this, they are <em>linked</em> to a location within the filesystem (a folder).
 The cache-implementation loads data into the memory on-demand and frees space if there is no demand left.</p>
-
 <p>Caches are exclusively created within the module interface that is also responsible
 for triggering the linking process between a folder and the cache implementation.</p>
-
 <h1 id="declaring-and-linking-caches">Declaring and linking caches</h1>
-
 <p>To define that a cache is part of the interface, declare a variable of <code>misa::misa_cached_data&lt;T&gt;</code>. This instance is called an <em>accessor</em>, which is a shared pointer to the actual cache. Accessors are designed to include additional helper functions to make working with the specific cache type easier.</p>
-
 <p>Linking of a cache is done within the <code>setup()</code> method of the module interface. In most cases, it is most reasonable to use the <code>suggest_import_location(...)</code> or <code>suggest_export_location(...)</code> functions to link a cache.</p>
 
-<div class="notices info" ><p>
-The paths provided to `suggest_import_location(...)` and `suggest_export_location(...)` are relative to the
+<div class="notices info" ><p><p>The paths provided to <code>suggest_import_location(...)</code> and <code>suggest_export_location(...)</code> are relative to the
 virtual filesystem of the current module. The framework will automatically handle the organization of the files within
-the physical filesystem.
+the physical filesystem.</p>
 </p></div>
 
 <h2 id="input-data">Input data</h2>
-
 <p>To declare input data, use the <code>suggest_import_location(...)</code> function. It loads a location from the filesystem if the cache was not already set from a parent module. Its first parameter, <code>filesystem</code> is the filesystem that is directly available from within the module interface. The second parameter describes the location within the input folder.</p>
-
 <blockquote>
 <p>The filesystem of a module interface is always relative. You do not have to account for your module being instantiated as a submodule.</p>
 </blockquote>
-
 <h2 id="output-data">Output data</h2>
-
 <p><code>suggest_export_location(...)</code> creates a new location within the output folder that will contain the generated data. It has a third parameter that contains all necessary information for the cache to create an output. The type of this <em>description</em> differs from cache to cache.</p>
-
 <link href="../../../mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
 <script defer src="../../../mermaid/mermaid.js">mermaid.initialize({startOnLoad:true});</script>
 <div class="mermaid" align="center" >
@@ -479,8 +467,7 @@ Cache-->|describe|Description
 Filesystem---|link|Cache
 </div>
 
-
-<div class="panel panel-default"><div class="panel-heading">Example</div><div class="panel-body"><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">struct</span> <span style="color:#111">module_interface</span> <span style="color:#111">:</span> <span style="color:#00a8c8">public</span> <span style="color:#111">misa_module_interface</span> <span style="color:#111">{</span>
+<div class="panel panel-default"><div class="panel-heading">Example</div><div class="panel-body"><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">struct</span> <span style="color:#75af00">module_interface</span> <span style="color:#f92672">:</span> <span style="color:#00a8c8">public</span> <span style="color:#111">misa_module_interface</span> <span style="color:#111">{</span>
     <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">ome</span><span style="color:#f92672">::</span><span style="color:#111">misa_ome_tiff</span> <span style="color:#111">m_input</span><span style="color:#111">;</span>
     <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">ome</span><span style="color:#f92672">::</span><span style="color:#111">misa_ome_tiff</span> <span style="color:#111">m_output</span><span style="color:#111">;</span>
     <span style="color:#00a8c8">void</span> <span style="color:#75af00">setup</span><span style="color:#111">();</span>
@@ -492,25 +479,20 @@ Filesystem---|link|Cache
 </span><span style="color:#75715e"></span><span style="color:#111">}</span>
 </code></pre></div></div></div>
 
-
 <h1 id="accessing-cached-data">Accessing cached data</h1>
-
 <p>Caches load data from hard disk on demand and are implemented in a way that minimizes read and write operations. Any cache accessor comes with 3 methods:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#111">readonly_access</span> <span style="color:#f92672">&lt;</span><span style="color:#111">value_type</span><span style="color:#f92672">&gt;</span> <span style="color:#111">access_readonly</span><span style="color:#111">();</span>
 <span style="color:#111">write_access</span> <span style="color:#f92672">&lt;</span><span style="color:#111">value_type</span><span style="color:#f92672">&gt;</span> <span style="color:#111">access_write</span><span style="color:#111">();</span>
 <span style="color:#111">readwrite_access</span> <span style="color:#f92672">&lt;</span><span style="color:#111">value_type</span><span style="color:#f92672">&gt;</span> <span style="color:#111">access_readwrite</span><span style="color:#111">();</span>
-</code></pre></div>
-<p>Those methods create proxy objects that ensure the correct state of the cache.</p>
+</code></pre></div><p>Those methods create proxy objects that ensure the correct state of the cache.</p>
 
-<div class="notices warning" ><p>
-Make sure to not destroy the proxy objects prematurely. The cache
-might invalidate the data.
+<div class="notices warning" ><p><p>Make sure to not destroy the proxy objects prematurely. The cache
+might invalidate the data.</p>
 </p></div>
 
 <p>Access via proxy-objects or accessor-specific helper methods is thread-safe and uses a shared mutex to allow multiple threads to read the data, but only one thread to write it.</p>
 
-<div class="notices warning" ><p>
-Please be careful to not circumvent cache access, as it can lead to lost data or errors.
+<div class="notices warning" ><p><p>Please be careful to not circumvent cache access, as it can lead to lost data or errors.</p>
 </p></div>
 
 <h2 id="example">Example</h2>

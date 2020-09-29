@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2020-02-19T15:47:21 CET">
+<meta name="revised" content="2020-09-29T15:41:25 CEST">
 <title>Attachments :: MISA&#43;&#43; Framework</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     
 	
   
-    <a href="../../../" target="_self"><img src="../../../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span>
+    <p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->by <!-- raw HTML omitted -->Applied Systems Biology, HKI Jena, Germany<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 
   
 
@@ -435,19 +435,14 @@
     
     
     
-    
-
-<p>MISA++ comes with a system to attach quantification results and other
+    <p>MISA++ comes with a system to attach quantification results and other
 information to input and output data. The information is stored within
 objects that are serialized into JSON format, including additional
 information such as the object type.</p>
-
 <p>Attachments are saved in the <code>attachments/imported</code> and
 <code>attachments/exported</code> folders within a <a href="../output-data">MISA++ result folder</a>.
 The files are structured according to the filesystem (see <a href="../parameters">Parameters</a>).</p>
-
 <p>An attachment file has the following structure:</p>
-
 <link href="../../../mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
 <script defer src="../../../mermaid/mermaid.js">mermaid.initialize({startOnLoad:true});</script>
 <div class="mermaid" align="center" >
@@ -464,43 +459,28 @@ L --> FsULocation[filesystem-unique-location : string]
 L --> FsILocation[internal-location : string]
 L -.-> O2["Other properties"]
 </div>
-
 <h1 id="root">root</h1>
-
 <p>The root of an attachment file is a JSON object that maps from
 <code>misa:serialization-id</code> to the attached object.
 It has an additional entry <code>location</code> that maps to a <code>misa:location</code>.</p>
-
 <h1 id="misa-serializable">misa-serializable</h1>
-
-<h2 id="misa-serialization-id">misa:serialization-id</h2>
-
+<h2 id="misaserialization-id">misa:serialization-id</h2>
 <p>Unique identifier of the object type.
 Follows the <a href="../serialization-id">Serialization ID</a> standard.</p>
-
-<h2 id="misa-serialization-hierarchy">misa:serialization-hierarchy</h2>
-
+<h2 id="misaserialization-hierarchy">misa:serialization-hierarchy</h2>
 <p>A list of strings the describes the inheritance hierarchy of the object.
 The first entry is always <code>misa:serializable</code>.
 The last entry is always the current <code>misa:serialization-id</code>.
 The hierarchy is ordered from the most basic type to the current one.</p>
-
 <h1 id="misa-location">misa-location</h1>
-
 <p>Inherits all properties from <code>misa:serializable</code>.</p>
-
 <h2 id="filesystem-location">filesystem-location</h2>
-
 <p>Absolute path of the folder that contains the input or output data.
 Different parts of the data have the same <code>filesystem-location</code>.</p>
-
 <h2 id="filesystem-unique-location">filesystem-unique-location</h2>
-
 <p>Absolute path to a file or folder within the the <code>filesystem-location</code>.
 Unique for each part of the data.</p>
-
 <h2 id="internal-location">internal-location</h2>
-
 <p>Internal MISA++ filesystem location.</p>
 
 

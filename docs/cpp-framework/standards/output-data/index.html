@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2020-02-19T15:47:21 CET">
+<meta name="revised" content="2020-09-29T15:41:25 CEST">
 <title>Result folder :: MISA&#43;&#43; Framework</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     
 	
   
-    <a href="../../../" target="_self"><img src="../../../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span>
+    <p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->by <!-- raw HTML omitted -->Applied Systems Biology, HKI Jena, Germany<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 
   
 
@@ -435,13 +435,9 @@
     
     
     
-    
-
-<p>MISA++ framework applications write their output into a folder that contains
+    <p>MISA++ framework applications write their output into a folder that contains
 all neccessary information to repeat the analysis.</p>
-
 <p>The folder has following structure:</p>
-
 <link href="../../../mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
 <script defer src="../../../mermaid/mermaid.js">mermaid.initialize({startOnLoad:true});</script>
 <div class="mermaid" align="center" >
@@ -458,63 +454,41 @@ I -->|For each sample| K["Input data attachments : folder"]
 J -->|For each sample| L["Output data attachments : folder"]
 A -->|For each sample|F["Sample result data : folder"]
 </div>
-
 <h1 id="parameters">Parameters</h1>
-
 <p>A file <code>parameters.json</code> in JSON format.
 A copy of the input parameter file.
 See <a href="../parameters">Parameters</a> for more information.</p>
-
 <h1 id="module-info">Module Info</h1>
-
 <p>A file <code>misa-module-info.json</code> in JSON format.
 The same as the output of of <code>&lt;module&gt; --module-info</code>.
 See <a href="../module-info">Module Info</a> for more information.</p>
-
 <h1 id="parameter-schema">Parameter schema</h1>
-
 <p>A file <code>parameter-schema.json</code> in JSON format.
 See <a href="../parameter-schema">Parameter schema</a> for more information.</p>
-
 <h1 id="runtime-log">Runtime log</h1>
-
 <p>A file <code>runtime-log.json</code> in JSON format.
 See <a href="../runtime-log">Runtime log</a> for more information.</p>
-
 <h1 id="attachments">Attachments</h1>
-
 <p>A folder <code>attachments</code>.</p>
-
 <h2 id="attachment-serialization-schemata">Attachment serialization schemata</h2>
-
 <p>A file <code>serialization-schemas.json</code> that contains serialization schemas for
 all attached objects.
 See <a href="../attchments">Attachments</a> for more information.</p>
-
 <h2 id="imported">imported</h2>
-
 <p>An optional folder <code>imported</code>.</p>
-
 <h3 id="input-data-attachments">Input data attachments</h3>
-
 <p>A structure of folders that follows the data structure defined by the MISA++ application.
 Folders contain JSON files (extension <code>.json</code>).
 The files contain attached objects assigned to the data via the directory structure.
 See <a href="../attachments">&ldquo;Attachments&rdquo;</a> for more information.</p>
-
 <h2 id="exported">exported</h2>
-
 <p>An optional folder <code>exported</code>.</p>
-
 <h3 id="input-data-attachments-1">Input data attachments</h3>
-
 <p>A structure of folders that follows the data structure defined by the MISA++ application.
 Folders contain JSON files (extension <code>.json</code>).
 The files contain attached objects assigned to the data via the directory structure.
 See <a href="../attachments">&ldquo;Attachments&rdquo;</a> for more information.</p>
-
 <h1 id="sample-result-data">Sample result data</h1>
-
 <p>A structure of folders that follows the data structure defined by the MISA++ application
 unless folders have been redirected via the filesystem.
 See <a href="../parameters">Parameters</a> for more information.</p>

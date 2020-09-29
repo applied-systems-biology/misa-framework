@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2020-02-19T15:47:21 CET">
+<meta name="revised" content="2020-09-29T15:41:25 CEST">
 <title>Parameters :: MISA&#43;&#43; Framework</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     
 	
   
-    <a href="../../../" target="_self"><img src="../../../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span>
+    <p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->by <!-- raw HTML omitted -->Applied Systems Biology, HKI Jena, Germany<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 
   
 
@@ -435,10 +435,7 @@
     
     
     
-    
-
-<p>Parameters are in JSON format and have following structure:</p>
-
+    <p>Parameters are in JSON format and have following structure:</p>
 <link href="../../../mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
 <script defer src="../../../mermaid/mermaid.js">mermaid.initialize({startOnLoad:true});</script>
 <div class="mermaid" align="center" >
@@ -456,42 +453,27 @@ Runtime -.->|optional| NumThreads["num-threads : integer"]
 Runtime -.->|optional| FullRuntimeLog["full-runtime-log : boolean"]
 Runtime -.->|optional| RequestsSkipping["request-skipping : boolean"]
 </div>
-
 <h1 id="filesystem">filesystem</h1>
-
 <p>Describes the virtual filesystem that is used by the MISA++ application.</p>
-
 <h2 id="source">source</h2>
-
 <p>Determines how MISA++ imports the filesystem.</p>
-
 <p>Following values are valid:</p>
-
 <ul>
 <li><code>json</code> imports the filesystem from <code>json-data</code></li>
 <li><code>directories</code> imports the filesystem from <code>input-directory</code> and <code>output-directory</code></li>
 </ul>
-
 <h2 id="input-directory">input-directory</h2>
-
 <p>If <code>source</code> is <code>directories</code>, input data is imported from the provided directory.
 The folder structure must be consistent with the filesystem structure expected by
 the MISA++ application (see <a href="../parameter-schema">Parameter schema</a>).</p>
-
 <p>Each data folder can contain a file <code>misa-metadata.json</code> in JSON format that
 has equivalent effects to the <code>metadata</code> property in <code>json-data</code> (see below).</p>
-
 <h2 id="output-directory">output-directory</h2>
-
 <p>If <code>source</code> is <code>directories</code>, output data is exported to the provided directory.</p>
-
 <h2 id="json-data">json-data</h2>
-
 <p>Imports the filesystem via the <code>json-data</code> property. It should be consistent with the
 <code>filesystem</code> parameter schema (see <a href="../parameter-schema">Parameter schema</a>).</p>
-
 <p>The <code>json-data</code> property has following structure:</p>
-
 <link href="../../../mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
 <script defer src="../../../mermaid/mermaid.js">mermaid.initialize({startOnLoad:true});</script>
 <div class="mermaid" align="center" >
@@ -508,68 +490,43 @@ FsEntry -.->|optional*| ExternalPath["external-path : string"]
 FsEntry -.->|optional| Children["children : object"]
 FsEntry -.->|optional| Metadata["metadata : object"]
 </div>
-
 <h2 id="imported">imported</h2>
-
 <p>An object of type <code>filesystem-entry</code>.
 The <code>external-path</code> property <strong>must</strong> be set to a valid path.</p>
-
 <h2 id="exported">exported</h2>
-
 <p>An object of type <code>filesystem-entry</code>.
 The <code>external-path</code> property <strong>must</strong> be set to a valid path.</p>
-
 <h2 id="filesystem-entry">filesystem-entry</h2>
-
 <h3 id="external-path">external-path</h3>
-
 <p>Links the virtual filesystem entry to a physical filesystem location.
 Required for <code>imported</code> and <code>exported</code>.</p>
-
 <p>Entries in <code>children</code> automatically link to corresponding sub-folders in
 the path unless <code>external-path</code> of the child overrides the previous definition.</p>
-
 <h3 id="children">children</h3>
-
 <p>Map from directory name to a <code>filesystem-entry</code> type.</p>
-
 <h3 id="metadata">metadata</h3>
-
 <p>Optional metadata for data import. The <a href="../parameter-schema">Parameter schema</a>
 contains information about the structure of <code>metadata</code>.</p>
-
 <h1 id="algorithm">algorithm</h1>
-
 <p>Parameters that are independent from sample.
 The structure depends on the MISA++ application.
 See <a href="../parameter-schema">Parameter schema</a> for more information.</p>
-
 <h1 id="sample">sample</h1>
-
 <p>Map from sample name to sample parameters.
 The structure of sample parameters depends on the MISA++ application.
 See <a href="../parameter-schema">Parameter schema</a> for more information.</p>
-
 <h1 id="runtime">runtime</h1>
-
 <p>Global parameter for the MISA++ runtime.
 The structure of sample parameters depends on the MISA++ application.
 See <a href="../parameter-schema">Parameter schema</a> for more information.</p>
-
 <p>Following parameters are defined by MISA++ Core itself and are always present:</p>
-
 <h2 id="num-threads">num-threads</h2>
-
 <p>Number of threads. Must be at least <code>1</code>.</p>
-
 <h2 id="full-runtime-log">full-runtime-log</h2>
-
 <p>If <code>true</code>, a fully detailed runtime log (see <a href="../runtime-log">Runtime log</a>)
 is created. If <code>false</code>, only an overview is generated.
 Defaults to <code>false</code>.</p>
-
 <h2 id="request-skipping">request-skipping</h2>
-
 <p>If <code>true</code>, algorithms are informated that existing results should be re-used and
 not overwritten. Depends on the algorithm implementation.
 Defaults to <code>false</code>.</p>

@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2020-02-19T15:47:21 CET">
+<meta name="revised" content="2020-09-29T15:41:25 CEST">
 <title>Runtime log :: MISA&#43;&#43; Framework</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     
 	
   
-    <a href="../../../" target="_self"><img src="../../../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span>
+    <p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->by <!-- raw HTML omitted -->Applied Systems Biology, HKI Jena, Germany<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 
   
 
@@ -435,13 +435,9 @@
     
     
     
-    
-
-<p>The runtime log contains detailed information about individual tasks executed
+    <p>The runtime log contains detailed information about individual tasks executed
 by a MISA++ application.</p>
-
 <p>It is in JSON format and has following structure:</p>
-
 <link href="../../../mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
 <script defer src="../../../mermaid/mermaid.js">mermaid.initialize({startOnLoad:true});</script>
 <div class="mermaid" align="center" >
@@ -453,27 +449,16 @@ TaskEntry --> StartTime["start-time : number"]
 TaskEntry --> EndTime["end-time : number"]
 TaskEntry --> Unit["unit : string"]
 </div>
-
 <h1 id="entries">entries</h1>
-
 <p>A map from <code>thread$</code> where <code>$</code> is the thread number to a list of <code>task-entry</code>.</p>
-
 <h1 id="task-entry">task-entry</h1>
-
 <h2 id="name">name</h2>
-
 <p>Name of the task.</p>
-
 <h2 id="start-time">start-time</h2>
-
 <p>Time in <code>unit</code> relative to the MISA++ application start time when the task was started.</p>
-
 <h2 id="end-time">end-time</h2>
-
 <p>Time in <code>unit</code> relative to the MISA++ application start time when the task was ended.</p>
-
 <h2 id="unit">unit</h2>
-
 <p>Unit of <code>start-time</code> and <code>end-time</code>.</p>
 
 

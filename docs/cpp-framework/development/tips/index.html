@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2020-02-19T15:47:21 CET">
+<meta name="revised" content="2020-09-29T15:41:25 CEST">
 <title>Tips and tricks :: MISA&#43;&#43; Framework</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     
 	
   
-    <a href="../../../" target="_self"><img src="../../../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span>
+    <p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->by <!-- raw HTML omitted -->Applied Systems Biology, HKI Jena, Germany<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 
   
 
@@ -104,6 +104,41 @@
       <a href="../../../imagej/result-analyzer/">Analyzing results</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
+      <li data-nav-id="https://applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/output-data/" class="dd-item">
+        <div>
+          <a href="../../../imagej/result-analyzer/output-data/">
+            Evaluating output data
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/quantification-results/" class="dd-item">
+        <div>
+          <a href="../../../imagej/result-analyzer/quantification-results/">
+            Browsing quantification results
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/table-analyzer/" class="dd-item">
+        <div>
+          <a href="../../../imagej/result-analyzer/table-analyzer/">
+            Summarizing quantification results
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/plot-builder/" class="dd-item">
+        <div>
+          <a href="../../../imagej/result-analyzer/plot-builder/">
+            Creating plots
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="https://applied-systems-biology.github.io/misa-framework/imagej/result-analyzer/runtime-log/" class="dd-item">
+        <div>
+          <a href="../../../imagej/result-analyzer/runtime-log/">
+            Analyzing the runtime
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
         </ul>
     </li>
       <li data-nav-id="https://applied-systems-biology.github.io/misa-framework/imagej/credits/" class="dd-item">
@@ -401,37 +436,22 @@
     
     
     
-    
-
-<h1 id="interacting-with-the-runtime">Interacting with the runtime</h1>
-
+    <h1 id="interacting-with-the-runtime">Interacting with the runtime</h1>
 <p>The MISA++ runtime is responsible for managing parameters, generation of the parameter schema,
 managing caches and executing workers.</p>
-
 <p>There are multiple interface functions avilable that allow extracting information from and manipulation of the runtime.</p>
-
-<h2 id="misaxx-runtime-properties">misaxx::runtime_properties</h2>
-
+<h2 id="misaxxruntime_properties">misaxx::runtime_properties</h2>
 <p>Contains functions about the current set of workers, the number of threads, the root filesystem
 and information about the root module.</p>
-
 <p>The most important function is <code>misaxx::runtime_properties::is_simulating()</code> that indicates
 if actual work should be done or a parameter schema is currently being generated.</p>
-
-<h2 id="misaxx-cache-registry">misaxx::cache_registry</h2>
-
+<h2 id="misaxxcache_registry">misaxx::cache_registry</h2>
 <p>Allows manual registration and de-registration of caches.</p>
-
-<h2 id="misaxx-parameter-registry">misaxx::parameter_registry</h2>
-
+<h2 id="misaxxparameter_registry">misaxx::parameter_registry</h2>
 <p>Allows manual query of parameters, access to the parameter JSON data and parameter schema builder.</p>
-
 <h1 id="working-on-streaming-data">Working on streaming data</h1>
-
 <p>MISA++ can be used to process that that is not (yet) fully present on the hard disk, but generated during the runtime. This is for example helpful for online analyses.</p>
-
 <p>A possible way is to implement a cache that acts as data source and offers functionality to query data that should be processed and a way to know if the analysis should be finished.</p>
-
 <p>Any MISA++ worker (tasks, dispatchers and module dispatchers) allows repetition of the workload. This does not include the parameter and blueprint generation. This functionality can be used to create new workers whenever new data is available.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">void</span> <span style="color:#75af00">create_blueprints</span><span style="color:#111">(</span><span style="color:#111">blueprint_list</span> <span style="color:#f92672">&amp;</span><span style="color:#111">blueprints</span><span style="color:#111">,</span> <span style="color:#111">parameter_list</span> <span style="color:#f92672">&amp;</span><span style="color:#111">parameters</span><span style="color:#111">)</span> <span style="color:#111">{</span>
     <span style="color:#111">blueprints</span><span style="color:#111">.</span><span style="color:#111">add</span><span style="color:#111">(</span><span style="color:#111">create_blueprint</span><span style="color:#f92672">&lt;</span><span style="color:#111">online_analysis_dispatcher</span><span style="color:#f92672">&gt;</span><span style="color:#111">(</span><span style="color:#d88200">&#34;online-analysis&#34;</span><span style="color:#111">));</span>

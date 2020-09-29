@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2020-02-19T15:47:21 CET">
+<meta name="revised" content="2020-09-29T15:41:25 CEST">
 <title>Attaching data :: MISA&#43;&#43; Framework</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     
 	
   
-    <a href="../../../" target="_self"><img src="../../../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span>
+    <p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->by <!-- raw HTML omitted -->Applied Systems Biology, HKI Jena, Germany<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 
   
 
@@ -436,16 +436,10 @@
     
     
     
-    
-
-<p>The attachment system allows easy attachment of any serializable data to a cache. It can be used to communicate between different tasks and generate quantification output. If the attachment data type supports adding information about its location (e.g. which image plane), the cache will automatically assign the most available information.</p>
-
+    <p>The attachment system allows easy attachment of any serializable data to a cache. It can be used to communicate between different tasks and generate quantification output. If the attachment data type supports adding information about its location (e.g. which image plane), the cache will automatically assign the most available information.</p>
 <h1 id="attaching-data-to-a-cache">Attaching data to a cache</h1>
-
 <p>To attach data, just call the <code>void attach&lt;T&gt;(...)</code> member function of a cache accessor. To access an attachment, you can use the <code>T &amp;get&lt;T&gt;()</code> member function, which will <em>throw an exception</em> if the type does not exist. Use the <code>T &amp;access&lt;T&gt;()</code> function to either return an existing attachment or create a new one.</p>
-
 <p>Attachments are caches and therefore thread-safe.</p>
-
 <h2 id="example">Example</h2>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">void</span> <span style="color:#111">my_task</span><span style="color:#f92672">::</span><span style="color:#111">work</span><span style="color:#111">()</span> <span style="color:#111">{</span>
     <span style="color:#00a8c8">auto</span> <span style="color:#111">module</span> <span style="color:#f92672">=</span> <span style="color:#111">get_module_as</span><span style="color:#f92672">&lt;</span><span style="color:#111">module_interface</span><span style="color:#f92672">&gt;</span><span style="color:#111">();</span>
@@ -455,18 +449,14 @@
 </span><span style="color:#75715e"></span>
     <span style="color:#111">module</span><span style="color:#f92672">-&gt;</span><span style="color:#111">m_output</span><span style="color:#111">.</span><span style="color:#111">access</span><span style="color:#f92672">&lt;</span><span style="color:#111">not_in_output</span><span style="color:#f92672">&gt;</span><span style="color:#111">().</span><span style="color:#111">important_stuff</span> <span style="color:#f92672">=</span> <span style="color:#111">true</span><span style="color:#111">;</span> <span style="color:#75715e">// Safe access
 </span><span style="color:#75715e"></span><span style="color:#111">}</span>
-</code></pre></div>
-<h1 id="creating-a-new-attachment-type">Creating a new attachment type</h1>
-
+</code></pre></div><h1 id="creating-a-new-attachment-type">Creating a new attachment type</h1>
 <p>Attachments inherit either from <code>misaxx::misa_serializable</code> or <code>misaxx::misa_locatable</code>. If you want a plain attachment, use <code>misaxx::misa_serializable</code> as base. The <code>misaxx::misa_locatable</code> interface additionally allows adding a location to the attachment. This location allows easy assignment of the data to the data its attached to.</p>
-
 <p>Any MISA++ serializable must override following virtual methods:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">void</span> <span style="color:#75af00">from_json</span><span style="color:#111">(</span><span style="color:#00a8c8">const</span> <span style="color:#111">nlohmann</span><span style="color:#f92672">::</span><span style="color:#111">json</span> <span style="color:#f92672">&amp;</span><span style="color:#111">j</span><span style="color:#111">);</span>
 <span style="color:#00a8c8">void</span> <span style="color:#75af00">to_json</span><span style="color:#111">(</span><span style="color:#111">nlohmann</span><span style="color:#f92672">::</span><span style="color:#111">json</span> <span style="color:#f92672">&amp;</span><span style="color:#111">j</span><span style="color:#111">)</span> <span style="color:#00a8c8">const</span><span style="color:#111">;</span>
 <span style="color:#00a8c8">void</span> <span style="color:#75af00">to_json_schema</span><span style="color:#111">(</span><span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_json_schema_property</span> <span style="color:#f92672">&amp;</span><span style="color:#111">t_schema</span><span style="color:#111">)</span> <span style="color:#00a8c8">const</span><span style="color:#111">;</span>
 <span style="color:#00a8c8">void</span> <span style="color:#75af00">build_serialization_id_hierarchy</span><span style="color:#111">(</span><span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">vector</span><span style="color:#f92672">&lt;</span><span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_serialization_id</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span><span style="color:#111">result</span><span style="color:#111">)</span> <span style="color:#00a8c8">const</span><span style="color:#111">;</span>
-</code></pre></div>
-<p>You additionally need to create following inline functions that are needed for JSON serialization.</p>
+</code></pre></div><p>You additionally need to create following inline functions that are needed for JSON serialization.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">inline</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">to_json</span><span style="color:#111">(</span><span style="color:#111">nlohmann</span><span style="color:#f92672">::</span><span style="color:#111">json</span> <span style="color:#f92672">&amp;</span><span style="color:#111">j</span><span style="color:#111">,</span> <span style="color:#00a8c8">const</span> <span style="color:#111">my_attachment</span> <span style="color:#f92672">&amp;</span><span style="color:#111">p</span><span style="color:#111">)</span> <span style="color:#111">{</span>
     <span style="color:#111">p</span><span style="color:#111">.</span><span style="color:#111">to_json</span><span style="color:#111">(</span><span style="color:#111">j</span><span style="color:#111">);</span>
 <span style="color:#111">}</span>
@@ -474,55 +464,38 @@
 <span style="color:#00a8c8">inline</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">from_json</span><span style="color:#111">(</span><span style="color:#00a8c8">const</span> <span style="color:#111">nlohmann</span><span style="color:#f92672">::</span><span style="color:#111">json</span> <span style="color:#f92672">&amp;</span><span style="color:#111">j</span><span style="color:#111">,</span> <span style="color:#111">my_attachment</span> <span style="color:#f92672">&amp;</span><span style="color:#111">p</span><span style="color:#111">)</span> <span style="color:#111">{</span>
     <span style="color:#111">p</span><span style="color:#111">.</span><span style="color:#111">from_json</span><span style="color:#111">(</span><span style="color:#111">j</span><span style="color:#111">);</span>
 <span style="color:#111">}</span>
-</code></pre></div>
-<p>The <code>from_json</code> and <code>to_json</code> members should be used to serialize or deserialize the object. The <code>to_json_schema</code> describes the JSON that is created/expected by the <code>from_json</code> and <code>to_json</code> members and is used to generate the parameter schema.</p>
-
+</code></pre></div><p>The <code>from_json</code> and <code>to_json</code> members should be used to serialize or deserialize the object. The <code>to_json_schema</code> describes the JSON that is created/expected by the <code>from_json</code> and <code>to_json</code> members and is used to generate the parameter schema.</p>
 <p>Each serializable is assigned an unique <em>serialization id</em>. The <code>build_serialization_id_hierarchy</code> is used to create this ID.</p>
-
 <h2 id="from-and-to-json">From and to JSON</h2>
-
 <p>Just take a look at the <a href="https://nlohmann.github.io/json/">JSON for Modern C++ documentation</a>.</p>
-
 <h2 id="describing-the-input-and-output-json">Describing the input and output JSON</h2>
-
 <p>To be able to create the parameter schema, each serialzable object must describe the expected structure of the serialized JSON. The <code>misaxx::misa_json_schema</code> provides methods to do this.</p>
-
 <p>It offers following methods:</p>
-
 <ul>
 <li><code>declare&lt;T&gt;(...)</code> declares the <em>current path</em> as JSON of type <code>T</code>. The default value is the <code>T()</code></li>
 <li><code>declare_optional&lt;T&gt;(...)</code> allows providing a default value</li>
 <li><code>declare_required&lt;T&gt;(...)</code> marks the property as a <strong>required</strong> property</li>
 <li><code>resolve()</code> returns a sub-path of the current JSON schema path. It will create a child property if needed</li>
 </ul>
-
 <p>Please keep in mind that the provided <code>misaxx::misa_json_schema_property</code> represents the &ldquo;root&rdquo; of the current JSON object. This means that you have to call the declare function on <code>resolve(...)</code> to register member variables.</p>
-
 <h2 id="portable-serialization">Portable serialization</h2>
-
 <p>Each serializable type has an unique serialization id of type <code>misaxx::misa_serialization_id</code>. This id is part of a hierarchy of serialization ids that mirrors the inheritance hierarchy of the C++ class. This allows external programs to serialize even unsupported types with minimal loss of information.</p>
-
 <p>The <code>build_serialization_id_hierarchy</code> is used to build this hierarchy. In most cases, it is sufficient to just add the serialization ID of the current class to the list of IDs provided in the parameter.</p>
-
 <blockquote>
 <p>Please do not forget to call <code>build_serialization_id_hierarchy</code> function of the parent class.</p>
 </blockquote>
-
 <p>Serialization IDs have two components:</p>
-
 <ul>
 <li>The module</li>
 <li>A path that describes the serialized object</li>
 </ul>
-
 <p>The serialization ID should be consistent with the location in the public interface, which means that it should for example be <code>misa_serialization_id(&quot;my-module&quot;, &quot;attachments/my-attachment&quot;</code>.</p>
-
 
 <div class="panel panel-default"><div class="panel-heading">Example</div><div class="panel-body"><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">/**
 </span><span style="color:#75715e">* We want this attachment to be assignable to a cache after the program has run.
 </span><span style="color:#75715e">* Alternatively use misa_serializable
 </span><span style="color:#75715e">*/</span>
-<span style="color:#00a8c8">struct</span> <span style="color:#111">my_attachment</span> <span style="color:#111">:</span> <span style="color:#00a8c8">public</span> <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_locatable</span> <span style="color:#111">{</span>
+<span style="color:#00a8c8">struct</span> <span style="color:#75af00">my_attachment</span> <span style="color:#f92672">:</span> <span style="color:#00a8c8">public</span> <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_locatable</span> <span style="color:#111">{</span>
     <span style="color:#00a8c8">int</span> <span style="color:#111">count</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#111">;</span>
     <span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">vector</span><span style="color:#f92672">&lt;</span><span style="color:#00a8c8">double</span><span style="color:#f92672">&gt;</span> <span style="color:#111">variances</span><span style="color:#111">;</span>
     <span style="color:#00a8c8">bool</span> <span style="color:#111">some_flag</span> <span style="color:#f92672">=</span> <span style="color:#111">false</span><span style="color:#111">;</span>
@@ -576,11 +549,11 @@
 
 <span style="color:#75715e">// Important for nlohmann:json serialization
 </span><span style="color:#75715e">// Do not forget them
-</span><span style="color:#75715e"></span><span style="color:#00a8c8">inline</span> <span style="color:#00a8c8">void</span> <span style="color:#111">to_json</span><span style="color:#111">(</span><span style="color:#111">nlohmann</span><span style="color:#f92672">::</span><span style="color:#111">json</span> <span style="color:#f92672">&amp;</span><span style="color:#111">j</span><span style="color:#111">,</span> <span style="color:#00a8c8">const</span> <span style="color:#111">my_attachment</span> <span style="color:#f92672">&amp;</span><span style="color:#111">p</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+</span><span style="color:#75715e"></span><span style="color:#00a8c8">inline</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">to_json</span><span style="color:#111">(</span><span style="color:#111">nlohmann</span><span style="color:#f92672">::</span><span style="color:#111">json</span> <span style="color:#f92672">&amp;</span><span style="color:#111">j</span><span style="color:#111">,</span> <span style="color:#00a8c8">const</span> <span style="color:#111">my_attachment</span> <span style="color:#f92672">&amp;</span><span style="color:#111">p</span><span style="color:#111">)</span> <span style="color:#111">{</span>
     <span style="color:#111">p</span><span style="color:#111">.</span><span style="color:#111">to_json</span><span style="color:#111">(</span><span style="color:#111">j</span><span style="color:#111">);</span>
 <span style="color:#111">}</span>
 
-<span style="color:#00a8c8">inline</span> <span style="color:#00a8c8">void</span> <span style="color:#111">from_json</span><span style="color:#111">(</span><span style="color:#00a8c8">const</span> <span style="color:#111">nlohmann</span><span style="color:#f92672">::</span><span style="color:#111">json</span> <span style="color:#f92672">&amp;</span><span style="color:#111">j</span><span style="color:#111">,</span> <span style="color:#111">my_attachment</span> <span style="color:#f92672">&amp;</span><span style="color:#111">p</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+<span style="color:#00a8c8">inline</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">from_json</span><span style="color:#111">(</span><span style="color:#00a8c8">const</span> <span style="color:#111">nlohmann</span><span style="color:#f92672">::</span><span style="color:#111">json</span> <span style="color:#f92672">&amp;</span><span style="color:#111">j</span><span style="color:#111">,</span> <span style="color:#111">my_attachment</span> <span style="color:#f92672">&amp;</span><span style="color:#111">p</span><span style="color:#111">)</span> <span style="color:#111">{</span>
     <span style="color:#111">p</span><span style="color:#111">.</span><span style="color:#111">from_json</span><span style="color:#111">(</span><span style="color:#111">j</span><span style="color:#111">);</span>
 <span style="color:#111">}</span>
 </code></pre></div></div></div>

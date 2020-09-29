@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2020-02-19T15:47:21 CET">
+<meta name="revised" content="2020-09-29T15:41:25 CEST">
 <title>Module info :: MISA&#43;&#43; Framework</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     
 	
   
-    <a href="../../../" target="_self"><img src="../../../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span>
+    <p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->by <!-- raw HTML omitted -->Applied Systems Biology, HKI Jena, Germany<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 
   
 
@@ -435,13 +435,9 @@
     
     
     
-    
-
-<p>The module information is accessible via the command line parameter <code>&lt;module&gt; --module-info</code>
+    <p>The module information is accessible via the command line parameter <code>&lt;module&gt; --module-info</code>
 and as JSON file in MISA++ output folders (see <a href="../output-data">Result folder</a>).</p>
-
 <p>It is data in JSON format with following structure:</p>
-
 <link href="../../../mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
 <script defer src="../../../mermaid/mermaid.js">mermaid.initialize({startOnLoad:true});</script>
 <div class="mermaid" align="center" >
@@ -458,54 +454,32 @@ Root -.->|Optional| IsExternal["is-external : boolean"]
 Root -.->|Optional| Authors["authors : array of string"]
 Root -.->|Optional| Dependencies["dependencies : array of module info"]
 </div>
-
 <h1 id="id">id</h1>
-
 <p>Unique identifier of the module.
 Should be lower-case and only consist of letters <code>a-z</code>, <code>0-9</code> and <code>-</code>.
 Should be consistent with the module executable name.</p>
-
 <h1 id="version">version</h1>
-
 <p>Version of the module.</p>
-
 <h1 id="name">name</h1>
-
 <p>Optional short and descriptive name.</p>
-
 <h1 id="description">description</h1>
-
 <p>Optional short description.</p>
-
 <h1 id="citation">citation</h1>
-
 <p>Optional citation referencing a publication that should be cited if a user
 wants to credit the module.</p>
-
 <h1 id="url">url</h1>
-
 <p>Optional website URL.</p>
-
 <h1 id="license">license</h1>
-
 <p>Optional name of the license.</p>
-
 <h1 id="organization">organization</h1>
-
 <p>Optional name of the organization that developed the module.</p>
-
 <h1 id="is-external">is-external</h1>
-
 <p>If <code>true</code>, the module info is marked as non-MISA++ dependency.
 Should be never true for information about a MISA++ module.
 Defaults to false if not defined.</p>
-
 <h1 id="authors">authors</h1>
-
 <p>Optional list of authors.</p>
-
 <h1 id="dependencies">dependencies</h1>
-
 <p>Optional list of module info JSON objects that lists all dependencies.</p>
 
 

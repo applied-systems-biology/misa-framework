@@ -28,6 +28,7 @@ We provide ready-to-install packages for Ubuntu 18.04 and Ubuntu 19.10 that cont
 * ImageJ plugin binaries, including dependency libraries
 
 {{< button href="https://github.com/applied-systems-biology/misa-framework/releases/download/1.0.0/misaxx-linux-ubuntu-18.04.zip" theme="success" >}} Download MISA++ for Ubuntu 18.04{{< /button >}} {{< button href="https://github.com/applied-systems-biology/misa-framework/releases/download/1.0.0/misaxx-linux-ubuntu-19.10.zip" theme="success" >}} Download MISA++ for Ubuntu 19.10{{< /button >}}
+{{< button href="https://github.com/applied-systems-biology/misa-framework/releases/download/1.0.0/misaxx-linux-ubuntu-20.04.zip" theme="success" >}} Download MISA++ for Ubuntu 20.04{{< /button >}}
 
 You can install the \*.deb packages using `sudo apt install ./*.deb`. Put the plugin files (located in the `misa-imagej` folder)
 into an existing [Fiji](https://fiji.sc/) installation to install the ImageJ plugin.

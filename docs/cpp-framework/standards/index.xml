@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Standards on MISA&#43;&#43; Framework</title>
@@ -52,7 +52,7 @@ Modifications to JSON Schema draft-07 Property defitions can contain following a
       
       <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/parameters/</guid>
       <description>Parameters are in JSON format and have following structure:
-mermaid.initialize({startOnLoad:true}); graph LR; Root[&#34;root : object&#34;]--Filesystem[&#34;filesystem : object&#34;] Filesystem -- FilesystemSource[&#34;source : string&#34;] Filesystem -.-|if source is &#39;json&#39;| FSJsonData[&#34;json-data : string&#34;] Filesystem -.-|if source is &#39;directories&#39;| FSInputDir[&#34;input-directory : string&#34;] Filesystem -.-|if source is &#39;directories&#39;| FSOutputDir[&#34;output-directory : string&#34;] Root --Algorithm[&#34;algorithm : object&#34;] Root --Samples[&#34;samples : object&#34;] Root --Runtime[&#34;runtime : object&#34;] Samples -.-|for each sample| SampleParams[&#34; : object&#34;] Runtime -.-|optional| NumThreads[&#34;num-threads : integer&#34;</description>
+mermaid.initialize({startOnLoad:true}); graph LR; Root[&#34;root : object&#34;]--Filesystem[&#34;filesystem : object&#34;] Filesystem -- FilesystemSource[&#34;source : string&#34;] Filesystem -.-|if source is &#39;json&#39;| FSJsonData[&#34;json-data : string&#34;] Filesystem -.-|if source is &#39;directories&#39;| FSInputDir[&#34;input-directory : string&#34;] Filesystem -.-|if source is &#39;directories&#39;| FSOutputDir[&#34;output-directory : string&#34;] Root --Algorithm[&#34;algorithm : object&#34;] Root --Samples[&#34;samples : object&#34;] Root --Runtime[&#34;runtime : object&#34;] Samples -.-|for each sample| SampleParams[&#34; : object&#34;] Runtime -.-|optional| NumThreads[&#34;num-threads : integer&#34;] Runtime -.</description>
     </item>
     
     <item>
@@ -73,7 +73,7 @@ mermaid.initialize({startOnLoad:true}); graph LR; Root[&#34;root : object&#34;]-
       <guid>https://applied-systems-biology.github.io/misa-framework/cpp-framework/standards/output-data/</guid>
       <description>MISA++ framework applications write their output into a folder that contains all neccessary information to repeat the analysis.
 The folder has following structure:
-mermaid.initialize({startOnLoad:true}); graph LR; A[&#34;Result folder : directory&#34;] -- B[&#34;Parameters : file&#34;] A -- C[&#34;Module Info : file&#34;] A -- D[&#34;Parameter schema : file&#34;] A -- E[&#34;Runtime log : file&#34;] A -- G[&#34;Attachments : folder&#34;] G -- H[&#34;Attachment serialization schemata : file&#34;] G -.-|optional|I[&#34;imported : folder&#34;] G -.</description>
+mermaid.initialize({startOnLoad:true}); graph LR; A[&#34;Result folder : directory&#34;] -- B[&#34;Parameters : file&#34;] A -- C[&#34;Module Info : file&#34;] A -- D[&#34;Parameter schema : file&#34;] A -- E[&#34;Runtime log : file&#34;] A -- G[&#34;Attachments : folder&#34;] G -- H[&#34;Attachment serialization schemata : file&#34;] G -.-|optional|I[&#34;imported : folder&#34;] G -.-|optional|J[&#34;exported : folder&#34;</description>
     </item>
     
     <item>

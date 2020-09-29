@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2020-02-19T15:47:21 CET">
+<meta name="revised" content="2020-09-29T15:41:25 CEST">
 <title>Public API :: MISA&#43;&#43; Framework</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     
 	
   
-    <a href="../../../" target="_self"><img src="../../../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span>
+    <p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->by <!-- raw HTML omitted -->Applied Systems Biology, HKI Jena, Germany<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 
   
 
@@ -436,7 +436,6 @@
     
     
     <p>The public API of a MISA++ module should follow a specific structure to make it easier for other developers to use it.</p>
-
 <table>
 <thead>
 <tr>
@@ -444,48 +443,39 @@
 <th>Contains</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>./include/&lt;module-name&gt;/accessors/</td>
 <td>Derivatives of misaxx::misa_cached_data</td>
 </tr>
-
 <tr>
 <td>./include/&lt;module-name&gt;/attachments/</td>
 <td>Derivatives of misaxx::misa_serializable or misaxx::misa_locatable (preferred). For example quantified data.</td>
 </tr>
-
 <tr>
 <td>./include/&lt;module-name&gt;/caches/</td>
 <td>Derivatives of misaxx::misa_cache</td>
 </tr>
-
 <tr>
 <td>./include/&lt;module-name&gt;/descriptions/</td>
 <td>Derivatives of misaxx::misa_data_description</td>
 </tr>
-
 <tr>
 <td>./include/&lt;module-name&gt;/patterns/</td>
 <td>Derivatives of misaxx::misa_data_pattern</td>
 </tr>
-
 <tr>
 <td>./include/&lt;module-name&gt;/utils/</td>
 <td>Anything else (non-serializable data types, converters, helpers, &hellip;)</td>
 </tr>
-
 <tr>
 <td>./include/&lt;module-name&gt;/module_interface.h</td>
 <td>Only for worker modules: A misaxx::misa_module_interface derivative</td>
 </tr>
-
 <tr>
 <td>./include/&lt;module-name&gt;/module.h</td>
 <td>Only for worker modules: A misaxx::misa_module derivative</td>
 </tr>
-
 <tr>
 <td>./include/&lt;module-name&gt;/module_info.h</td>
 <td>A function <code>module_info()</code> that returns a misaxx::misa_module_info</td>

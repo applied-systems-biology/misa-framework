@@ -8,8 +8,10 @@ lastmodifierdisplayname = "Ruman Gerst"
 lastmodifieremail = "ruman.gerst@leibniz-hki.de"
 +++
 
-MISA++ uses the [CMake](https://cmake.org/) build system (version 3.12 or higher) and is designed around
+MISA++ uses the [CMake](https://cmake.org/) build system (version 3.12.2) and is designed around
 the GCC compiler. We tested compilation under GCC version 7.3.
+
+Info: Newer versions than CMake 3.12.2 might have issues with compiling *OME files*.
 
 If you want to use another compiler, check if it supports C++ 2017 or higher and
 OpenMP 4.5 or higher. We only used OpenMP 3.x features, so using an older OpenMP

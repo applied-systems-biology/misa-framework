@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2020-02-19T15:47:21 CET">
+<meta name="revised" content="2020-09-29T15:41:25 CEST">
 <title>Dispatching submodules :: MISA&#43;&#43; Framework</title>
 <link rel="shortcut icon" href="../../../images/favicon.png" type="image/x-icon" />
 <link href="../../../css/font-awesome.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     
 	
   
-    <a href="../../../" target="_self"><img src="../../../img/logo.svg" /></a><span style="font-size: 80%;">by <a href="https://www.leibniz-hki.de/en/applied-systems-biology.html" target="_blank">Applied Systems Biology, HKI Jena, Germany</a></span>
+    <p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->by <!-- raw HTML omitted -->Applied Systems Biology, HKI Jena, Germany<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 
   
 
@@ -436,34 +436,27 @@
     
     
     
-    
-
-<p>You reduce the amount of code in your current project by off-loading work
+    <p>You reduce the amount of code in your current project by off-loading work
 to another MISA++ module. The sub-module will be integrated into the
 current worker tree and benefit from better parallelization and less post-processing
 compared to running MISA++ applications in a pipeline.</p>
-
 <h1 id="prerequisites">Prerequisites</h1>
-
 <p>Modify the <code>CMakeLists.txt</code> and the <code>cmake/*-config.in</code> to add the submodule as dependency.</p>
 
-
-<div class="panel panel-default"><div class="panel-heading">Example</div><div class="panel-body"><h3 id="in-cmakelists-txt">In CMakeLists.txt</h3>
+<div class="panel panel-default"><div class="panel-heading">Example</div><div class="panel-body"><h3 id="in-cmakeliststxt">In CMakeLists.txt</h3>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmake" data-lang="cmake"><span style="color:#111">find_package</span><span style="color:#111">(</span><span style="color:#d88200">misaxx-core</span> <span style="color:#d88200">REQUIRED</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#111">find_package</span><span style="color:#111">(</span><span style="color:#d88200">misaxx-tissue-segmentation</span> <span style="color:#d88200">REQUIRED</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Later:
-</span><span style="color:#75715e"></span><span style="color:#111">target_link_libraries</span><span style="color:#111">(</span><span style="color:#d88200">my-module</span> <span style="color:#d88200">PUBLIC</span> <span style="color:#d88200">misaxx::misaxx-tissue-segmentation</span><span style="color:#111">)</span></code></pre></div>
-<h3 id="in-cmake-config-in">In cmake/*-config.in</h3>
+</span><span style="color:#75715e"></span><span style="color:#111">target_link_libraries</span><span style="color:#111">(</span><span style="color:#d88200">my-module</span> <span style="color:#d88200">PUBLIC</span> <span style="color:#d88200">misaxx::misaxx-tissue-segmentation</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><h3 id="in-cmake-configin">In cmake/*-config.in</h3>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmake" data-lang="cmake"><span style="color:#111">find_package</span><span style="color:#111">(</span><span style="color:#d88200">misaxx-core</span> <span style="color:#d88200">REQUIRED</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#111">find_package</span><span style="color:#111">(</span><span style="color:#d88200">misaxx-tissue-segmentation</span> <span style="color:#d88200">REQUIRED</span><span style="color:#111">)</span></code></pre></div></div></div>
-
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#111">find_package</span><span style="color:#111">(</span><span style="color:#d88200">misaxx-tissue-segmentation</span> <span style="color:#d88200">REQUIRED</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div></div></div>
 
 <h1 id="submodules-within-the-filesystem">Submodules within the filesystem</h1>
-
 <p>A submodule is created on a subfolder of the current virtual filesystem and therefore are handled similar
 to data. The name of the folder is set during the declaration of the submodule in a dispatcher&rsquo;s <code>create_blueprints</code> function.</p>
-
 <link href="../../../mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
 <script defer src="../../../mermaid/mermaid.js">mermaid.initialize({startOnLoad:true});</script>
 <div class="mermaid" align="center" >
@@ -478,42 +471,35 @@ S2 --> D4("Data 2")
 S1 ==> M1["Submodule"]
 S2 ==> M2["Submodule"]
 </div>
-
-<div class="notices warning" ><p>
-Please do not name sub-modules like existing data.
-This also means that the name of a submodule must be **unique** across the whole module.
-
-This does not apply to submodules of the submodules, as each sub-module gets its own virtual filesystem.
+<p>
+<div class="notices warning" ><p><p>Please do not name sub-modules like existing data.
+This also means that the name of a submodule must be <strong>unique</strong> across the whole module.</p>
+<p>This does not apply to submodules of the submodules, as each sub-module gets its own virtual filesystem.</p>
 </p></div>
 
-<div class="notices info" ><p>
-Submodules are independent of the dispatcher where they are instantiated. They only depend on the filesystem of the instantiating module.
-</p></div>
 
+<div class="notices info" ><p><p>Submodules are independent of the dispatcher where they are instantiated. They only depend on the filesystem of the instantiating module.</p>
+</p></div>
+</p>
 <h1 id="dispatching-a-submodule">Dispatching a submodule</h1>
-
 <p>It is recommended to add submodules to the module interface. To do this, create an empty shared pointer to the submodule interface in the current module interface.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">struct</span> <span style="color:#111">module_interface</span> <span style="color:#111">:</span> <span style="color:#00a8c8">public</span> <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_module_interface</span> <span style="color:#111">{</span>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">struct</span> <span style="color:#75af00">module_interface</span> <span style="color:#f92672">:</span> <span style="color:#00a8c8">public</span> <span style="color:#111">misaxx</span><span style="color:#f92672">::</span><span style="color:#111">misa_module_interface</span> <span style="color:#111">{</span>
   <span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">shared_ptr</span><span style="color:#f92672">&lt;</span><span style="color:#111">my_submodule</span><span style="color:#f92672">::</span><span style="color:#111">module_interface</span><span style="color:#f92672">&gt;</span> <span style="color:#111">m_submodule</span><span style="color:#111">;</span>
 <span style="color:#111">}</span>
-</code></pre></div>
-<p>Instantiate the pointer within the <code>setup()</code> function (see <a href="../creating-dispatchers">Creating dispatchers</a>). Here you can also pass input data from the current module to the submodule.</p>
+</code></pre></div><p>Instantiate the pointer within the <code>setup()</code> function (see <a href="../creating-dispatchers">Creating dispatchers</a>). Here you can also pass input data from the current module to the submodule.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#00a8c8">void</span> <span style="color:#75af00">setup</span><span style="color:#111">()</span> <span style="color:#111">{</span>
   <span style="color:#111">m_submodule</span> <span style="color:#f92672">=</span> <span style="color:#111">std</span><span style="color:#f92672">::</span><span style="color:#111">make_shared</span><span style="color:#f92672">&lt;</span><span style="color:#111">my_submodule</span><span style="color:#f92672">::</span><span style="color:#111">module_interface</span><span style="color:#f92672">&gt;</span><span style="color:#111">();</span>
 
   <span style="color:#75715e">// You have the option to directly set the input data of the submodule
 </span><span style="color:#75715e"></span>  <span style="color:#111">m_submodule</span><span style="color:#111">.</span><span style="color:#111">m_input_images</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">this</span><span style="color:#f92672">-&gt;</span><span style="color:#111">m_input_images</span><span style="color:#111">;</span>
 <span style="color:#111">}</span>
-</code></pre></div>
-<p>Like all dispatchers, submodules need to be added to the list of blueprints. It is recommended to do this in the module dispatcher. Use <code>create_submodule_blueprint(...)</code> instead of <code>create_blueprint(...)</code>.</p>
-
+</code></pre></div><p>Like all dispatchers, submodules need to be added to the list of blueprints. It is recommended to do this in the module dispatcher. Use <code>create_submodule_blueprint(...)</code> instead of <code>create_blueprint(...)</code>.</p>
 <p>The <code>create_submodule_blueprint(...)</code> function requires you to give a name to the submodule and allows you to pass the submodule interface that was created within the module interface. The shared pointer will be automatically updated to follow the submodule dispatcher instead.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#111">module</span><span style="color:#f92672">::</span><span style="color:#111">create_blueprints</span><span style="color:#111">(</span><span style="color:#111">misa_dispatcher</span><span style="color:#f92672">::</span><span style="color:#111">blueprint_list</span> <span style="color:#f92672">&amp;</span><span style="color:#111">blueprints</span><span style="color:#111">,</span>
                           <span style="color:#111">misa_dispatcher</span><span style="color:#f92672">::</span><span style="color:#111">parameter_list</span> <span style="color:#f92672">&amp;</span><span style="color:#111">parameters</span><span style="color:#111">)</span> <span style="color:#111">{</span>
   <span style="color:#111">blueprints</span><span style="color:#111">.</span><span style="color:#111">add</span><span style="color:#111">(</span><span style="color:#111">create_submodule_blueprint</span><span style="color:#f92672">&lt;</span><span style="color:#111">my_submodule</span><span style="color:#f92672">::</span><span style="color:#111">module</span><span style="color:#f92672">&gt;</span><span style="color:#111">(</span><span style="color:#d88200">&#34;my-submodule&#34;</span><span style="color:#111">,</span> <span style="color:#111">get_module_as</span><span style="color:#f92672">&lt;</span><span style="color:#111">module_interface</span><span style="color:#f92672">&gt;</span><span style="color:#111">()</span><span style="color:#f92672">-&gt;</span><span style="color:#111">m_submodule</span><span style="color:#111">));</span>
 <span style="color:#111">}</span>
-</code></pre></div>
-<p>Dispatch the submodule dispatcher just like any other dispatcher (see <a href="../creating-dispatchers">Creating dispatchers</a>).</p>
+</code></pre></div><p>Dispatch the submodule dispatcher just like any other dispatcher (see <a href="../creating-dispatchers">Creating dispatchers</a>).</p>
 
 
     
