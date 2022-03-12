@@ -19,7 +19,7 @@ matplotlib==3.1.1
 more-itertools==7.2.0
 networkx==2.4
 numpy==1.21.0
-Pillow==9.0.0
+Pillow==9.0.1
 psutil==5.6.6
 pyparsing==2.4.4
 pyrsistent==0.15.5
