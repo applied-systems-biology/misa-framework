@@ -150,7 +150,7 @@ See the LICENSE file provided with this code for the full license.
         <dependency>
             <groupId>org.xerial</groupId>
             <artifactId>sqlite-jdbc</artifactId>
-            <version>3.25.2</version>
+            <version>3.41.2.2</version>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
