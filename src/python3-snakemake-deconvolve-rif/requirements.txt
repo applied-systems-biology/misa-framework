@@ -33,6 +33,6 @@ scipy==1.10.0
 six==1.13.0
 smmap2==2.0.5
 snakemake==5.7.4
-urllib3==1.26.5
+urllib3==1.26.17
 wrapt==1.11.2
 zipp==0.6.0
